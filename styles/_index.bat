@@ -1,0 +1,1 @@
+../.././dart-sass/sass index.scss ../index.css --style=compressed --no-source-map --watch
