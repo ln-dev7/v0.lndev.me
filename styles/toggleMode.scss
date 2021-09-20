@@ -1,0 +1,37 @@
+.toggle-mode{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $gray-dark;
+    border: 2px solid $primary;
+    box-shadow: 0 2px 10px rgba($default, $alpha: 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .5s;
+    & ion-icon{
+        font-size: 1.5em;
+        color: $primary;
+    }
+    & ion-icon:nth-child(2){
+        display: none;
+    }
+    &.active{
+        background: $white;
+        border: 2px solid $success;
+        box-shadow: 0 2px 10px rgba($success, $alpha: 0.5);
+    }
+    &.active ion-icon:nth-child(2){
+        display: block;
+        color: $success;
+    }
+    &.active ion-icon:nth-child(1){
+        display: none;
+    }
+}

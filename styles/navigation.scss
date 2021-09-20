@@ -1,0 +1,36 @@
+.navigation{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(minmax(9, auto), 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    &-logo{
+        grid-area: 1 / 3 / 2 / 4;
+        font-family: 'Grey Qo', cursive;
+        font-size: 35px;
+        color: $dark;
+    }
+    &-page{
+        display: flex;
+        grid-area: 1 / 5 / 2 / 7;
+        li{
+            padding: 1rem;
+        }
+    }
+    &-socials{
+        display: flex;
+        grid-area: 1 / 7 / 2 / 9;
+        li{
+            padding: 1rem;
+            ion-icon{
+                font-size: 20px;
+                cursor: pointer;
+                &:hover{
+                    opacity: .5s;
+                }
+            }
+        }
+    }
+}
