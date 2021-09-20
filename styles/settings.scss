@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space_monoregular';
+    src: url('../fonts/spacemono-regular-webfont.woff2') format('woff2'),
+         url('../fonts/spacemono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, ::before, ::after{
     box-sizing: border-box;
     font-family: sans-serif;

@@ -1,17 +1,1 @@
-/* Error: expected "{".
- *   ,
- * 1 | <!DOCTYPE html>
- *   |  ^
- *   '
- *   index.scss 1:2  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a   \2577 \a 1 \2502  <!DOCTYPE html>\d\a   \2502   ^\a   \2575 \a   index.scss 1:2  root stylesheet';
-}
+@font-face{font-family:"robotolight";src:url("../fonts/roboto-light-webfont.woff2") format("woff2"),url("../fonts/roboto-light-webfont.woff") format("woff");font-weight:normal;font-style:normal}@font-face{font-family:"space_monoregular";src:url("../fonts/spacemono-regular-webfont.woff2") format("woff2"),url("../fonts/spacemono-regular-webfont.woff") format("woff");font-weight:normal;font-style:normal}*,::before,::after{box-sizing:border-box;font-family:sans-serif;margin:0;padding:0;scroll-behavior:smooth}a{text-decoration:none;color:inherit}li{list-style:none}i{color:#fff}img{max-width:100%;height:auto}body{background-color:#000}@font-face{font-family:"robotolight";src:url("roboto-light-webfont.woff2") format("woff2"),url("roboto-light-webfont.woff") format("woff");font-weight:normal;font-style:normal}
