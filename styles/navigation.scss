@@ -1,7 +1,4 @@
 .navigation{
-    position: absolute;
-    left: 0;
-    right: 0;
     display: grid;
     grid-template-columns: repeat(minmax(9, auto), 1fr);
     grid-template-rows: 1fr;
@@ -26,6 +23,7 @@
                     transform: translateX(2px);
                     color: $primary;
                     cursor: pointer;
+                    
             }
         }
     }
@@ -98,7 +96,12 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        position: static;
+        &-page{
+            display: none;
+        }
+        &-socials{
+            display: none;
+        }
         &-burger{
             display: flex;
         }
@@ -106,7 +109,7 @@
             display: flex;
             position: absolute;
             width: 70%;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-items: center;
             align-items: center;
@@ -147,12 +150,6 @@
         }
         &-logo.active-mode{
             color: $white;
-        }
-        &-page{
-            display: none;
-        }
-        &-socials{
-            display: none;
         }
     }
 }

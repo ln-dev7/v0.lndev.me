@@ -15,6 +15,9 @@
     align-items: center;
     cursor: pointer;
     transition: .5s;
+    &:hover{
+        opacity: 0.8;
+    }
     & ion-icon{
         font-size: 1.5em;
         color: $primary;
@@ -34,4 +37,31 @@
     &.active ion-icon:nth-child(1){
         display: none;
     }
+}
+
+.arrow{
+    position: fixed;
+    display: none;
+    bottom: 60px;
+    right: 15px;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: $white;
+    border: 2px solid $cyan;
+    box-shadow: 0 2px 10px rgba($cyan, $alpha: 0.5);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    ion-icon{
+        color: $cyan;
+    }
+}
+
+.arrow.arrow-hidde{
+    transition: opacity .5s;
+    display: flex!important;
+    opacity: 1!important;
 }

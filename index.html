@@ -35,14 +35,13 @@
     <!-- JS Local -->
     <script src="Scripts/loader.js" defer></script>
     <script src="Scripts/toggleMode.js" defer></script>
-    <script src="Scripts/navigation.js" defer></script>
 </head>
 <body>
     <div class="loader"> 
         <span class="loader-load"></span>       
     </div>
 
-    <nav class="navigation">
+    <nav class="navigation" id="navigation">
         <a href="index.html" class="navigation-logo">< Leonel Ngoya /></a>
         <div class="navigation-burger">
             <div class="navigation-burger-line"></div>
@@ -79,7 +78,7 @@
         </ul>
     </nav>
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="containers">
             <div class="header-img">
                 <img src="img/ln.png" alt="">
@@ -92,11 +91,49 @@
         </div>
     </header>
 
+    <div class="about" id="about">
+        <h1 class="about-title">À propos de moi</h1>
+        <h2 class="about-about">
+            Je suis un étudiant et développeur front-end web / android vivant au Cameroun.<br>
+            Je me veux d'être le plus créatif possible en utilisant mon imagination et mes capacités intellectuelles dans mon travail.<br>
+            Mon but est de rendre un site le plus beau et attirant possible.
+        </h2>
+        <h2 class="about-languages-title">Langues parlées</h2>
+        <div class="about-languages">
+            <div class="about-languages-card">
+                <div class="about-languages-range">
+                    <div class="about-languages-french"></div>
+                </div>
+                <div class="about-languages-range">
+                    <div class="about-languages-italian"></div>
+                </div>
+                <div class="about-languages-range">
+                    <div class="about-languages-english"></div>
+                </div>
+            </div>
+            <div class="about-languages-text">
+                <h2 class="about-languages-text-french"> • Français </h2>
+                <h2 class="about-languages-text-italian"> • Italien </h2>
+                <h2 class="about-languages-text-english"> • Anglais </h2>
+            </div>
+        </div>
+        <h2 class="about-hobbies-title">Loisirs</h2>
+        <div class="about-hobbies">
+            <h3>
+                Je m'intéresse beaucoup aux séries de réflexion et de suspens, comme sport j'aime pratiquer le volley-ball et beaucoup regarder le football.<br>
+                Comme la majorité des développeurs, pour coder j'adore les endroits calme avec une bonne musique, pour cela j'ai une playlist Spotify que j'écoute la plus part de mon temps.
+            </h3>
+            <iframe src="https://open.spotify.com/embed/playlist/1fciPOQsvJFvA22F9PeEOU" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media" class="about-hobbies-playlist"></iframe>
+        </div>
+    </div>
+
+    <a href="#navigation" class="arrow">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </a>
+
     <div class="toggle-mode">
         <ion-icon name="moon-outline"></ion-icon>
         <ion-icon name="sunny-outline"></ion-icon>
     </div>
 </body>
 </html>
-
-<!-- <iframe src="https://open.spotify.com/embed/playlist/1fciPOQsvJFvA22F9PeEOU" width="100%" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->

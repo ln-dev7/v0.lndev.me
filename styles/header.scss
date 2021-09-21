@@ -1,5 +1,6 @@
 .containers{
     width: 75%;
+    height: 75%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,9 +8,9 @@
 
 .header{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     &-img{
         min-width: 500px;
@@ -45,7 +46,8 @@
         border-radius: 50%;
         z-index: -2;
         background: rgba($primary, $alpha: 0.03);
-        animation: span 10s infinite alternate;
+        -webkit-animation: span 10s infinite alternate;
+                animation: span 10s infinite alternate;
     }
     &::before{
         content: '';
@@ -57,7 +59,16 @@
         border-radius: 50%;
         z-index: -2;
         background: rgba($success, $alpha: 0.03);
-        animation: span 5s infinite alternate;
+        -webkit-animation: span 5s infinite alternate;
+                animation: span 5s infinite alternate;
+    }
+    @-webkit-keyframes span {
+        50%{
+           transform: scale(0.8);
+        }
+        100%{
+            transform: scale(1.2);
+        }
     }
     @keyframes span {
         50%{
@@ -75,13 +86,13 @@
         justify-content: center;
         align-items: center;
         width: 95%;
-        height: auto;
     }
     .header{
         display: flex;
         align-items: flex-start;
         justify-content: center;
         width: 100%;
+        min-height: 100vh;
         &-img{
             min-width: 400px;
             height: calc(400px * 4/3);
@@ -102,6 +113,23 @@
     }
 }
 
+@media screen and (max-width: 1035px) {
+    .header{
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+    .containers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;      
+        padding-bottom: 12rem;
+    }
+}
+
 @media screen and (max-width: 750px) {
     .containers{
         width: 70%;
@@ -109,6 +137,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 6rem;
     }
     .header{
         &-img{
