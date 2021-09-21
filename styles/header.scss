@@ -43,6 +43,7 @@
         left: 100px;
         top: -100px;
         border-radius: 50%;
+        z-index: -2;
         background: rgba($primary, $alpha: 0.03);
         animation: span 10s infinite alternate;
     }
@@ -54,6 +55,7 @@
         top: 100px;
         right: 150px;
         border-radius: 50%;
+        z-index: -2;
         background: rgba($success, $alpha: 0.03);
         animation: span 5s infinite alternate;
     }
@@ -131,5 +133,14 @@
             top: -75px;
             left: 50px;
         }
+        // &::after{
+        //     display: block;
+        //     width: 200px;
+        //     height: 200px;
+        //     top: 0px;
+        //     left: 50px;
+        //     background: rgba($success, $alpha: 0.1);
+        //     animation: none;
+        // }
     }
 }

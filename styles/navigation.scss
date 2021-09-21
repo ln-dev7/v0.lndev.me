@@ -1,6 +1,7 @@
 .navigation{
     position: absolute;
-    inset: 0;
+    left: 0;
+    right: 0;
     display: grid;
     grid-template-columns: repeat(minmax(9, auto), 1fr);
     grid-template-rows: 1fr;
@@ -17,6 +18,12 @@
         grid-area: 1 / 5 / 2 / 7;
         li{
             padding: 1rem;
+            transition: all .3s ease;
+                &:hover{
+                    transform: translateX(2px);
+                    color: $primary;
+                    cursor: pointer;
+            }
         }
     }
     &-socials{
@@ -26,9 +33,11 @@
             padding: 1rem;
             ion-icon{
                 font-size: 20px;
-                cursor: pointer;
+                transition: all .3s ease;
                 &:hover{
-                    opacity: .5s;
+                    transform: translateY(2px) scaleX(1.1);;
+                    color: $primary;
+                    cursor: pointer;
                 }
             }
         }
@@ -39,12 +48,12 @@
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        z-index: 2;
         border: 2px solid $gray;
         cursor: pointer;
         display: none;
         justify-content: center;
         align-items: center;
+        display: none;
         &-line{
             position: relative;
             width: 25px;
@@ -67,13 +76,13 @@
             }
         }
     }
-    &-burger.burger-active .header-burger-line {
+    &-burger.burger-active .navigation-burger-line {
         background-color: transparent;
     }
-    &-burger.burger-active .header-burger-line::before {
+    &-burger.burger-active .navigation-burger-line::before {
         transform: translateY(0px) rotate(135deg);
     }
-    &-burger.burger-active .header-burger-line::after {
+    &-burger.burger-active .navigation-burger-line::after {
         transform: translateY(0px) rotate(-135deg);
     }
     &-menu{
@@ -99,15 +108,32 @@
             justify-items: center;
             align-items: center;
             flex-direction: column;
-            background: $primary;
+            background: $white;
+            border: 2px solid transparent;
+            border-right-color: $gray;
+            border-bottom-color: $gray;
             top: 0;
+            left: 0;
             transform: translateX(0%);
-            opacity: 0;
-            z-index: 15;
+            z-index: 2;
+            li{
+                padding: 0.75rem;
+                transition: all .3s ease;
+                ion-icon{
+                    font-size: 25px;
+                    &:hover{
+                        color: $primary;
+                        cursor: pointer;
+                    }
+                }
+                &:hover{
+                    transform: translateX(3px);
+                    color: $primary;
+                }
+            }
         }
         &-menu.burger-active {
-            opacity: 1;
-            transform: translateX(0%)
+            transform: translateX(-100%)
         }
         &-logo{
             margin: 1rem;
