@@ -9,7 +9,7 @@
         font-weight: 500;
         font-size: 35px;
         margin-bottom: 20px;
-        color: $dark;
+        color: $gray-dark;
     }
     &-about{
         color: $default;
@@ -114,6 +114,9 @@
         h3.active{
             color: $light;
         }
+        &-playlist{
+            margin-bottom: 5rem;
+        }
     }
     &-languages-title, &-hobbies-title{
         font-family: 'Ubuntu', cursive;
@@ -139,8 +142,4 @@
             transform: scale(1.2);
         }
     }
-}
-
-@media screen and (max-width: 1035px) {
-
 }
