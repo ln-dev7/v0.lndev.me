@@ -33,4 +33,90 @@
             }
         }
     }
+    &-burger{
+        margin: 1rem;
+        background: rgba($gray, $alpha: 0.3);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        z-index: 2;
+        border: 2px solid $gray;
+        cursor: pointer;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        &-line{
+            position: relative;
+            width: 25px;
+            height: 2.5px;
+            background: $gray;
+            &::before, 
+            &::after {
+                content: "";
+                width: 25px;
+                height: 2.5px;
+                background: $gray;
+                position: absolute;
+                transition: all 0.2s;
+            }
+            &::before {
+                transform: translateY(-7px);
+            }
+            &::after {
+                transform: translateY(7px);
+            }
+        }
+    }
+    &-burger.burger-active .header-burger-line {
+        background-color: transparent;
+    }
+    &-burger.burger-active .header-burger-line::before {
+        transform: translateY(0px) rotate(135deg);
+    }
+    &-burger.burger-active .header-burger-line::after {
+        transform: translateY(0px) rotate(-135deg);
+    }
+    &-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .navigation{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: static;
+        &-burger{
+            display: flex;
+        }
+        &-menu{
+            display: flex;
+            position: absolute;
+            width: 70%;
+            height: 100vh;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+            background: $primary;
+            top: 0;
+            transform: translateX(0%);
+            opacity: 0;
+            z-index: 15;
+        }
+        &-menu.burger-active {
+            opacity: 1;
+            transform: translateX(0%)
+        }
+        &-logo{
+            margin: 1rem;
+        }
+        &-page{
+            display: none;
+        }
+        &-socials{
+            display: none;
+        }
+    }
 }
