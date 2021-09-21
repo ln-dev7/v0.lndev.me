@@ -13,6 +13,9 @@
         font-size: 35px;
         color: $gray-dark;
     }
+    &-logo.active{
+        color: $white;
+    }
     &-page{
         display: flex;
         grid-area: 1 / 5 / 2 / 7;
@@ -114,7 +117,7 @@
             border-bottom-color: $gray;
             top: 0;
             left: 0;
-            transform: translateX(0%);
+            transform: translateX(-100%);
             z-index: 2;
             li{
                 padding: 0.75rem;
@@ -133,7 +136,7 @@
             }
         }
         &-menu.burger-active {
-            transform: translateX(-100%)
+            transform: translateX(0)
         }
         &-logo{
             margin: 1rem;

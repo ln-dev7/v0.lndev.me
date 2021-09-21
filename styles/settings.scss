@@ -6,7 +6,7 @@ $pink: #f3a4b5;
 $yellow: #ffd600;
 $cyan: #2bffc6;
 $gray: #8898aa;
-$gray-dark: #32325d;
+$gray-dark: #1b1e3d;
 $light: #ced4da;
 $lighter: #e9ecef;
 $primary: #5e72e4;
@@ -47,5 +47,9 @@ img{
 
 body{
     background-color: $white;
+}
+
+body.active{
+    background-color: $dark;
 }
 
