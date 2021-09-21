@@ -1,4 +1,5 @@
 let toggleMode = document.querySelector('.toggle-mode')
+let arrow = document.querySelector('.arrow')
 let body = document.querySelector('body')
 let headerImg = document.querySelector('.header-img')
 let navigationLogo = document.querySelectorAll('.navigation-logo')
@@ -7,6 +8,7 @@ let aboutTtile = document.querySelector('.about-title')
 let aboutAbout = document.querySelector('.about-about')
 let aboutHobbiesH3 = document.querySelector('.about-hobbies h3')
 toggleMode.addEventListener('click', () => {
+    arrow.classList.toggle('active')
     toggleMode.classList.toggle('active')
     body.classList.toggle('active')
     if (body.classList.contains('active')) {

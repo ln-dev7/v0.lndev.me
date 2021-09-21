@@ -60,6 +60,15 @@
     }
 }
 
+.arrow.active{
+    border: 2px solid $primary;
+    background: $gray-dark;
+    box-shadow: 0 2px 10px rgba($default, $alpha: 0.5);
+    & ion-icon{
+        color: $primary;
+    }
+}
+
 .arrow.arrow-hidde{
     transition: opacity .5s;
     display: flex!important;
