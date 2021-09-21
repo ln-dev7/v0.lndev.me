@@ -1,8 +1,9 @@
 let toggleMode = document.querySelector('.toggle-mode')
 let body = document.querySelector('body')
 let headerImg = document.querySelector('.header-img')
-let navigationLogo = document.querySelector('.navigation-logo')
-toggleMode.addEventListener('click', ()=>{
+let navigationLogo = document.querySelectorAll('.navigation-logo')
+let navigationMenu = document.querySelector('.navigation-menu')
+toggleMode.addEventListener('click', () => {
     toggleMode.classList.toggle('active')
     body.classList.toggle('active')
     if (body.classList.contains('active')) {
@@ -10,5 +11,20 @@ toggleMode.addEventListener('click', ()=>{
     } else {
         headerImg.innerHTML = '<img src="img/ln.png" alt="">'
     }
-    navigationLogo.classList.toggle('active')
+    navigationLogo.forEach(element => {
+        element.classList.toggle('active-mode')
+    });
+    navigationMenu.classList.toggle('active-mode')
+})
+
+let navBurger = document.querySelector('.navigation-burger');
+let navMenu = document.querySelector('.navigation-menu');
+
+navBurger.addEventListener('click', () => {
+    navBurger.classList.toggle('active');
+    if(navBurger.classList.contains('active')){
+        navMenu.classList.add('active');
+    }else{
+        navMenu.classList.remove('active');
+    }
 })

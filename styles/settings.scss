@@ -15,7 +15,7 @@ $success: #2dce89;
 $info: #11cdef;
 $warning: #fb6340;
 $danger: #f5365c;
-$light: #adb5bd;
+$lighter: #adb5bd;
 $dark: #212529;
 $default: #172b4d;
 $white: #fff;
@@ -47,6 +47,7 @@ img{
 
 body{
     background-color: $white;
+    transition: background-color .3s ease;
 }
 
 body.active{
