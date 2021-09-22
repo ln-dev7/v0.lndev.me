@@ -132,7 +132,16 @@
         border-radius: 50%;
         z-index: -2;
         background: rgba($cyan, $alpha: 0.05);
-        animation: span 10s infinite alternate;
+        -webkit-animation: span 10s infinite alternate;
+                animation: span 10s infinite alternate;
+    }
+    @-webkit-keyframes span {
+        50%{
+           transform: scale(0.8);
+        }
+        100%{
+            transform: scale(1.2);
+        }
     }
     @keyframes span {
         50%{
