@@ -14,6 +14,7 @@ let skillestCardsTitle1 = document.querySelector('.skillest-cards-title h1')
 let skillestCardsTitle2 = document.querySelector('.skillest-cards-title h2')
 let skillestCardsContainerCard = document.querySelectorAll('.skillest-cards-container-card')
 let footer = document.querySelector('.footer')
+let other = document.querySelector('.other')
 toggleMode.addEventListener('click', () => {
     arrow.classList.toggle('active')
     toggleMode.classList.toggle('active')
@@ -37,6 +38,7 @@ toggleMode.addEventListener('click', () => {
     skillestCardsContainerCard.forEach(element => {
         element.classList.toggle('active')
     });
+    other.classList.toggle('active')
     footer.classList.toggle('active')
 })
 

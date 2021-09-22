@@ -1,0 +1,152 @@
+.other.active{
+    h1{
+        color: $purple; 
+    }
+    h2{
+        color: $light;    
+    }
+}
+.other{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin-bottom: 5rem;
+    &-container{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem;
+        h1{
+            text-align: center;
+            color: $gray-dark;
+            font-family: 'Ubuntu';
+            font-size: 35px;
+            font-weight: 500;
+        }
+        h2{
+            text-align: center;  
+            color: $default; 
+            font-family: 'Roboto';
+            font-weight: 500;
+            i{
+                font-size: 18px;
+            }
+        }
+        &-certification{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1{
+                margin-bottom: 2rem;
+            }
+            h2{
+                margin-bottom: 3rem;
+            }
+            img{
+                height: 300px;
+                width: calc(300px * 1.7793594306);
+                transition: opacity .3s ease;
+                border-radius: 10px;
+                margin-bottom: 1.5rem;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }
+        }
+        &-contact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            h1{
+                margin-bottom: 1.5rem;
+            }
+            h2{
+                margin-bottom: 1.5rem;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 1rem;
+                    transition: all .3s ease;
+                    &:hover{
+                        opacity: .5;
+                        transform: rotate(540deg);
+                    }
+                    ion-icon{
+                        padding: 0.5rem;
+                        font-size: 30px;
+                        color: $white;
+                    }
+                }
+                a:nth-child(1){
+                    background: #25D366;
+                    box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
+                    border-radius: 50%;
+                }
+                a:nth-child(2){
+                    background: $danger;
+                    box-shadow: 0 2px 10px rgba($danger, $alpha: 0.2);
+                    border-radius: 50%;  
+                }
+            }
+        }
+        &-cv{
+            position: relative;
+            width: 100%;
+            padding: 0.5rem;
+            margin: 1rem;
+            text-align: center;
+            color: $white;
+            background: $primary;
+            transition: transform .3s ease;
+            &:hover{
+                transform: translateY(5px);
+            }
+            &::before{
+                content: '•';
+                position: absolute;
+                color: $white;
+                font-size: 20px;
+                top: 5px;
+                left: 5px;
+                transition: transform .3s ease;
+            }
+            &:hover::before{
+                animation: hover_cv .3s infinite;
+            }
+            @keyframes hover_cv {
+                0%{
+                    transform: translateY(0);
+                }
+                50%{
+                    transform: translateY(-10px);
+                }
+                100%{
+                    transform: translateY(10px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .other{
+        &-container{
+            width: 90%;
+        }
+        img{
+            height: calc(100% / 1.7793594306);
+            width: 100%;
+        }
+    }
+}

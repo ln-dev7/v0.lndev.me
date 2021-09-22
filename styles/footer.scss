@@ -18,7 +18,7 @@
                 padding: 1rem;
                 font-family: 'Roboto';
                 font-weight: 500;
-                text-align: 400;
+                text-align: center;
             }
             &-socials{
                 display: flex;
@@ -54,6 +54,10 @@
             p{
                 font-size: 18px;
                 padding: 1rem;
+                text-align: center;
+                a{
+                    text-decoration: underline;
+                }
             }
     }
 }
