@@ -1,3 +1,87 @@
 .skillest{
-    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin-bottom: 5rem;
+    &-cards{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem;
+        &-title{
+            h1.active{
+                color: $purple; 
+            }
+            h1{
+                text-align: center;
+                color: $gray-dark;
+                font-family: 'Ubuntu';
+                font-size: 35px;
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+            h2.active{
+                color: $light;    
+            }
+            h2{
+                text-align: center;  
+                color: $default; 
+                font-family: 'Roboto';
+                font-weight: 500;
+                margin-bottom: 3rem;
+            }
+        }
+        &-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+            &-card{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 45%;
+                margin: 1rem;
+                border-radius: 3px;
+                overflow: hidden;
+                box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
+                ion-icon{
+                    font-size: 35px;
+                    padding: 0.5rem;
+                    border-radius: 50%;
+                    border: 2px solid $gray;
+                }
+                .circle{
+                    margin: 1rem;
+                }
+                p{
+                    margin: 1rem;
+                }
+                div{
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .skillest{
+        &-cards{
+            &-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                &-card{
+                    width: 90%;
+                }
+            }
+        }
+    }
 }

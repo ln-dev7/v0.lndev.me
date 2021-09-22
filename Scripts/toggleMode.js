@@ -10,6 +10,8 @@ let aboutAbout = document.querySelector('.about-about')
 let aboutHobbiesH3 = document.querySelector('.about-hobbies h3')
 let educationCardsTitle1 = document.querySelector('.education-cards-title h1')
 let educationCardsTitle2 = document.querySelector('.education-cards-title h2')
+let skillestCardsTitle1 = document.querySelector('.skillest-cards-title h1')
+let skillestCardsTitle2 = document.querySelector('.skillest-cards-title h2')
 toggleMode.addEventListener('click', () => {
     arrow.classList.toggle('active')
     toggleMode.classList.toggle('active')
@@ -28,6 +30,8 @@ toggleMode.addEventListener('click', () => {
     aboutHobbiesH3.classList.toggle('active')
     educationCardsTitle1.classList.toggle('active')
     educationCardsTitle2.classList.toggle('active')
+    skillestCardsTitle1.classList.toggle('active')
+    skillestCardsTitle2.classList.toggle('active')
 })
 
 // Menu burger
