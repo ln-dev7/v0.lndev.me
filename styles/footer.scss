@@ -1,0 +1,59 @@
+.footer.active{
+    background: rgba($default, $alpha: 0.3);
+    h2, p{
+        color: $white;
+    }
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $gray-white;
+    &-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+            h2{
+                padding: 1rem;
+                font-family: 'Roboto';
+                font-weight: 500;
+                text-align: 400;
+            }
+            &-socials{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin: 0 10px;
+                    ion-icon{
+                        padding: 0.5rem;
+                        margin: 0.5rem;
+                        font-size: 15px;
+                        color: $white;
+                    }
+                    transition: opacity .3s;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+                a:nth-child(1){
+                    background: #00aced;
+                }
+                a:nth-child(2){
+                    background: #0077b5;
+                }
+                a:nth-child(3){
+                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+                }
+            }
+            p{
+                font-size: 18px;
+                padding: 1rem;
+            }
+    }
+}

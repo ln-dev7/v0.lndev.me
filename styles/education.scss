@@ -79,6 +79,14 @@
                 }
                 &-container{
                     grid-area: 1 / 2 / 2 / 6;
+                    b{
+                        a{
+                            transition: opacity .3s ease;
+                            &:hover{
+                                opacity: .8;
+                            }
+                        }
+                    }
                 }
             }
         }
