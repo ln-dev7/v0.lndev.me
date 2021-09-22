@@ -12,6 +12,7 @@ let educationCardsTitle1 = document.querySelector('.education-cards-title h1')
 let educationCardsTitle2 = document.querySelector('.education-cards-title h2')
 let skillestCardsTitle1 = document.querySelector('.skillest-cards-title h1')
 let skillestCardsTitle2 = document.querySelector('.skillest-cards-title h2')
+let skillestCardsContainerCard = document.querySelectorAll('.skillest-cards-container-card')
 toggleMode.addEventListener('click', () => {
     arrow.classList.toggle('active')
     toggleMode.classList.toggle('active')
@@ -32,6 +33,9 @@ toggleMode.addEventListener('click', () => {
     educationCardsTitle2.classList.toggle('active')
     skillestCardsTitle1.classList.toggle('active')
     skillestCardsTitle2.classList.toggle('active')
+    skillestCardsContainerCard.forEach(element => {
+        element.classList.toggle('active')
+    });
 })
 
 // Menu burger

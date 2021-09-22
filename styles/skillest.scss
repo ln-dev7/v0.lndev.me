@@ -39,6 +39,18 @@
             justify-content: center;
             flex-wrap: wrap;
             width: 100%;
+            &-card.active{
+                background: $gray-dark;
+                box-shadow: 0 2px 10px rgba($info, $alpha: 0.1);
+            }
+            &-card.active:nth-child(3){div{ion-icon:nth-child(2){
+                color: $white;
+                transition: .3s ease;
+                &:hover{
+                    background: rgba($white, $alpha: 0.2);
+                    cursor: pointer;
+                }
+            }}}
             &-card{
                 display: flex;
                 justify-content: center;
@@ -49,6 +61,7 @@
                 border-radius: 3px;
                 overflow: hidden;
                 box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
+                transition: transform .3s ease;
                 ion-icon{
                     font-size: 35px;
                     padding: 0.5rem;
@@ -63,6 +76,153 @@
                 }
                 div{
                     margin: 1rem;
+                }
+                &:hover{
+                    transform: translateX(-10px);
+                }
+            }
+            &-card:nth-child(1){
+                .circle{
+                    color: $info;
+                    border-color: $info;
+                    background: rgba($info, $alpha: 0.2);
+                }
+                p{
+                    color: $info;
+                }
+                div{
+                    ion-icon{
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+                div{
+                    ion-icon:nth-child(1){
+                        color: #e54d26;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#e54d26, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(2){
+                        color: #3d8fc6;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#3d8fc6, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(3){
+                        color: #CD6799;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#CD6799, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(4){
+                        color: #f0db4f;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#f0db4f, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(5){
+                        color: #61dafb;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#61dafb, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &-card:nth-child(2){
+                .circle{
+                    color: $cyan;
+                    border-color: $cyan;
+                    background: rgba($cyan, $alpha: 0.2);
+                }
+                p{
+                    color: $cyan;
+                }
+                div{
+                    ion-icon{
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+                div{
+                    ion-icon:nth-child(1){
+                        color: #a4c439;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#a4c439, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(2){
+                        color: #61dafb;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#61dafb, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &-card:nth-child(3){
+                .circle{
+                    color: $warning;
+                    border-color: $warning;
+                    background: rgba($warning, $alpha: 0.2);
+                }
+                p{
+                    color: $warning;
+                }
+                div{
+                    ion-icon{
+                        &:hover{
+                            transform: translateY(-5px);
+                        }
+                    }
+                }
+                div{
+                    ion-icon:nth-child(1){
+                        color: #ffd43b;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#ffd43b, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }ion-icon:nth-child(2){
+                        color: #181616;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#181616, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(3){
+                        color: #f34f29;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#f34f29, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(4){
+                        color: #2970f3;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#2970f3, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
@@ -82,6 +242,15 @@
                     width: 90%;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .skillest{
+        &-cards{
+            width: 90%;
+            margin: 0.5rem;
         }
     }
 }
