@@ -16,6 +16,7 @@ let skillestCardsContainerCard = document.querySelectorAll('.skillest-cards-cont
 let footer = document.querySelector('.footer')
 let other = document.querySelector('.other')
 let services = document.querySelector('.services')
+let experience = document.querySelector('.experience')
 toggleMode.addEventListener('click', () => {
     arrow.classList.toggle('active')
     toggleMode.classList.toggle('active')
@@ -42,6 +43,7 @@ toggleMode.addEventListener('click', () => {
     other.classList.toggle('active')
     footer.classList.toggle('active')
     services.classList.toggle('active')
+    experience.classList.toggle('active')
 })
 
 // Menu burger
