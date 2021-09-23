@@ -22,12 +22,30 @@
         align-items: center;
         flex-direction: column;
         &-citation{
+            position: relative;
             font-family: 'Birthstone', cursive;
             font-size: 35px;
             color: $default;
             margin-bottom: 3rem;
             //font-weight: bold;
             text-align: center;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 2px;
+                background: rgba($default, $alpha: 0.5);
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: rgba($default, $alpha: 0.5);
+            }
         }
         &-title{
             h1.active{
