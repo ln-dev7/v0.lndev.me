@@ -5,6 +5,11 @@
     h2{
         color: $light;    
     }
+    .oc-cert{
+        span{
+            color: $white;
+        }
+    }
 }
 .other{
     display: flex;
@@ -46,15 +51,38 @@
             h2{
                 margin-bottom: 3rem;
             }
-            img{
+            .oc-cert{
+                position: relative;
                 height: 300px;
                 width: calc(300px * 1.7793594306);
-                transition: opacity .3s ease;
-                border-radius: 10px;
                 margin-bottom: 1.5rem;
-                &:hover{
-                    opacity: 0.5;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    transition: opacity .3s ease;
+                    border-radius: 10px;
                 }
+                span{
+                    position: absolute;
+                    transform: translateY(150px);
+                    color: $gray-dark;
+                    font-weight: bold;
+                    text-align: center;
+                    opacity: 0;
+                    font-size: 20px;
+                    transition: .3s;
+                }
+                &:hover img{
+                    opacity: 0.08;
+                }
+            }
+            a:hover span{
+                transform: translateY(0px);
+                opacity: 1;
             }
         }
         &-contact{
@@ -122,7 +150,19 @@
                 transition: transform .3s ease;
             }
             &:hover::before{
-                animation: hover_cv .3s infinite;
+                -webkit-animation: hover_cv .3s infinite;
+                        animation: hover_cv .3s infinite;
+            }
+            @-webkit-keyframes hover_cv {
+                0%{
+                    transform: translateY(0);
+                }
+                50%{
+                    transform: translateY(-10px);
+                }
+                100%{
+                    transform: translateY(10px);
+                }
             }
             @keyframes hover_cv {
                 0%{
@@ -144,9 +184,13 @@
         &-container{
             width: 90%;
         }
-        img{
+        .oc-cert{
             height: calc(100% / 1.7793594306);
             width: 100%;
+            img{
+                height: 100%;
+                width: 100%;
+            }
         }
     }
 }
