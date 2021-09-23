@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    min-height: 100vh;
     margin-bottom: 5rem;
     &-cards{
         width: 70%;
@@ -102,6 +101,56 @@
                 div{
                     margin: 1rem;
                     text-align: center;
+                }
+            }
+        }
+        &-extern{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p{
+                text-align: center;
+                padding: 0.5rem;
+            }
+            button{
+                width: 100%;
+                padding: 1rem;
+                border: none;
+                border-radius: 10px;
+                background: $primary;
+                cursor: pointer;
+                color: $white;
+                transition: 1.5s ease;
+                &:hover{
+                    animation: button 1.5s alternate both;
+                    opacity: 0.8;
+                }
+            }
+            @keyframes button {
+                0%{
+                    transform: translateX(0);
+                }
+                12%{
+                    transform: translateX(5px);
+                }
+                33%{
+                    transform: translateX(-5px);
+                }
+                44%{
+                    transform: scale(1.1);
+                }
+                54%{
+                    transform: scale(1);
+                }
+                66%{
+                    transform: translateX(-5px);
+                }
+                78%{
+                    transform: translateX(5px);
+                }
+                100%{
+                    transform: translateX(0px);
                 }
             }
         }
