@@ -123,8 +123,35 @@
                 color: $white;
                 transition: 1.5s ease;
                 &:hover{
-                    animation: button 1.5s alternate both;
+                    -webkit-animation: button 1.5s alternate both;
+                            animation: button 1.5s alternate both;
                     opacity: 0.8;
+                }
+            }
+            @-webkit-keyframes button {
+                0%{
+                    transform: translateX(0);
+                }
+                12%{
+                    transform: translateX(5px);
+                }
+                33%{
+                    transform: translateX(-5px);
+                }
+                44%{
+                    transform: scale(1.1);
+                }
+                54%{
+                    transform: scale(1);
+                }
+                66%{
+                    transform: translateX(-5px);
+                }
+                78%{
+                    transform: translateX(5px);
+                }
+                100%{
+                    transform: translateX(0px);
                 }
             }
             @keyframes button {
