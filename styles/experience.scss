@@ -104,11 +104,12 @@
                 }
             }
         }
-        &-extern{
+        &-github{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin: 1rem;
             p{
                 text-align: center;
                 padding: 0.5rem;
@@ -178,6 +179,50 @@
                 }
                 100%{
                     transform: translateX(0px);
+                }
+            }
+        }
+        &-formation-web{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1rem;
+            p{
+                text-align: center;
+                padding: 0.5rem;
+            }
+            .form-web{
+                position: relative;
+                height: 300px;
+                width: calc(300px * 1.7793594306);
+                margin-bottom: 1.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    transition: opacity .3s ease;
+                    border-radius: 10px;
+                }
+                span{
+                    position: absolute;
+                    transform: translateY(150px);
+                    color: $gray-dark;
+                    font-weight: bold;
+                    text-align: center;
+                    opacity: 0;
+                    font-size: 20px;
+                    transition: .3s;
+                }
+                &:hover img{
+                    opacity: 0.08;
+                }
+                &:hover span{
+                    transform: translateY(0px);
+                    opacity: 1;
                 }
             }
         }
