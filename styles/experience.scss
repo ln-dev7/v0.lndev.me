@@ -8,6 +8,9 @@
     .experience-cards-citation{
         color: $gray-white;
     }
+    .form-web{
+        color: $white;
+    }
 }
 .experience{
     display: flex;
@@ -251,6 +254,21 @@
         &-cards{
             width: 90%;
             margin: 0.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .experience{
+        &-cards{
+            .form-web{
+                height: calc(100% / 1.77777777778);
+                width: 100%;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
         }
     }
 }
