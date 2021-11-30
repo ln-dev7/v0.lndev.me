@@ -43,7 +43,7 @@
                 background: $gray-dark;
                 box-shadow: 0 2px 10px rgba($info, $alpha: 0.1);
             }
-            &-card.active:nth-child(3){div{ion-icon:nth-child(2){
+            &-card.active:nth-child(3){div{ion-icon:nth-child(1){
                 color: $white;
                 transition: .3s ease;
                 &:hover{
@@ -67,6 +67,23 @@
                     padding: 0.5rem;
                     border-radius: 50%;
                     border: 2px solid $gray;
+                }
+                span{
+                    display: inline-block;
+                    width: 55px;
+                    height: 55px;
+                    border: 2px solid $gray;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: transform .3s ease;
+                    img{
+                        padding: 0.5rem;
+                        text-align: center;
+                    }
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
                 }
                 .circle{
                     margin: 1rem;
@@ -139,6 +156,25 @@
                             cursor: pointer;
                         }
                     }
+                    span:nth-child(6){
+                        img{
+                            padding: 1rem;
+                        }
+                        color: #ff3c00;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#ff3c00, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
+                    ion-icon:nth-child(7){
+                        color: #a4c439;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#a4c439, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
             &-card:nth-child(2){
@@ -151,26 +187,16 @@
                     color: $cyan;
                 }
                 div{
-                    ion-icon{
-                        &:hover{
-                            transform: translateY(-5px);
-                        }
+                    span{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
-                }
-                div{
-                    ion-icon:nth-child(1){
-                        color: #a4c439;
+                    span:nth-child(1){
+                        color: #787cb4;
                         transition: .3s ease;
                         &:hover{
-                            background: rgba(#a4c439, $alpha: 0.2);
-                            cursor: pointer;
-                        }
-                    }
-                    ion-icon:nth-child(2){
-                        color: #61dafb;
-                        transition: .3s ease;
-                        &:hover{
-                            background: rgba(#61dafb, $alpha: 0.2);
+                            background: rgba(#787cb4, $alpha: 0.2);
                             cursor: pointer;
                         }
                     }
@@ -194,13 +220,6 @@
                 }
                 div{
                     ion-icon:nth-child(1){
-                        color: #ffd43b;
-                        transition: .3s ease;
-                        &:hover{
-                            background: rgba(#ffd43b, $alpha: 0.2);
-                            cursor: pointer;
-                        }
-                    }ion-icon:nth-child(2){
                         color: #181616;
                         transition: .3s ease;
                         &:hover{
@@ -208,20 +227,37 @@
                             cursor: pointer;
                         }
                     }
-                    ion-icon:nth-child(3){
-                        color: #f34f29;
-                        transition: .3s ease;
-                        &:hover{
-                            background: rgba(#f34f29, $alpha: 0.2);
-                            cursor: pointer;
-                        }
-                    }
-                    ion-icon:nth-child(4){
+                    ion-icon:nth-child(2){
                         color: #2970f3;
                         transition: .3s ease;
                         &:hover{
                             background: rgba(#2970f3, $alpha: 0.2);
                             cursor: pointer;
+                        }
+                    }
+                }
+            }
+            &-card:nth-child(4){
+                div{
+                    span:nth-child(1){
+                        color: #0b48b0;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#0b48b0, $alpha: 0.2);
+                        }
+                    }
+                    span:nth-child(2){
+                        color: #046b32;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#046b32, $alpha: 0.2);
+                        }
+                    }
+                    span:nth-child(3){
+                        color: #a51424;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#a51424, $alpha: 0.2);
                         }
                     }
                 }
