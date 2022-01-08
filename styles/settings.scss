@@ -53,5 +53,8 @@ body{
 
 body.active{
     background-color: $dark;
+    .navigation{
+        background-color: $dark;
+    }
 }
 
