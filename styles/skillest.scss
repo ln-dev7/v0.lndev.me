@@ -186,6 +186,17 @@
                             cursor: pointer;
                         }
                     }
+                    span:nth-child(9){
+                        img{
+                            padding: 0.7rem;
+                        }
+                        color: #4effca;
+                        transition: .3s ease;
+                        &:hover{
+                            background: rgba(#4effca, $alpha: 0.2);
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
             &-card:nth-child(2){
