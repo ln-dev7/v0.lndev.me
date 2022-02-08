@@ -101,30 +101,19 @@
                 justify-content: center;
                 align-items: center;
                 a{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 1rem;
-                    transition: all .3s ease;
-                    &:hover{
-                        opacity: .5;
-                        transform: rotate(540deg);
+                    button{
+                        border-radius: 10px;
+                        outline: none;
+                        padding: 1rem 1.5rem;
+                        border: 2px solid $indigo;
+                        background: $white;
+                        color: $indigo;
+                        font-weight: bold;
+                        cursor: pointer;
+                        &:hover{
+                            background: rgba($color: $indigo, $alpha: .05);
+                        }
                     }
-                    ion-icon{
-                        padding: 0.5rem;
-                        font-size: 30px;
-                        color: $white;
-                    }
-                }
-                a:nth-child(1){
-                    background: #25D366;
-                    box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
-                    border-radius: 50%;
-                }
-                a:nth-child(2){
-                    background: $danger;
-                    box-shadow: 0 2px 10px rgba($danger, $alpha: 0.2);
-                    border-radius: 50%;  
                 }
             }
         }
