@@ -51,6 +51,16 @@ body{
     transition: background-color .3s ease;
 }
 
+body::-webkit-scrollbar {
+  background: none;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $purple;
+  border-radius: 10px;
+}
+
 body.active{
     background-color: $dark;
     .navigation{
