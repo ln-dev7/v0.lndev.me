@@ -235,13 +235,19 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-    //   overflow-x: scroll;
+      //   overflow-x: scroll;
       a {
         margin: 0.5rem;
         img {
           width: 500px;
           height: auto;
+          border-radius: 5px;
           object-fit: cover;
+          overflow: hidden;
+          transition: 0.3s ease;
+          &:hover {
+            box-shadow: 2px 2px 10px rgba($dark, $alpha: 0.4);
+          }
         }
       }
     }
