@@ -47,6 +47,7 @@ img{
 }
 
 body{
+    position: relative;
     background-color: $white;
     transition: background-color .3s ease;
     overflow-x: hidden;

@@ -1,6 +1,9 @@
 // Gestion du dark-mode 
 let toggleMode = document.querySelector('.toggle-mode')
 let arrow = document.querySelector('.arrow')
+let don = document.querySelector('.don')
+let donClose = document.querySelector('.don-close')
+let modal = document.querySelector('#modal')
 let body = document.querySelector('body')
 let headerImg = document.querySelector('.header-img')
 let navigationLogo = document.querySelectorAll('.navigation-logo')
@@ -17,9 +20,16 @@ let footer = document.querySelector('.footer')
 let other = document.querySelector('.other')
 let services = document.querySelector('.services')
 let experience = document.querySelector('.experience')
+don.addEventListener('click', () => {
+    modal.classList.add('active')
+})
+donClose.addEventListener('click', () => {
+    modal.classList.remove('active')
+})
 toggleMode.addEventListener('click', () => {
     arrow.classList.toggle('active')
     toggleMode.classList.toggle('active')
+    don.classList.toggle('active')
     body.classList.toggle('active')
     if (body.classList.contains('active')) {
         headerImg.innerHTML = '<img src="img/ln3.png" alt="">'
