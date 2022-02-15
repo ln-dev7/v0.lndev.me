@@ -107,6 +107,22 @@
         }
       }
     }
+    &-project {
+      height: 600px;
+      overflow: hidden;
+      overflow-y: scroll;
+      
+
+      &::-webkit-scrollbar {
+        background: none;
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $success;
+        border-radius: 10px;
+      }
+    }
     &-github {
       display: flex;
       justify-content: center;
