@@ -24,7 +24,7 @@
   flex-direction: column;
   position: absolute;
   max-width: 500px;
-  background: #fff;
+  background: $dark;
   border-radius: 10px;
   box-shadow: 2px 2px 25px #00000033;
   .don-close {
@@ -46,7 +46,7 @@
     text-align: center;
     font-family: 'Parisienne', cursive;
     font-size: 30px;
-    color: $gray-dark;
+    color: $white;
     margin: 0.5rem 0;
   }
   h3{

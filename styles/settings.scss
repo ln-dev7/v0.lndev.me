@@ -68,5 +68,11 @@ body.active{
     .navigation{
         background-color: $dark;
     }
+    .card-don{
+        h2{
+            color: $gray-dark;
+        }
+        background-color: $white;
+    }
 }
 
