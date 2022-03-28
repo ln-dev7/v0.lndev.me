@@ -121,11 +121,11 @@
         width: 90%;
         margin-top: 1rem;
         margin-bottom: 1rem;
-       display: grid;
-grid-template-columns: repeat(6, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
 
         &-img {
           width: 100px;
@@ -152,8 +152,25 @@ grid-row-gap: 20px;
           }
         }
 
-        h4{
+        &-description {
           grid-area: 2 / 1 / 3 / 7;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          div {
+            margin: 10px 0;
+            button {
+              border: 1px solid $dark;
+              color: $dark;
+              padding: 5px;
+              margin: 2px;
+              background: none;
+              border-radius: 20px;
+              text-transform: uppercase;
+            }
+          }
         }
       }
     }
