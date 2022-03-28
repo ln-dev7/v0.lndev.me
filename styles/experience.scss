@@ -123,13 +123,14 @@
         margin-bottom: 1rem;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        //grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 20px;
 
         &-img {
           width: 100px;
           height: 100px;
+          margin-right: 5px;
           grid-area: 1 / 1 / 2 / 2;
 
           img {
