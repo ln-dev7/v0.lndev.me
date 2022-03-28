@@ -2,27 +2,33 @@
   h1 {
     color: $purple;
   }
+
   h2 {
     color: $light;
   }
+
   .experience-cards-citation {
     color: $gray-white;
   }
+
   .form-web span {
     color: $white;
   }
 }
+
 .experience {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 5rem;
+
   &-cards {
     width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     &-citation {
       position: relative;
       font-family: "Birthstone", cursive;
@@ -31,6 +37,7 @@
       margin-bottom: 3rem;
       //font-weight: bold;
       text-align: center;
+
       &::before {
         content: "";
         position: absolute;
@@ -39,6 +46,7 @@
         height: 2px;
         background: rgba($default, $alpha: 0.5);
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -49,10 +57,12 @@
         background: rgba($default, $alpha: 0.5);
       }
     }
+
     &-title {
       h1.active {
         color: $purple;
       }
+
       h1 {
         text-align: center;
         color: $gray-dark;
@@ -61,9 +71,11 @@
         font-weight: 500;
         margin-bottom: 2rem;
       }
+
       h2.active {
         color: $light;
       }
+
       h2 {
         text-align: center;
         color: $default;
@@ -72,46 +84,85 @@
         margin-bottom: 3rem;
       }
     }
+
     &-container {
+      width: 100%;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
-      width: 100%;
-      &-card.active {
-        background: $gray-dark;
-        box-shadow: 0 2px 10px rgba($white, $alpha: 0.5);
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+      margin-bottom: 50px;
+      border-radius: 5px;
+      background: $white;
+      //border: 0.2px solid $light;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
+
+      h3 {
+        color: $gray-dark;
+        font-weight: bold;
+
+        i {
+          color: $gray-dark;
+          font-weight: bold;
+        }
       }
+
+      b {
+        color: $default;
+      }
+
+      h4 {
+        color: $dark;
+      }
+
       &-card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 45%;
-        margin: 1rem;
-        border-radius: 3px;
-        overflow: hidden;
-        box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
-        transition: transform 0.3s ease;
-        ion-icon {
-          font-size: 35px;
-          padding: 0.5rem;
-          border-radius: 50%;
-          border: 2px solid $gray;
+        width: 90%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+       display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 20px;
+
+        &-img {
+          width: 100px;
+          height: 100px;
+          grid-area: 1 / 1 / 2 / 2;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
-        p {
-          margin: 1rem;
+
+        &-container {
+          grid-area: 1 / 2 / 2 / 7;
+
+          b {
+            a {
+              transition: opacity .3s ease;
+
+              &:hover {
+                opacity: .8;
+              }
+            }
+          }
         }
-        div {
-          margin: 1rem;
-          text-align: center;
+
+        h4{
+          grid-area: 2 / 1 / 3 / 7;
         }
       }
     }
+
     &-project {
       height: 600px;
       overflow: hidden;
       overflow-y: scroll;
-      
+
 
       &::-webkit-scrollbar {
         background: none;
@@ -123,16 +174,19 @@
         border-radius: 10px;
       }
     }
+
     &-github {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       margin: 1rem;
+
       p {
         text-align: center;
         padding: 0.5rem;
       }
+
       button {
         width: 100%;
         padding: 1rem;
@@ -142,75 +196,95 @@
         cursor: pointer;
         color: $white;
         transition: 1.5s ease;
+
         &:hover {
           -webkit-animation: button 1.5s alternate both;
           animation: button 1.5s alternate both;
           opacity: 0.8;
         }
       }
+
       @-webkit-keyframes button {
         0% {
           transform: translateX(0);
         }
+
         12% {
           transform: translateX(5px);
         }
+
         33% {
           transform: translateX(-5px);
         }
+
         44% {
           transform: scale(1.1);
         }
+
         54% {
           transform: scale(1);
         }
+
         66% {
           transform: translateX(-5px);
         }
+
         78% {
           transform: translateX(5px);
         }
+
         100% {
           transform: translateX(0px);
         }
       }
+
       @keyframes button {
         0% {
           transform: translateX(0);
         }
+
         12% {
           transform: translateX(5px);
         }
+
         33% {
           transform: translateX(-5px);
         }
+
         44% {
           transform: scale(1.1);
         }
+
         54% {
           transform: scale(1);
         }
+
         66% {
           transform: translateX(-5px);
         }
+
         78% {
           transform: translateX(5px);
         }
+
         100% {
           transform: translateX(0px);
         }
       }
     }
+
     &-formation-web {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       margin: 1rem;
+
       p {
         text-align: center;
         padding: 0.5rem;
       }
+
       .form-web {
         position: relative;
         height: 300px;
@@ -220,12 +294,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         img {
           height: 100%;
           width: 100%;
           transition: opacity 0.3s ease;
           border-radius: 10px;
         }
+
         span {
           position: absolute;
           transform: translateY(150px);
@@ -236,24 +312,29 @@
           font-size: 20px;
           transition: 0.3s;
         }
+
         &:hover img {
           opacity: 0.08;
         }
+
         &:hover span {
           transform: translateY(0px);
           opacity: 1;
         }
       }
     }
+
     &-project {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+
       //   overflow-x: scroll;
       a {
         margin: 0.5rem;
+
         img {
           width: 500px;
           height: auto;
@@ -261,12 +342,14 @@
           object-fit: cover;
           overflow: hidden;
           transition: 0.3s ease;
+
           &:hover {
             box-shadow: 2px 2px 10px rgba($dark, $alpha: 0.4);
           }
         }
       }
     }
+
     // &-project::-webkit-scrollbar {
     //   background: none;
     //   width: 5px;
@@ -289,6 +372,7 @@
         align-items: center;
         flex-direction: column;
         flex-wrap: nowrap;
+
         &-card {
           width: 90%;
         }
@@ -312,11 +396,78 @@
       .form-web {
         height: calc(100% / 1.77777777778);
         width: 100%;
+
         img {
           height: 100%;
           width: 100%;
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .experience {
+    &-cards {
+      width: 90%;
+
+      &-container {
+        &-card {
+          grid-column-gap: 1rem;
+
+          &-img {
+            width: 80px;
+            height: 80px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.faq-card {
+  width: 100%;
+  margin: 2px 0;
+  border: 1px solid $gray;
+  cursor: pointer;
+
+  .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    background: rgba($color: $info, $alpha: .05);
+  }
+
+  .answer {
+    height: 0;
+    overflow: hidden;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .line {
+      width: 90%;
+      height: 1px;
+      background: $light;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.faq-card.active {
+  .question {
+    border-bottom: 1px solid $gray;
+  }
+
+  .answer {
+    height: auto;
   }
 }
