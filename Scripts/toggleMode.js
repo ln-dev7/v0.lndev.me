@@ -31,11 +31,7 @@ toggleMode.addEventListener('click', () => {
     toggleMode.classList.toggle('active')
     don.classList.toggle('active')
     body.classList.toggle('active')
-    if (body.classList.contains('active')) {
-        headerImg.innerHTML = '<img src="img/ln3.png" alt="">'
-    } else {
-        headerImg.innerHTML = '<img src="img/ln.png" alt="">'
-    }
+    headerImg.classList.toggle('active')
     navigationLogo.forEach(element => {
         element.classList.toggle('active-mode')
     });
@@ -62,15 +58,15 @@ let navMenu = document.querySelector('.navigation-menu');
 
 navBurger.addEventListener('click', () => {
     navBurger.classList.toggle('active');
-    if(navBurger.classList.contains('active')){
+    if (navBurger.classList.contains('active')) {
         navMenu.classList.add('active');
-    }else{
+    } else {
         navMenu.classList.remove('active');
     }
 })
 
 // Boutton remonter en haut
-window.addEventListener('scroll', (e)=>{
+window.addEventListener('scroll', (e) => {
     let arrow = document.querySelector('.arrow');
     arrow.classList.toggle('arrow-hidde', window.scrollY > (screen.height) / 2);
 })
