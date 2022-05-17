@@ -202,6 +202,25 @@
             }
             &-card:nth-child(2) {
                 .circle {
+                    color: #2bffc6;
+                    border-color: #2bffc6;
+                    background: rgba(#2bffc6, $alpha: 0.2);
+                }
+                p{
+                    color: #2bffc6;
+                }
+                div {
+                    span:nth-child(1) {
+                        color: #57c6f8;
+                        transition: .3s ease;
+                        &:hover {
+                            background: rgba(#57c6f8, $alpha: 0.2);
+                        }
+                    }
+                }
+            }
+            &-card:nth-child(3) {
+                .circle {
                     color: #787cb4;
                     border-color: #787cb4;
                     background: rgba(#787cb4, $alpha: 0.2);
@@ -228,12 +247,12 @@
                     }
                 }
             }
-            &-card:nth-child(3) {
+            &-card:nth-child(4) {
                 .circle {
                     color: $warning;
                     border-color: $warning;
                     background: rgba($warning, $alpha: 0.2);
-                }
+                } 
                 p {
                     color: $warning;
                 }
@@ -245,7 +264,14 @@
                     }
                 }
                 div {
-                    ion-icon:nth-child(1) {
+                    span:nth-child(1) {
+                        color: #ffcb2c;
+                        transition: .3s ease;
+                        &:hover {
+                            background: rgba(#ffcb2c, $alpha: 0.2);
+                        }
+                    }
+                    ion-icon:nth-child(2) {
                         color: #181616;
                         transition: .3s ease;
                         &:hover {
@@ -253,7 +279,7 @@
                             cursor: pointer;
                         }
                     }
-                    ion-icon:nth-child(2) {
+                    ion-icon:nth-child(3) {
                         color: #2970f3;
                         transition: .3s ease;
                         &:hover {
@@ -261,29 +287,11 @@
                             cursor: pointer;
                         }
                     }
-                }
-            }
-            &-card:nth-child(4) {
-                div {
-                    span:nth-child(1) {
-                        color: #0b48b0;
+                    span:nth-child(4), span:nth-child(5) {
+                        color: #1293d8;
                         transition: .3s ease;
                         &:hover {
-                            background: rgba(#0b48b0, $alpha: 0.2);
-                        }
-                    }
-                    span:nth-child(2) {
-                        color: #046b32;
-                        transition: .3s ease;
-                        &:hover {
-                            background: rgba(#046b32, $alpha: 0.2);
-                        }
-                    }
-                    span:nth-child(3) {
-                        color: #a51424;
-                        transition: .3s ease;
-                        &:hover {
-                            background: rgba(#a51424, $alpha: 0.2);
+                            background: rgba(#1293d8, $alpha: 0.2);
                         }
                     }
                 }
