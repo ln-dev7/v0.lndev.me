@@ -144,10 +144,10 @@
 
           b {
             a {
-              transition: opacity .3s ease;
+              transition: opacity 0.3s ease;
 
               &:hover {
-                opacity: .8;
+                opacity: 0.8;
               }
             }
           }
@@ -181,7 +181,6 @@
       overflow: hidden;
       overflow-y: scroll;
 
-
       &::-webkit-scrollbar {
         background: none;
         width: 5px;
@@ -193,100 +192,83 @@
       }
     }
 
-    &-github {
+    &-mobile {
+      width: 100%;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;
-      margin: 1rem;
-
-      p {
-        text-align: center;
-        padding: 0.5rem;
-      }
-
-      button {
+      align-items: center;
+      justify-content: center;
+      .mobile-card {
         width: 100%;
-        padding: 1rem;
-        border: none;
-        border-radius: 10px;
-        background: $primary;
-        cursor: pointer;
-        color: $white;
-        transition: 1.5s ease;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        .splide {
+          position: relative;
 
-        &:hover {
-          -webkit-animation: button 1.5s alternate both;
-          animation: button 1.5s alternate both;
-          opacity: 0.8;
+          .splide__list {
+            width: 300px;
+          }
+
+          .splide__arrows.splide__arrows--ltr {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            z-index: 4;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+              border-radius: 50%;
+              padding: 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-color: $gray;
+              cursor: pointer;
+
+              svg {
+                width: 10px;
+                height: 10px;
+              }
+
+              &:first-child {
+                svg {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+          }
+
+          .splide__pagination {
+            display: none;
+          }
         }
-      }
+        .card-text{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
 
-      @-webkit-keyframes button {
-        0% {
-          transform: translateX(0);
-        }
-
-        12% {
-          transform: translateX(5px);
-        }
-
-        33% {
-          transform: translateX(-5px);
-        }
-
-        44% {
-          transform: scale(1.1);
-        }
-
-        54% {
-          transform: scale(1);
-        }
-
-        66% {
-          transform: translateX(-5px);
-        }
-
-        78% {
-          transform: translateX(5px);
-        }
-
-        100% {
-          transform: translateX(0px);
-        }
-      }
-
-      @keyframes button {
-        0% {
-          transform: translateX(0);
-        }
-
-        12% {
-          transform: translateX(5px);
-        }
-
-        33% {
-          transform: translateX(-5px);
-        }
-
-        44% {
-          transform: scale(1.1);
-        }
-
-        54% {
-          transform: scale(1);
-        }
-
-        66% {
-          transform: translateX(-5px);
-        }
-
-        78% {
-          transform: translateX(5px);
-        }
-
-        100% {
-          transform: translateX(0px);
+          h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+          }
+          button{
+            border: 2px solid $cyan;
+            color: $dark;
+            padding: 10px;
+            margin: 2px;
+            background: $cyan;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
         }
       }
     }
@@ -459,7 +441,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1rem;
-    background: rgba($color: $info, $alpha: .05);
+    background: rgba($color: $info, $alpha: 0.05);
   }
 
   .answer {

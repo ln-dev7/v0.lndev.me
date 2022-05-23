@@ -38,6 +38,9 @@
     <script src="Scripts/toggleMode.js" defer></script>
     <script src="Scripts/nav.js" defer></script>
     <script src="Scripts/experience.js" defer></script>
+
+    <link rel="stylesheet" href="styles/splide-core.min.css">
+    <script src="Scripts/splide.min.js"></script>
 </head>
 
 <body>
@@ -487,9 +490,24 @@
                     <img src="projets/loopstudio.png" alt="loopstudio">
                 </a>
             </div>
-            <div class="experience-cards-github">
-                <p> Vous pouvez voir tout mes autres side projets OpenSource sur mon github.</p>
-                <a href="https://github.com/ln-dev7" target="_blank"><button>OUVRIR MON GITHUB</button></a>
+            <div class="experience-cards-mobile">
+                <div class="mobile-card">
+                    <section class="splide">
+                        <div class="splide__track">
+                              <ul class="splide__list">
+                                  <li class="splide__slide"><img src="mockup/lngram-m-5.png" alt="mockup"></li>
+                                  <li class="splide__slide"><img src="mockup/lngram-m-1.png" alt="mockup"></li>
+                                  <li class="splide__slide"><img src="mockup/lngram-m-2.png" alt="mockup"></li>
+                                  <li class="splide__slide"><img src="mockup/lngram-m-3.png" alt="mockup"></li>
+                                  <li class="splide__slide"><img src="mockup/lngram-m-4.png" alt="mockup"></li>
+                              </ul>
+                        </div>
+                    </section>
+                    <div class="card-text">
+                        <h2>Clone de l' UI d' Instagram</h2>
+                    <a href="https://github.com/ln-dev7/LN-Gram" target="_blank"><button>Code source</button></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -585,11 +603,6 @@
                         <button>GO !!!</button>
                     </a>
                 </div>
-                <h2>Mes profils freelance</h2>
-                <div class="other-freelance">
-                    <a href="https://www.fiverr.com/ln_dev7" target="_blank"><img src="img/fiverr.png" alt="fiverr"></a>
-                    <a href="https://www.malt.fr/profile/lndev" target="_blank"><img src="img/malt.png" alt="malt"></a>
-                </div>
                 <a href="https://drive.google.com/file/d/1KKmC-Wo-mTnAq8GlhFldHt2WBnuElt2B/view?usp=sharing" target="_blank" class="other-container-cv">TELECHARGER MON CV</a>
             </div>
         </div>
@@ -619,7 +632,7 @@
             <p> &copy; Codé par LN • Tout droits réservé • 2021 -
                 <script>
                     document.write(new Date().getFullYear())
-                </script> | Inspiré de <a href="https://gabrielthecode.com/" target="_blank">Gabriel The Code</a>
+                </script>
             </p>
         </div>
     </footer>
@@ -643,6 +656,11 @@
             </svg>
         </div>
     </div>
+
+    <script>
+        var splide = new Splide( '.splide' );
+        splide.mount();
+    </script>
 </body>
 
 </html>
