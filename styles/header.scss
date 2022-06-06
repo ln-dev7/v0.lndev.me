@@ -52,39 +52,6 @@
                 box-shadow: 0px 0px 50px #121345;
                 background: red;
             }
-            .fade-box {
-                height: 170px;
-                width: 170px;
-                border-radius: 50%;
-                position: absolute;
-                bottom: -30px;
-                right: 0;
-                background-image: radial-gradient(#121345, #121345, #9a03b4);
-                z-index: 2;
-                transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-                z-index: 6;
-            }
-            .fade-text {
-                inset: 0;
-                position: fixed;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transform: translateX(-100%);
-                opacity: 0;
-                z-index: 15;
-                font-size: 100px;
-                font-family: 'Whisper', cursive;
-                transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                color: #fff;
-            }
-            .logo:hover~.fade-text {
-                opacity: 1;
-                transform: translateX(0%);
-            }
-            .logo:hover+.fade-box {
-                transform: scale(50);
-            }
         }
         &::after {
             content: '';
