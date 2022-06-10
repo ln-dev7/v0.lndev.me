@@ -4,6 +4,35 @@
   align-items: flex-start;
   min-height: 100vh;
   margin-bottom: 5rem;
+  position: relative;
+  .rotate-card{
+    background: linear-gradient(to right, $cyan, $info);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    top: 0;
+    left: -100px;
+    border-radius: 50%;
+    animation: rotate 5s infinite;
+    z-index: -1;
+    .rotate-content{
+      width: 99%;
+      height: 99%;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   &-cards {
     width: 70%;
     display: flex;
@@ -50,6 +79,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        background: $white;
         width: 45%;
         margin: 1rem;
         border-radius: 3px;
@@ -328,7 +358,7 @@
   }
 }
 
-body.active {
+body.dark-mode {
   .skillest {
     &-cards {
       &-title {

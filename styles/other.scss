@@ -3,6 +3,36 @@
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 3rem;
+  position: relative;
+  .rotate-card{
+    background: linear-gradient(to right, $cyan, $info);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    right: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    animation: rotate 5s infinite;
+    z-index: -1;
+    .rotate-content{
+      width: 99%;
+      height: 99%;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
   &-container {
     width: 75%;
@@ -147,7 +177,7 @@
   }
 }
 
-body.active {
+body.dark-mode {
   .other {
     &-container {
       h1 {

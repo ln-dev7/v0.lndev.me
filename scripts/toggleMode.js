@@ -14,7 +14,7 @@ let body = document.querySelector('body')
 let toggleMode = document.querySelector('.toggle-mode')
 
 toggleMode.addEventListener('click', () => {
-    body.classList.toggle('active')
+    body.classList.toggle('dark-mode')
 })
 
 // Menu burger

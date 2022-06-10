@@ -65,13 +65,18 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
-body.active{
+body.dark-mode{
     background-color: $dark;
     .card-don{
         h2{
             color: $gray-dark;
         }
         background-color: $white;
+    }
+    .rotate-card{
+        .rotate-content{
+            background: $dark;
+        }
     }
 }
 

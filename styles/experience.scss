@@ -3,7 +3,35 @@
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 5rem;
-
+  position: relative;
+  .rotate-card{
+    background: linear-gradient(to right, $danger, $warning);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    top: -150px;
+    right: -100px;
+    border-radius: 50%;
+    animation: rotate 5s infinite;
+    z-index: -1;
+    .rotate-content{
+      width: 99%;
+      height: 99%;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
   &-cards {
     width: 70%;
     display: flex;
@@ -301,7 +329,7 @@
   }
 }
 
-body.active {
+body.dark-mode {
   .experience {
     h1 {
       color: $purple;

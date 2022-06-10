@@ -1,5 +1,5 @@
 .loader{
-    background: $white;
+    background: $dark;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: $white;
+        background: $dark;
         z-index: 1000;
     }
     &-left{
