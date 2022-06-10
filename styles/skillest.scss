@@ -5,6 +5,7 @@
   min-height: 100vh;
   margin-bottom: 5rem;
   position: relative;
+  overflow: hidden;
   .rotate-card{
     background: linear-gradient(to right, $cyan, $info);
     position: absolute;

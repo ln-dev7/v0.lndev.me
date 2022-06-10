@@ -60,7 +60,7 @@
     top: -100px;
     border-radius: 50%;
     z-index: -2;
-    background: rgba($primary, $alpha: 0.03);
+    background: rgba($primary, $alpha: 0.08);
     -webkit-animation: span 10s infinite alternate;
     animation: span 10s infinite alternate;
   }
@@ -73,7 +73,7 @@
     right: 150px;
     border-radius: 50%;
     z-index: -2;
-    background: rgba($success, $alpha: 0.03);
+    background: rgba($success, $alpha: 0.08);
     -webkit-animation: span 5s infinite alternate;
     animation: span 5s infinite alternate;
   }
