@@ -5,7 +5,7 @@
     color: $purple;
   }
   &-title {
-    font-family: "Ubuntu";
+    font-family: "Ubuntu", cursive;
     font-weight: 500;
     font-size: 35px;
     margin-bottom: 20px;
@@ -13,7 +13,7 @@
   }
   &-about {
     color: $default;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
     b{
       font-weight: 500;
