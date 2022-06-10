@@ -1,21 +1,3 @@
-.experience.active {
-  h1 {
-    color: $purple;
-  }
-
-  h2 {
-    color: $light;
-  }
-
-  .experience-cards-citation {
-    color: $gray-white;
-  }
-
-  .form-web span {
-    color: $white;
-  }
-}
-
 .experience {
   display: flex;
   justify-content: center;
@@ -59,10 +41,6 @@
     }
 
     &-title {
-      h1.active {
-        color: $purple;
-      }
-
       h1 {
         text-align: center;
         color: $gray-dark;
@@ -72,15 +50,11 @@
         margin-bottom: 2rem;
       }
 
-      h2.active {
-        color: $light;
-      }
-
       h2 {
         text-align: center;
-        color: $default;
-        font-family: "Roboto";
-        font-weight: 500;
+        color: rgba($color: $default, $alpha: 0.8);
+        font-family: "Overpass", sans-serif;
+        font-weight: 400;
         margin-bottom: 3rem;
       }
     }
@@ -192,150 +166,12 @@
       }
     }
 
-    &-mobile {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .mobile-card {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        .splide {
-          position: relative;
-
-          .splide__list {
-            width: 300px;
-          }
-
-          .splide__arrows.splide__arrows--ltr {
-            position: absolute;
-            width: 100%;
-            top: 40%;
-            z-index: 4;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            button {
-              border-radius: 50%;
-              padding: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-color: $gray;
-              cursor: pointer;
-
-              svg {
-                width: 10px;
-                height: 10px;
-              }
-
-              &:first-child {
-                svg {
-                  transform: rotate(180deg);
-                }
-              }
-            }
-          }
-
-          .splide__pagination {
-            display: none;
-          }
-        }
-        .card-text{
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-
-          h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-          }
-          button{
-            border: 2px solid $cyan;
-            color: $dark;
-            padding: 10px;
-            margin: 2px;
-            background: $cyan;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
-
-            &:hover{
-              box-shadow: 0 2px 10px rgba($cyan, $alpha: 0.5);
-            }
-          }
-        }
-      }
-    }
-
-    &-formation-web {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: 1rem;
-
-      p {
-        text-align: center;
-        padding: 0.5rem;
-      }
-
-      .form-web {
-        position: relative;
-        height: 300px;
-        width: calc(300px * 1.7793594306);
-        margin-bottom: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        img {
-          height: 100%;
-          width: 100%;
-          transition: opacity 0.3s ease;
-          border-radius: 10px;
-        }
-
-        span {
-          position: absolute;
-          transform: translateY(150px);
-          color: $gray-dark;
-          font-weight: bold;
-          text-align: center;
-          opacity: 0;
-          font-size: 20px;
-          transition: 0.3s;
-        }
-
-        &:hover img {
-          opacity: 0.08;
-        }
-
-        &:hover span {
-          transform: translateY(0px);
-          opacity: 1;
-        }
-      }
-    }
-
     &-project {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-
-      //   overflow-x: scroll;
       a {
         margin: 0.5rem;
 
@@ -353,17 +189,6 @@
         }
       }
     }
-
-    // &-project::-webkit-scrollbar {
-    //   background: none;
-    //   width: 5px;
-    //   height: 3px;
-    // }
-
-    // &-project::-webkit-scrollbar-thumb {
-    //   background: $purple;
-    //   border-radius: 10px;
-    // }
   }
 }
 
@@ -473,5 +298,49 @@
 
   .answer {
     height: auto;
+  }
+}
+
+body.active {
+  .experience {
+    h1 {
+      color: $purple;
+    }
+
+    h2 {
+      color: $light;
+    }
+
+    &-cards{
+      &-citation{
+        color: $gray-white;
+      }
+      &-container{
+        background: transparent;
+        box-shadow: 0 2px 10px rgba($color: $info, $alpha: .1);
+        h3 {
+          color: $purple;
+        }
+        b {
+          color: $light;
+        }
+        h4 {
+          color: $light;
+        }
+        button {
+          color: $light;
+          border-color: $light;
+        }
+      }
+    }
+  }
+  .faq-card{
+    background: $white;
+    .question{
+      background: rgba($color: $info, $alpha: .05);
+    }
+    .answer{
+      background: $dark;
+    }
   }
 }

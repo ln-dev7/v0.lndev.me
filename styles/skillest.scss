@@ -12,9 +12,6 @@
     flex-direction: column;
     margin: 1rem;
     &-title {
-      h1.active {
-        color: $purple;
-      }
       h1 {
         text-align: center;
         color: $gray-dark;
@@ -23,14 +20,11 @@
         font-weight: 500;
         margin-bottom: 2rem;
       }
-      h2.active {
-        color: $light;
-      }
       h2 {
         text-align: center;
-        color: $default;
-        font-family: "Roboto";
-        font-weight: 500;
+        color: rgba($color: $default, $alpha: 0.8);
+        font-family: "Overpass", sans-serif;
+        font-weight: 400;
         margin-bottom: 3rem;
       }
     }
@@ -39,10 +33,6 @@
       justify-content: center;
       flex-wrap: wrap;
       width: 100%;
-      &-card.active {
-        background: $gray-dark;
-        box-shadow: 0 2px 10px rgba($info, $alpha: 0.1);
-      }
       &-card.active:nth-child(3) {
         div {
           ion-icon:nth-child(1) {
@@ -334,6 +324,27 @@
     &-cards {
       width: 90%;
       margin: 0.5rem;
+    }
+  }
+}
+
+body.active {
+  .skillest {
+    &-cards {
+      &-title {
+        h1 {
+          color: $purple;
+        }
+        h2 {
+          color: $light;
+        }
+      }
+      &-container {
+        &-card {
+          background: $gray-dark;
+          box-shadow: 0 2px 10px rgba($info, $alpha: 0.1);
+        }
+      }
     }
   }
 }
