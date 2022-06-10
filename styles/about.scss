@@ -113,6 +113,9 @@
     h3 {
       color: $default;
       padding: 1rem;
+      a{
+        font-weight: 500;
+      }
     }
     h3.active {
       color: $light;
