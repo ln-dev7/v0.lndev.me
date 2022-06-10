@@ -48,12 +48,12 @@
       height: 10px;
       background: $primary;
       border-radius: 10px;
-      &::before {
-        content: "90%";
-        position: absolute;
-        top: -25px;
-        right: 0;
-      }
+      // &::before {
+      //   content: "90%";
+      //   position: absolute;
+      //   top: -25px;
+      //   right: 0;
+      // }
     }
     &-italian {
       position: absolute;
@@ -61,12 +61,12 @@
       height: 10px;
       background: $cyan;
       border-radius: 10px;
-      &::before {
-        content: "60%";
-        position: absolute;
-        top: -25px;
-        right: 0;
-      }
+      // &::before {
+      //   content: "60%";
+      //   position: absolute;
+      //   top: -25px;
+      //   right: 0;
+      // }
     }
     &-english {
       position: absolute;
@@ -74,12 +74,12 @@
       height: 10px;
       background: $info;
       border-radius: 10px;
-      &::before {
-        content: "25%";
-        position: absolute;
-        top: -25px;
-        right: 0;
-      }
+      // &::before {
+      //   content: "25%";
+      //   position: absolute;
+      //   top: -25px;
+      //   right: 0;
+      // }
     }
     &-text {
       display: flex;
