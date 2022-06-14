@@ -37,6 +37,18 @@
       font-size: 40px;
       color: $primary;
     }
+    &-cv{
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: 15px;
+      border-radius: 30px;
+      font-weight: 600;
+      border: 2px solid $purple;
+      color: $purple;
+      &:hover{
+        background: rgba($color: $purple, $alpha: .1);
+      }
+    }
     .logo {
       cursor: pointer;
       position: absolute;
