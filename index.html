@@ -30,14 +30,10 @@
     <link rel="icon" sizes="76x76" href="img/logo.webp">
     <!-- Ionicon -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Grey+Qo&family=Overpass&family=Parisienne&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     <!-- CSS Local -->
     <link rel="stylesheet" href="index.css">
     <!-- JS Local -->
-    <script src="scripts/loader.js" defer></script>
+    <!-- <script src="scripts/loader.js" defer></script> -->
     <script src="scripts/scroll.js" defer></script>
     <script src="scripts/toggleMode.js" defer></script>
     <script src="scripts/nav.js" defer></script>
@@ -47,11 +43,11 @@
 
 <body class="dark-mode">
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader-load"></div>
         <div class="loader-bloc loader-left"></div>
         <div class="loader-bloc loader-right"></div>
-    </div>
+    </div> -->
     <div class="scroll-indicator"></div>
     <div id="modal">
         <div class="card-don">
@@ -70,94 +66,52 @@
         </div>
     </div>
 
+    <nav class="navigation-menu">
+        <li><a href="#about">Moi</a></li>
+        <li><a href="#skillest">Compétences</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Expérience</a></li>
+        <li><a href="#other">Autres</a></li><li>
+            <a href="https://twitter.com/ln_dev7?s=09" target="_blank">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/ln-dev7" target="_blank">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://youtube.com/channel/UCocpsPbVlb4bGYZKa-VXySg" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.twitch.tv/ln_dev7" target="_blank">
+                <ion-icon name="logo-twitch"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/in/lndev" target="_blank">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.instagram.com/invites/contact/?i=md4mtcvgsrg4&utm_content=7zkbn8h" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </li>
+    </nav>
+
     <nav class="navigation" id="navigation">
-        <a href="index.html" class="navigation-logo">
-            < LN />
-        </a>
         <div class="navigation-burger">
-            <div class="navigation-burger-line"></div>
+            <img src="img/menu.svg" alt="menu">
+            <span>MENU</span>
         </div>
-        <ul class="navigation-menu">
-            <li>
-                <a href="index.html" class="navigation-logo">
-                    < LN />
-                </a>
-            </li>
-            <li><a href="#about">Moi</a></li>
-            <li><a href="#skillest">Compétences</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#other">Autres</a></li><li>
-                <a href="https://twitter.com/ln_dev7?s=09" target="_blank">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/ln-dev7" target="_blank">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com/channel/UCocpsPbVlb4bGYZKa-VXySg" target="_blank">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.twitch.tv/ln_dev7" target="_blank">
-                    <ion-icon name="logo-twitch"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/lndev" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/invites/contact/?i=md4mtcvgsrg4&utm_content=7zkbn8h" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-            </li>
-        </ul>
-        </div>
-        <ul class="navigation-page">
-            <li><a href="#about">Moi</a></li>
-            <li><a href="#skillest">Compétences</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#experience">Expérience</a></li>
-            <li><a href="#other">Autres</a></li>
-        </ul>
-        <ul class="navigation-socials">
-            <li>
-                <a href="https://twitter.com/ln_dev7?s=09" target="_blank">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/ln-dev7" target="_blank">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://youtube.com/channel/UCocpsPbVlb4bGYZKa-VXySg" target="_blank">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.twitch.tv/ln_dev7" target="_blank">
-                    <ion-icon name="logo-twitch"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/lndev" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/invites/contact/?i=md4mtcvgsrg4&utm_content=7zkbn8h" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-            </li>
-        </ul>
+        <a href="index.html" class="navigation-logo">
+            LN DEV.
+        </a>
+        <a href="mailto:leonelngoya@gmail.com" class="navigation-mail"><span>CONTACT</span><img src="img/mail.svg" alt="=mail"></a>
     </nav>
 
     <header class="header" id="header">

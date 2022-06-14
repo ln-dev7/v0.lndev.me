@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Grey+Qo&family=Overpass&family=Parisienne&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&family=Ubuntu:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Inter:wght@300;400;500;600;700&family=Grey+Qo&family=Overpass&family=Parisienne&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&family=Ubuntu:wght@400;500&display=swap');
 
 $indigo: #5603ad;
 $purple: #8965e0;
@@ -51,16 +51,6 @@ body{
     background-color: $white;
     transition: background-color .3s ease;
     overflow-x: hidden;
-}
-
-body::-webkit-scrollbar {
-  background: none;
-  width: 5px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: $dark;
-  border-radius: 10px;
 }
 
 body.dark-mode{
