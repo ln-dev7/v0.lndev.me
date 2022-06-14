@@ -22,3 +22,14 @@ window.addEventListener(
   },
   false
 );
+
+const bodyWrapper = document.querySelector('body')
+const close = document.querySelector('.close-menu')
+
+burger.addEventListener('click', (e) => {
+    body.classList.add('wrap')
+})
+
+close.addEventListener('click', (e) => {
+    body.classList.remove('wrap')
+}) 
