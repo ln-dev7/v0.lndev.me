@@ -1,14 +1,3 @@
-let don = document.querySelector('.don')
-let donClose = document.querySelector('.don-close')
-let modal = document.querySelector('#modal')
-
-don.addEventListener('click', () => {
-    modal.classList.add('active')
-})
-donClose.addEventListener('click', () => {
-    modal.classList.remove('active')
-})
-
 // Gestion du dark-mode 
 let body = document.querySelector('body')
 let toggleMode = document.querySelector('.toggle-mode')

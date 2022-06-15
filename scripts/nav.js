@@ -1,12 +1,12 @@
-let burger = document.querySelector('.navigation-burger');
-let nav = document.querySelector('.navigation');
+let burger = document.querySelector(".navigation-burger");
+let nav = document.querySelector(".navigation");
 
 var lastScrollTop = 0;
 
 window.addEventListener(
   "scroll",
   function () {
-    if (!(burger.classList.contains("active"))) {
+    if (!burger.classList.contains("active")) {
       var st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
         nav.classList.add("fixed");
@@ -23,13 +23,20 @@ window.addEventListener(
   false
 );
 
-const bodyWrapper = document.querySelector('body')
-const close = document.querySelector('.close-menu')
+const bodyWrapper = document.querySelector("body");
+const close = document.querySelector(".close-menu");
 
-burger.addEventListener('click', (e) => {
-    body.classList.add('wrap')
-})
+burger.addEventListener("click", (e) => {
+  body.classList.add("wrap");
+});
 
-close.addEventListener('click', (e) => {
-    body.classList.remove('wrap')
-}) 
+close.addEventListener("click", (e) => {
+  body.classList.remove("wrap");
+});
+
+const itemsMenu = document.querySelectorAll(".wrapper-menu ul li a");
+itemsMenu.forEach((element) => {
+  element.addEventListener("click", (e) => {
+    body.classList.remove("wrap");
+  });
+});
