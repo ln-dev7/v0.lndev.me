@@ -53,16 +53,6 @@ body{
     overflow-x: hidden;
 }
 
-body::-webkit-scrollbar {
-  background: none;
-  width: 5px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: $dark;
-  border-radius: 10px;
-}
-
 body.dark-mode{
     background-color: $dark;
     .card-don{
