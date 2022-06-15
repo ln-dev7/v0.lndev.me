@@ -24,27 +24,30 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 350px;
+  width: 300px;
   height: 100vh;
   background: #f4f7f6;
-  transform: translateX(-350px);
+  transform: translateX(-300px);
   overflow-x: hidden;
   overflow-y: scroll;
   ul {
     li {
       cursor: pointer;
-      padding: 24px 36px;
       font-size: 17px;
       font-weight: 600;
       color: #202121;
       border-bottom: 1px solid #e6eaea;
       overflow: hidden;
       a {
+        width: 100%;
+        padding: 24px 36px;
         display: inline-block;
         transform-origin: left;
         transform: translateX(150px) rotate(50deg);
         transition: 0.5s ease;
         transition-delay: 0.2s;
+        color: $gray;
+        font-weight: 500;
       }
       &:nth-child(2) {
         a {
@@ -72,10 +75,16 @@
         }
       }
       &:nth-child(1) {
-        text-align: right;
-        font-size: 15px;
-        font-style: italic;
-        padding: 18px 36px;
+        span {
+          width: 100%;
+          display: inline-block;
+          text-align: right;
+          font-size: 15px;
+          font-style: italic;
+          padding: 14px 36px;
+          background: #ecefee;
+          font-weight: 400;
+        }
       }
       &:hover {
         &:is(:not(:nth-child(1))) {
@@ -154,7 +163,7 @@
 body.wrap {
   #wrapper {
     position: fixed;
-    transform: translateX(350px);
+    transform: translateX(300px);
     &::before {
       opacity: 1;
       visibility: visible;
@@ -173,12 +182,22 @@ body.wrap {
 }
 
 body.dark-mode {
-  .wrapper-menu{
+  .wrapper-menu {
     background: #2b2b2b;
-    ul{
-      li{
+    ul {
+      li {
         color: $gray;
         border-color: #434343;
+        &:nth-child(1) {
+          span {
+            background: #202121;
+          }
+        }
+        &:hover {
+          &:is(:not(:nth-child(1))) {
+            background: $dark;
+          }
+        }
       }
     }
   }
