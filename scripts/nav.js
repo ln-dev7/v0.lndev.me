@@ -40,3 +40,10 @@ itemsMenu.forEach((element) => {
     body.classList.remove("wrap");
   });
 });
+
+// When click outside the menu close it
+window.addEventListener("click", (e) => {
+  if (e.target.classList.contains("wrapper-menu")) {
+    body.classList.remove("wrap");
+  }
+});
