@@ -6,19 +6,6 @@ toggleMode.addEventListener('click', () => {
     body.classList.toggle('dark-mode')
 })
 
-// Menu burger
-let navBurger = document.querySelector('.navigation-burger');
-let navMenu = document.querySelector('.navigation-menu');
-
-navBurger.addEventListener('click', () => {
-    navBurger.classList.toggle('active');
-    if (navBurger.classList.contains('active')) {
-        navMenu.classList.add('active');
-    } else {
-        navMenu.classList.remove('active');
-    }
-})
-
 // Boutton remonter en haut
 window.addEventListener('scroll', (e) => {
     let arrow = document.querySelector('.arrow');

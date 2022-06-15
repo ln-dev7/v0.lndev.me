@@ -27,11 +27,11 @@ const bodyWrapper = document.querySelector("body");
 const close = document.querySelector(".close-menu");
 
 burger.addEventListener("click", (e) => {
-  body.classList.add("wrap");
+  bodyWrapper.classList.add("wrap");
 });
 
 close.addEventListener("click", (e) => {
-  body.classList.remove("wrap");
+  bodyWrapper.classList.remove("wrap");
 });
 
 const itemsMenu = document.querySelectorAll(".wrapper-menu ul li a");
@@ -43,7 +43,7 @@ itemsMenu.forEach((element) => {
 
 // When click outside the menu close it
 window.addEventListener("click", (e) => {
-  if (e.target.classList.contains("wrapper-menu")) {
-    body.classList.remove("wrap");
+  if (e.target.classList.contains("wrapper")) {
+    bodyWrapper.classList.remove("wrap");
   }
 });
