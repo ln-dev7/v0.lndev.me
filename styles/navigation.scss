@@ -105,6 +105,55 @@
   z-index: 5;
   background: #f4f7f6;
   border-bottom: 1px solid #e6eaea;
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-translate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e6eaea;
+    img {
+      padding: 1.1rem;
+      cursor: pointer;
+    }
+    .translate-card {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f4f7f6;
+      overflow: hidden;
+      border: 1px solid #e6eaea;
+      display: none;
+      span,
+      a {
+        width: 100%;
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+      }
+      .translate-card_choice:nth-child(1) {
+        border-bottom: 1px solid #e6eaea;
+      }
+      span.active {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 10px;
+          height: 10px;
+          background: #2b2b2b;
+        }
+      }
+    }
+    .translate-card.show {
+      display: block;
+    }
+  }
   &-burger {
     display: flex;
     justify-content: center;
@@ -145,7 +194,7 @@
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 440px) {
   .navigation {
     &-burger,
     &-mail {
@@ -206,6 +255,21 @@ body.dark-mode {
     border-color: #434343;
     &-logo {
       color: $gray;
+    }
+    &-translate {
+      border-color: #434343;
+      .translate-card {
+        background-color: #2b2b2b;
+        border-color: #434343;
+        .translate-card_choice:nth-child(1) {
+          border-color: #434343;
+        }
+        span.active {
+          &::before {
+            background: #e6eaea;
+          }
+        }
+      }
     }
     &-burger {
       border-color: #434343;
