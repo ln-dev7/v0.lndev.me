@@ -1,0 +1,42 @@
+.uses {
+    background: $dark;
+    padding: 2rem 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-container{
+        width: 500px;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0;
+            li{
+                margin: 0.25rem 0;
+            }
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        a{
+            background: $gray-dark;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+    }
+}
