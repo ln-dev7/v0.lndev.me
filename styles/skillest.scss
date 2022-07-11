@@ -242,45 +242,6 @@
       }
       &-card:nth-child(3) {
         .circle {
-          color: #787cb4;
-          border-color: #787cb4;
-          background: rgba(#787cb4, $alpha: 0.2);
-        }
-        p {
-          color: #787cb4;
-        }
-        div {
-          span:nth-child(1) {
-            color: #787cb4;
-            transition: 0.3s ease;
-            &:hover {
-              background: rgba(#787cb4, $alpha: 0.2);
-              cursor: pointer;
-            }
-          }
-          span:nth-child(2) {
-            color: #787cb4;
-            transition: 0.3s ease;
-            img {
-              margin-top: 6px;
-            }
-            &:hover {
-              background: rgba(#787cb4, $alpha: 0.2);
-              cursor: pointer;
-            }
-          }
-          span:nth-child(3) {
-            color: #ff291a;
-            transition: 0.3s ease;
-            &:hover {
-              background: rgba(#ff291a, $alpha: 0.2);
-              cursor: pointer;
-            }
-          }
-        }
-      }
-      &-card:nth-child(4) {
-        .circle {
           color: $warning;
           border-color: $warning;
           background: rgba($warning, $alpha: 0.2);
