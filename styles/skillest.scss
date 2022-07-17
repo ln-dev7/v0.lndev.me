@@ -176,12 +176,12 @@
           }
           span:nth-child(5) {
             img {
-              padding: 0.6rem;
+              padding: 0.7rem;
             }
-            color: #3178c6;
+            color: #5ed3f3;
             transition: 0.3s ease;
             &:hover {
-              background: rgba(#3178c6, $alpha: 0.2);
+              background: rgba(#5ed3f3, $alpha: 0.2);
               cursor: pointer;
             }
           }
@@ -210,12 +210,19 @@
           }
           span:nth-child(8) {
             img {
-              padding: 0.7rem;
+              padding: 0.6rem;
             }
-            color: #5ed3f3;
+            color: #3178c6;
             transition: 0.3s ease;
             &:hover {
-              background: rgba(#5ed3f3, $alpha: 0.2);
+              background: rgba(#3178c6, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          span:nth-child(9) {
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#000, $alpha: 0.2);
               cursor: pointer;
             }
           }
