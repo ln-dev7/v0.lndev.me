@@ -82,6 +82,10 @@ body.dark-mode{
         font-size: 2rem;
         font-weight: 400;
         text-align: center;
+        transition: .3s ease;
+    }
+    a:hover{
+        color: $info;
     }
 }
 
