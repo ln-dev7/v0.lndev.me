@@ -72,6 +72,19 @@ body.dark-mode{
     }
 }
 
+.brand-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    p, a{
+        font-family: "Parisienne", cursive;
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
 .scroll-indicator{
     position: fixed;
     top: 0;
