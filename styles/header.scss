@@ -176,6 +176,7 @@
     &-img {
       min-width: 300px;
       height: calc(300px * 4 / 3);
+      display: none;
       img {
         width: 100%;
         height: 100%;
