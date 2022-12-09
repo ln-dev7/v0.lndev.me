@@ -47,3 +47,21 @@ window.addEventListener("click", (e) => {
     bodyWrapper.classList.remove("wrap");
   }
 });
+
+// Guirlande de Noël
+
+var date = new Date();
+var jour = date.getDate();
+var mois = date.getMonth() + 1; // Janvier est le mois 0
+
+if ((mois == 12 && jour >= 1) || (mois == 1 && jour <= 7)) {
+  const guirlandes = document.querySelectorAll(".guirlande");
+  guirlandes.forEach((guirlande) => {
+    guirlande.style.display = "block";
+  });
+} else {
+  const guirlandes = document.querySelectorAll(".guirlande");
+  guirlandes.forEach((guirlande) => {
+    guirlande.style.display = "none";
+  });
+}

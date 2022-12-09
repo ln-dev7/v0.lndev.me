@@ -1,2 +1,3 @@
 ../.././dart-sass-ubuntu/sass index.scss ../index.css --style=compressed --no-source-map --watch
 ../.././dart-sass-windows/sass index.scss ../index.css --style=compressed --no-source-map --watch
+../../../dart-sass/sass index.scss ../index.css --style=compressed --no-source-map --watch
