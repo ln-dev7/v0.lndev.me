@@ -57,6 +57,11 @@ html {
   scroll-behavior: smooth;
 }
 
+*::selection {
+  background-color: $primary;
+  color: $light;
+}
+
 img,
 video {
   height: auto;
@@ -80,3 +85,5 @@ th {
 a{
   text-decoration: none;
 }
+
+

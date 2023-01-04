@@ -4,7 +4,7 @@
   left: 0;
   width: 30px;
   height: 30px;
-  background-color: rgba(31, 30, 30, 0.4);
+  border: 2px solid $primary;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   -webkit-transition-duration: 100ms;
@@ -21,7 +21,7 @@
   left: 50%;
   width: 8px;
   height: 8px;
-  background-color: black;
+  background-color: $primary;
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
@@ -33,6 +33,7 @@
   height: 50px;
   border-width: 3px;
   background-color: rgba(31, 30, 30, 0.4);
+  border: none;
 }
 .dot.hovered {
   display: none;
