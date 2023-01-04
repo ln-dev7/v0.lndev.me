@@ -3,9 +3,10 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  //align-items: center;
+  align-items: center;
   background-color: rgb(248 250 252/1);
   overflow: hidden;
+  min-height: 100vh;
   &__lines {
     position: absolute;
     inset: 0;
@@ -17,13 +18,12 @@
   }
   &__container {
     z-index: 2;
-    padding: 12rem 1rem 10rem 1rem;
+    padding: 0 1rem 0 1rem;
     width: 100%;
     max-width: 58rem;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 1.5rem;
 
     @media only screen and (max-width: 640px) {
       padding: 9rem 1rem 6rem 1rem;
@@ -31,12 +31,13 @@
 
     h1 {
       text-align: center;
-      font-size: 3.75rem;
+      font-size: 3rem;
       line-height: 1;
       font-weight: 700;
       color: transparent;
       -webkit-text-stroke: 1.75px $primary;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.125rem;
+      padding-bottom: 0.25rem;
 
       //font-family: studiofeixen, Arial, Helvetica, sans-serif;
 
@@ -61,7 +62,7 @@
       }
 
       @media only screen and (max-width: 1024px) {
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 1;
       }
 
@@ -77,6 +78,7 @@
       line-height: 1.5;
       color: $primary;
       text-align: center;
+      padding: .375rem 0 1.5rem 0;
       span {
         font-size: inherit;
         font-weight: inherit;

@@ -4,7 +4,7 @@ export default function Header() {
   const router = useRouter();
   return (
     <header className="header">
-      <ul className="flex gap-12">
+      <ul>
         <Link href="/">
           <li
             className={`cursor-pointer ${

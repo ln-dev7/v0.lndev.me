@@ -19,9 +19,13 @@
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.1.7",
     "next": "13.1.1",
+    "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.57.1",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "@types/nprogress": "^0.2.0"
   }
 }
