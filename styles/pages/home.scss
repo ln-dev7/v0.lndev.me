@@ -1,0 +1,96 @@
+.home {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  background-color: rgb(248 250 252/1);
+  overflow: hidden;
+  &__lines {
+    position: absolute;
+    inset: 0;
+    mask-image: linear-gradient(to bottom, transparent, black);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    background-position: bottom 1px center;
+    background-color: rgb(255 255 255/0.25);
+  }
+  &__container {
+    z-index: 2;
+    padding: 12rem 1rem 10rem 1rem;
+    width: 100%;
+    max-width: 58rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media only screen and (max-width: 640px) {
+      padding: 9rem 1rem 6rem 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3.75rem;
+      line-height: 1;
+      font-weight: 700;
+      color: transparent;
+      -webkit-text-stroke: 1.75px $primary;
+      letter-spacing: 0.1rem;
+
+      //font-family: studiofeixen, Arial, Helvetica, sans-serif;
+
+      &::selection {
+        background: $primary;
+        -webkit-text-stroke: 1.75px $light;
+      }
+
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        font-family: inherit;
+        letter-spacing: inherit;
+
+        color: $primary;
+
+        cursor: help;
+        &::selection {
+          background: $primary;
+          color: $light;
+        }
+      }
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 3rem;
+        line-height: 1;
+      }
+
+      @media only screen and (max-width: 640px) {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $primary;
+      text-align: center;
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+    }
+
+    a{
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+}
