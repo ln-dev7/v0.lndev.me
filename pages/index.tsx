@@ -5,8 +5,11 @@ import styles from "../styles/Home.module.css";
 
 import { motion } from "framer-motion";
 import { container, item } from "../animation";
+import { useContext } from "react";
+import { MouseContext } from "../context/mouseContext";
 
 export default function Home() {
+  const { cursorChangeHandler } = useContext(MouseContext);
   return (
     <>
       <Head>
@@ -26,7 +29,11 @@ export default function Home() {
             I’m a Front-end Developer & Web Integrator, <br /> I’m passionate
             about creating beautiful, intuitive and responsive websites.
           </p>
-          <Link href="/contact">
+          <Link
+            href="/contact"
+            onMouseEnter={() => cursorChangeHandler("hovered")}
+            onMouseLeave={() => cursorChangeHandler("")}
+          >
             <svg
               width="24"
               height="24"
@@ -37,16 +44,16 @@ export default function Home() {
               <path
                 d="M19.7501 11.7258L4.75012 11.7258"
                 stroke="#130F26"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <path
                 d="M13.6998 5.70124C13.6998 5.70124 19.7498 8.96224 19.7498 11.7242C19.7498 14.4882 13.6998 17.7502 13.6998 17.7502"
                 stroke="#130F26"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
             <span>About me</span>
