@@ -10,6 +10,7 @@ import SEO from "@bradgarropy/next-seo";
 
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
+import { useEffect } from "react";
 //Route Events.
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -18,6 +19,13 @@ Router.events.on("routeChangeError", () => NProgress.done());
 NProgress.configure({ showSpinner: false });
 
 export default function App({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const loader = document.getElementById("globalLoader");
+      if (loader) loader.style.display = "none";
+    }
+  }, []);
+
   return (
     <>
       <SEO

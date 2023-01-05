@@ -12,7 +12,7 @@
     inset: 0;
     mask-image: linear-gradient(to bottom, transparent, black);
     -webkit-mask-image: linear-gradient(to bottom, transparent, black);
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / .075)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
     background-position: bottom 1px center;
     background-color: rgb(255 255 255/0.25);
   }
@@ -53,8 +53,6 @@
         letter-spacing: inherit;
 
         color: $primary;
-
-        cursor: help;
         &::selection {
           background: $primary;
           color: $light;
