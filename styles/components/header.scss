@@ -1,5 +1,42 @@
 .header {
     position: fixed;
-    top: 0;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 5;
-}
+    border: none;
+    padding: 0 1rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 0.5rem;
+  
+    background: rgba($color: $primary, $alpha: 0.8);
+  
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      background: $primary;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          color: $secondary;
+          font-family: studiofeixen, Arial, Helvetica, sans-serif;
+        }
+  
+        &.active {
+          span {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
