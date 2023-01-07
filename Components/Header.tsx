@@ -14,7 +14,7 @@ export default function Header() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <span>Home</span>
+          <li>Home</li>
         </Link>
         <Link
           href="/about"
@@ -22,7 +22,7 @@ export default function Header() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <span>About</span>
+          <li>About</li>
         </Link>
         <Link
           href="/skills"
@@ -30,7 +30,7 @@ export default function Header() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <span>Skills</span>
+          <li>Skills</li>
         </Link>
         <Link
           href="/experience"
@@ -38,7 +38,7 @@ export default function Header() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <span>Experience</span>
+          <li>Experience</li>
         </Link>
         <Link
           href="/contact"
@@ -46,7 +46,7 @@ export default function Header() {
           onMouseEnter={() => cursorChangeHandler("hovered")}
           onMouseLeave={() => cursorChangeHandler("")}
         >
-          <span>Contact</span>
+          <li>Contact</li>
         </Link>
       </ul>
     </header>
