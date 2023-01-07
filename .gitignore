@@ -1,9 +1,12 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 *.txt
 *.css.map
-*.vscode
-*.next
-*.DS_Store
+
+.vscode
+.next
+
+/.vscode
+/.DS_Store
 
 # dependencies
 /node_modules
