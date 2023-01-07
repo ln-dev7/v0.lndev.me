@@ -52,6 +52,7 @@ export default function about() {
           write articles about development and I also make youtube videos
         </p>
         <a href="#">resume</a>
+        <a href="https://testimonial.to/ln-dev/all">Give me your opinion 😊</a>
       </main>
     </>
   );
