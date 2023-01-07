@@ -1,0 +1,222 @@
+.other {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  .rotate-card {
+    background: linear-gradient(to right, $cyan, $info);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    left: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    animation: rotate 5s infinite;
+    z-index: -1;
+    .rotate-content {
+      width: 99%;
+      height: 99%;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &-container {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+
+    h1 {
+      text-align: center;
+      color: $gray-dark;
+      font-family: "Ubuntu";
+      font-size: 35px;
+      font-weight: 500;
+    }
+
+    h2 {
+      text-align: center;
+      color: rgba($color: $default, $alpha: 0.8);
+      font-family: "Overpass", sans-serif;
+      font-weight: 400;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    &-certification {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h1 {
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        margin-bottom: 3rem;
+      }
+
+      .cert {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        flex-wrap: wrap;
+        margin-bottom: 2.5rem;
+        gap: 20px;
+
+        @media screen and (max-width: 400px) {
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        &-card {
+          overflow: hidden;
+          background: #f4f7f6;
+          border: 1px solid #e6eaea;
+          .card-img {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            background: $white;
+            img {
+              cursor: pointer;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease-out;
+              &:hover {
+                transform: scale(1.05);
+              }
+            }
+          }
+          .card-body {
+            width: 100%;
+            padding: 1rem;
+            &__text {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              h3 {
+                width: 100%;
+                font-weight: 600;
+              }
+              h5 {
+                width: 100%;
+                text-align: right;
+                font-size: 15px;
+                font-style: italic;
+                font-weight: 400;
+              }
+            }
+            &__footer {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              gap: 10px;
+              margin-top: 10px;
+              padding-top: 7px;
+              border-top: 1px solid #e6eaea;
+              button {
+                padding: 0.25rem 0.5rem;
+                border-radius: 30px;
+                border: none;
+                color: #fff;
+              }
+              button:nth-child(n){
+                background: #ff4e4e;
+              }
+              button:nth-child(2n){
+                background: #8154ef;
+              }
+              button:nth-child(3n){
+                background: #f9a825;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .other {
+    &-container {
+      width: 90%;
+
+      &-certification {
+        .cert {
+          flex-direction: column;
+
+          a {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .other {
+    &-container {
+      &-certification {
+        .cert {
+          a {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.dark-mode {
+  .other {
+    &-container {
+      h1 {
+        color: $purple;
+      }
+      h2 {
+        color: $light;
+      }
+      &-certification {
+        .cert {
+          &-card {
+            background-color: #2b2b2b;
+            border-color: #434343;
+            span {
+              color: $light;
+            }
+            .card-body {
+              &__footer {
+                border-color: #434343;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
