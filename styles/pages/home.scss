@@ -26,7 +26,7 @@
     flex-direction: column;
 
     @media only screen and (max-width: 640px) {
-      padding: 9rem 1rem 6rem 1rem;
+      //padding: 9rem 1rem 6rem 1rem;
     }
 
     h1 {
@@ -35,18 +35,18 @@
       line-height: 1;
       font-weight: 700;
       color: transparent;
-      -webkit-text-stroke: 1.75px $primary;
+      -webkit-text-stroke: 0.5px $primary;
       letter-spacing: 0.125rem;
       padding-bottom: 0.25rem;
 
-      //font-family: studiofeixen, Arial, Helvetica, sans-serif;
-
       &::selection {
         background: $primary;
-        -webkit-text-stroke: 1.75px $light;
+        -webkit-text-stroke: 0.5px $light;
       }
 
       span {
+        display: inline-block;
+        position: relative;
         font-size: inherit;
         font-weight: inherit;
         font-family: inherit;
@@ -55,9 +55,23 @@
         color: $primary;
 
         cursor: help;
+
+        &::after {
+          position: absolute;
+          content: "";
+          background: rgba($color: $primary, $alpha: .1);
+          border-top: 2px solid rgba($color: $primary, $alpha: .5);
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 15px;
+          z-index: -1;
+        }
+
         &::selection {
           background: $primary;
           color: $light;
+          -webkit-text-stroke: 0.5px $light;
         }
       }
 
@@ -67,8 +81,8 @@
       }
 
       @media only screen and (max-width: 640px) {
-        font-size: 2.25rem;
-        line-height: 2.5rem;
+        font-size: 2rem;
+        line-height: 2rem;
       }
     }
 
@@ -83,16 +97,43 @@
         font-size: inherit;
         font-weight: inherit;
       }
+      @media only screen and (max-width: 640px) {
+        font-size: 1rem;
+      }
     }
 
     a {
+      position: relative;
       display: flex;
       align-items: center;
       gap: 0.25rem;
 
+      transition: transform 0.25s ease-in-out;
+
       span {
         color: $primary;
-        font-weight: 400;
+        font-weight: 500;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $primary;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.25s ease-in-out;
+      }
+
+      &:hover {
+        transform: translateX(0.25rem);
+        &::after {
+          transform-origin: left;
+          transform: scaleX(1);
+        }
       }
     }
   }
