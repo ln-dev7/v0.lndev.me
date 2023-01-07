@@ -1,0 +1,54 @@
+#globalLoader {
+  position: fixed;
+  z-index: 1700;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $primary;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s ease-in-out;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bullet-animation 1s ease-in-out 2s infinite alternate;
+
+  svg {
+    animation: fill-animation .5s forwards 1s;
+    path {
+      stroke-dasharray: 572;
+      stroke-dashoffset: 572;
+      animation: text-animation 5s ease forwards;
+    }
+    @keyframes text-animation {
+      from {
+        stroke-dashoffset: 572;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+  @keyframes fill-animation {
+  from {
+      fill: transparent;
+    }
+   to {
+      fill: $light;
+    }
+  }
+}
+
+@keyframes bullet-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}

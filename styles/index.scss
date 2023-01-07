@@ -1,13 +1,13 @@
-@import 'settings';
-@import 'loader';
-@import 'elementFixe';
-@import 'navigation';
-@import 'header';
-@import 'about';
-@import 'skillest';
-@import 'services';
-@import 'experience';
-@import 'other';
-@import 'footer';
-@import 'mouse';
-@import 'uses';
+@import './base/variables';
+@import './base/fonts';
+@import './base/reset';
+
+@import './components/cursor';
+@import './components/header';
+@import './components/loader';
+
+@import './pages/home';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/experience';
+@import './pages/skills';
