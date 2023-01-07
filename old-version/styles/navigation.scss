@@ -1,0 +1,311 @@
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  transition: transform 0.5s ease-in-out;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+}
+.wrapper-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: #f4f7f6;
+  transform: translateX(-300px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  ul {
+    li {
+      cursor: pointer;
+      font-size: 17px;
+      font-weight: 600;
+      color: #202121;
+      border-bottom: 1px solid #e6eaea;
+      overflow: hidden;
+      a {
+        width: 100%;
+        padding: 24px 36px;
+        display: inline-block;
+        transform-origin: left;
+        transform: translateX(150px) rotate(50deg);
+        transition: 0.5s ease;
+        transition-delay: 0.2s;
+        color: $gray;
+        font-weight: 500;
+      }
+      &:nth-child(2) {
+        a {
+          transition-delay: 0.2s;
+        }
+      }
+      &:nth-child(3) {
+        a {
+          transition-delay: 0.22s;
+        }
+      }
+      &:nth-child(4) {
+        a {
+          transition-delay: 0.24s;
+        }
+      }
+      &:nth-child(5) {
+        a {
+          transition-delay: 0.26s;
+        }
+      }
+      &:nth-child(6) {
+        a {
+          transition-delay: 0.28s;
+        }
+      }
+      &:nth-child(1) {
+        span {
+          width: 100%;
+          display: inline-block;
+          text-align: right;
+          font-size: 15px;
+          font-style: italic;
+          padding: 14px 36px;
+          background: #ecefee;
+          font-weight: 400;
+        }
+      }
+      &:hover {
+        &:is(:not(:nth-child(1))) {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.3s;
+  z-index: 5;
+  background: #f4f7f6;
+  border-bottom: 1px solid #e6eaea;
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-translate {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e6eaea;
+    img {
+      padding: 1.1rem;
+      cursor: pointer;
+    }
+    .translate-card {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #f4f7f6;
+      overflow: hidden;
+      border: 1px solid #e6eaea;
+      display: none;
+      span,
+      a {
+        width: 100%;
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+      }
+      .translate-card_choice:nth-child(1) {
+        border-bottom: 1px solid #e6eaea;
+      }
+      span.active {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 10px;
+          height: 10px;
+          background: #2b2b2b;
+        }
+      }
+    }
+    .translate-card.show {
+      display: block;
+    }
+  }
+  &-burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.1rem;
+    border-right: 1px solid #e6eaea;
+    span {
+      font-family: "Inter", sans-serif;
+      margin-left: 5px;
+      font-weight: 500;
+    }
+  }
+  &-logo {
+    // font-family: "Grey Qo", cursive;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray;
+    padding: 1rem;
+  }
+  &-mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.1rem;
+    border-left: 1px solid #e6eaea;
+    background: #ecefee;
+    span {
+      font-family: "Inter", sans-serif;
+      margin-right: 5px;
+      font-weight: 500;
+    }
+    &:hover {
+      background: rgba($color: #ecefee, $alpha: 0.7);
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .navigation {
+    &-burger,
+    &-mail {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+.navigation.fixed {
+  transform: translateY(-100%);
+}
+
+body.wrap {
+  #wrapper {
+    position: fixed;
+    transform: translateX(300px);
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .wrapper-menu {
+    ul {
+      li {
+        a {
+          transform: translateX(0) rotate(0);
+        }
+      }
+    }
+  }
+}
+
+body.dark-mode {
+  .wrapper-menu {
+    background: #2b2b2b;
+    ul {
+      li {
+        color: $gray;
+        border-color: #434343;
+        &:nth-child(1) {
+          span {
+            background: #202121;
+          }
+        }
+        &:hover {
+          &:is(:not(:nth-child(1))) {
+            background: $dark;
+          }
+        }
+      }
+    }
+  }
+  .navigation {
+    background-color: #2b2b2b;
+    border-color: #434343;
+    &-logo {
+      color: $gray;
+    }
+    &-translate {
+      border-color: #434343;
+      .translate-card {
+        background-color: #2b2b2b;
+        border-color: #434343;
+        .translate-card_choice:nth-child(1) {
+          border-color: #434343;
+        }
+        span.active {
+          &::before {
+            background: #e6eaea;
+          }
+        }
+      }
+    }
+    &-burger {
+      border-color: #434343;
+    }
+    &-mail {
+      border-color: #434343;
+      background: #202121;
+      &:hover {
+        background: rgba($color: #202121, $alpha: 0.7);
+      }
+    }
+  }
+}
+
+.guirlande {
+  pointer-events: none;
+  z-index: 10;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+
+.guirlande1 {
+  height: 120px;
+  background: url("./../img/guirlande1.png") repeat-x 300% top;
+  top: -23px;
+}
+
+.guirlande2 {
+  background: url("./../img/guirlande2.png") repeat-x 70% top;
+  top: -71px;
+}
+
+.guirlande3 {
+  background: url("./../img/guirlande3.png") repeat-x 10% top;
+  top: -50px;
+}

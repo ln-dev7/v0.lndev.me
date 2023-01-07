@@ -1,0 +1,349 @@
+.skillest {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin-bottom: 5rem;
+  position: relative;
+  overflow: hidden;
+  .rotate-card{
+    background: linear-gradient(to right, $cyan, $info);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    top: 0;
+    left: -100px;
+    border-radius: 50%;
+    animation: rotate 5s infinite;
+    z-index: -1;
+    .rotate-content{
+      width: 99%;
+      height: 99%;
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  &-cards {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    &-title {
+      h1 {
+        text-align: center;
+        color: $gray-dark;
+        font-family: "Ubuntu";
+        font-size: 35px;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      h2 {
+        text-align: center;
+        color: rgba($color: $default, $alpha: 0.8);
+        font-family: "Overpass", sans-serif;
+        font-weight: 400;
+        margin-bottom: 3rem;
+      }
+    }
+    &-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      &-card.active:nth-child(3) {
+        div {
+          ion-icon:nth-child(1) {
+            color: $white;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba($white, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      &-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: $white;
+        width: 45%;
+        margin: 1rem;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba($dark, $alpha: 0.2);
+        transition: transform 0.3s ease;
+        ion-icon {
+          font-size: 35px;
+          padding: 0.5rem;
+          border-radius: 50%;
+          border: 2px solid $gray;
+        }
+        span {
+          display: inline-block;
+          width: 55px;
+          height: 55px;
+          border: 2px solid $gray;
+          border-radius: 50%;
+          overflow: hidden;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          img {
+            padding: 0.5rem;
+            text-align: center;
+          }
+          &:hover {
+            transform: translateY(-5px);
+          }
+        }
+        .circle {
+          margin: 1rem;
+        }
+        p {
+          margin: 1rem;
+          text-align: center;
+        }
+        div {
+          margin: 1rem;
+          text-align: center;
+        }
+        &:hover {
+          transform: translateX(-10px);
+        }
+      }
+      &-card:nth-child(1) {
+        .circle {
+          color: $info;
+          border-color: $info;
+          background: rgba($info, $alpha: 0.2);
+        }
+        p {
+          color: $info;
+        }
+        div {
+          ion-icon {
+            &:hover {
+              transform: translateY(-5px);
+            }
+          }
+        }
+        div {
+          ion-icon:nth-child(1) {
+            color: #e54d26;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#e54d26, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          ion-icon:nth-child(2) {
+            color: #3d8fc6;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#3d8fc6, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          ion-icon:nth-child(3) {
+            color: #cd6799;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#cd6799, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          ion-icon:nth-child(4) {
+            color: #efd81d;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#efd81d, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          span:nth-child(5) {
+            img {
+              padding: 0.7rem;
+            }
+            color: #5ed3f3;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#5ed3f3, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          span:nth-child(6) {
+            img {
+              padding: 0.6rem;
+            }
+            color: #ff3c00;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#ff3c00, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          // span:nth-child(7), span:nth-child(8), span:nth-child(9){
+          span:nth-child(7) {
+            img {
+              padding: 0.7rem;
+            }
+            color: #4effca;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#4effca, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          span:nth-child(8) {
+            img {
+              padding: 0.6rem;
+            }
+            color: #3178c6;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#3178c6, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          span:nth-child(9) {
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#000, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      &-card:nth-child(2) {
+        .circle {
+          color: #2bffc6;
+          border-color: #2bffc6;
+          background: rgba(#2bffc6, $alpha: 0.2);
+        }
+        p {
+          color: #2bffc6;
+        }
+        div {
+          span:nth-child(1) {
+            color: #57c6f8;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#57c6f8, $alpha: 0.2);
+            }
+          }
+        }
+      }
+      &-card:nth-child(3) {
+        .circle {
+          color: $warning;
+          border-color: $warning;
+          background: rgba($warning, $alpha: 0.2);
+        }
+        p {
+          color: $warning;
+        }
+        div {
+          ion-icon {
+            &:hover {
+              transform: translateY(-5px);
+            }
+          }
+        }
+        div {
+          span:nth-child(1) {
+            color: #ffcb2c;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#ffcb2c, $alpha: 0.2);
+            }
+          }
+          ion-icon:nth-child(2) {
+            color: #181616;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#181616, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          ion-icon:nth-child(3) {
+            color: #2970f3;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#2970f3, $alpha: 0.2);
+              cursor: pointer;
+            }
+          }
+          span:nth-child(4),
+          span:nth-child(5) {
+            color: #1293d8;
+            transition: 0.3s ease;
+            &:hover {
+              background: rgba(#1293d8, $alpha: 0.2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  .skillest {
+    &-cards {
+      &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        &-card {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skillest {
+    &-cards {
+      width: 90%;
+      margin: 0.5rem;
+    }
+  }
+}
+
+body.dark-mode {
+  .skillest {
+    &-cards {
+      &-title {
+        h1 {
+          color: $purple;
+        }
+        h2 {
+          color: $light;
+        }
+      }
+      &-container {
+        &-card {
+          background: $gray-dark;
+          box-shadow: 0 2px 10px rgba($info, $alpha: 0.1);
+        }
+      }
+    }
+  }
+}

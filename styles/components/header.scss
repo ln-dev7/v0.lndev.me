@@ -49,3 +49,24 @@
     }
   }
 }
+
+body.dark {
+  .header {
+    ul {
+      background: $light;
+      a {
+        border-color: red;
+        li {
+          color: $primary;
+          font-weight: 600;
+        }
+        &.active {
+          background: $primary;
+          li {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+}
