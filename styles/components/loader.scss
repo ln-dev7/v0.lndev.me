@@ -1,11 +1,10 @@
-
 #globalLoader {
   position: fixed;
   z-index: 1700;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
+  background-color: $primary;
   display: flex;
   width: 100%;
   height: 100%;
@@ -13,42 +12,42 @@
   align-items: center;
 }
 .loader {
-  --clr: $primary;
-  /* color of spining  */
-  width: 50px;
-  height: 50px;
-  position: relative;
-}
-.loader div:nth-child(1),
-.loader div:nth-child(2) {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  border: 10px solid transparent;
-  border-top-color: var(--clr);
-}
-.loader div:nth-child(1) {
-  z-index: 100;
-  animation: spin 1s infinite;
-}
-.loader div:nth-child(2) {
-  border: 10px solid #ccc;
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bullet-animation 1s ease-in-out 2s infinite alternate;
+
+  svg {
+    animation: fill-animation .5s forwards 1s;
+    path {
+      stroke-dasharray: 572;
+      stroke-dashoffset: 572;
+      animation: text-animation 5s ease forwards;
+    }
+    @keyframes text-animation {
+      from {
+        stroke-dashoffset: 572;
+      }
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
   }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
+  @keyframes fill-animation {
+  from {
+      fill: transparent;
+    }
+   to {
+      fill: $light;
+    }
+  }
+}
+
+@keyframes bullet-animation {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
   }
 }
