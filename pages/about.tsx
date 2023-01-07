@@ -48,8 +48,8 @@ export default function about() {
           Hey, my name is leonel ngoya but I am much better known as LN. I am a{" "}
           {age} year old frontend developer and web integrator from Cameroon,
           I’m passionate about creating beautiful, intuitive and responsive
-          websites. I also like to listen to music and in my spare time I often
-          write articles about development and I also make youtube videos
+          websites. I also like to listen to <a href="https://open.spotify.com/playlist/2akHeWgVqLdf453oKj4lPH?si=ZdA5H7VMTm2OtjfdxFiEtg" target="_blank">music</a> and in my spare time I often
+          write <a href="https://laravel.cm/user/ln-dev7" target="_blank">articles</a> about development and I also make <a href="https://www.youtube.com/c/LNDev" target="_blank">youtube videos</a>
         </p>
         <a href="#">resume</a>
         <a href="https://testimonial.to/ln-dev/all">Give me your opinion 😊</a>
