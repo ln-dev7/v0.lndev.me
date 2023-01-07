@@ -10,7 +10,12 @@ import { MouseContext } from "../context/mouseContext";
 export default function Home() {
   const { cursorChangeHandler } = useContext(MouseContext);
   return (
-    <>
+    <motion.div
+      animate={{ y: "0%" }}
+      exit={{ opacity: 1 }}
+      initial={{ y: "100%" }}
+      transition={{ duration: 0, ease: "easeOut" }}
+    >
       <Head>
         <title>Leonel NGOYA</title>
         <meta
@@ -77,6 +82,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-    </>
+    </motion.div>
   );
 }

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
 import { MouseContext } from "../context/mouseContext";
+import { motion } from "framer-motion";
+import { container, item } from "../animation";
 export default function Header() {
   const router = useRouter();
   const { cursorChangeHandler } = useContext(MouseContext);
