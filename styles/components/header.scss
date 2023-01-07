@@ -13,28 +13,33 @@
     border-radius: 10px;
     padding: 0.5rem;
   
-    background: rgba($color: $primary, $alpha: 0.8);
-  
+   // background: rgba($color: $primary, $alpha: 0.625);
+    overflow: hidden;
     ul {
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 1rem;
+      padding: 0.5rem;
       border-radius: 5px;
-      padding: 1rem 2rem;
       background: $primary;
       a {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: .5rem .75rem;
+        border-radius: 5px;
         span {
+          font-size: .875rem;
+          font-weight: 600;
           color: $secondary;
-          font-family: studiofeixen, Arial, Helvetica, sans-serif;
         }
   
         &.active {
+          background: #d3d3d3;
           span {
-            color: $light;
+            color: $primary;
           }
         }
       }
