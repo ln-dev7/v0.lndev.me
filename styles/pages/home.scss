@@ -42,13 +42,15 @@
       color: transparent;
       opacity: 1;
       transform: none;
-      -webkit-text-stroke: 0.5px $primary;
+      -webkit-text-stroke: 2px $primary;
       letter-spacing: 0.125rem;
       padding-bottom: 0.25rem;
 
+      font-family: "Clash Display", sans-serif;
+
       &::selection {
         background: $primary;
-        -webkit-text-stroke: 0.5px $light;
+        -webkit-text-stroke: 2px $light;
       }
 
       span {
