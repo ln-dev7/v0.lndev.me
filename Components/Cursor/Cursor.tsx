@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import useMousePosition from "./UseMousePosition";
 import { MouseContext } from "../../context/mouseContext";
 const Cursor = () => {

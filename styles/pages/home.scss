@@ -26,9 +26,19 @@
       transform: translateX(-50%);
       left: 50%;
       width: 350px;
-      filter: grayscale(1);
-      object-fit: cover;
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
+      -o-object-fit: cover;
+         object-fit: cover;
       //animation: velo 10s ease infinite;
+    }
+    @-webkit-keyframes velo {
+      0% {
+        left: calc(100% + 350px);
+      }
+      100% {
+        left: -350px;
+      }
     }
     @keyframes velo {
       0% {
@@ -75,8 +85,10 @@
       z-index: -1;
       width: 300px;
       transform: rotate(45deg);
-      filter: grayscale(1);
-      object-fit: cover;
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
+      -o-object-fit: cover;
+         object-fit: cover;
       @media only screen and (max-width: 640px) {
         display: none;
       }
@@ -120,13 +132,21 @@
       color: transparent;
       opacity: 1;
       transform: none;
-      // -webkit-text-stroke: 2px $primary;
-      -webkit-text-stroke: 0.5px $primary;
+      -webkit-text-stroke: 1.5px $primary;
+      // -webkit-text-stroke: 0.5px $primary;
       letter-spacing: 0.125rem;
       padding-bottom: 0.25rem;
       mix-blend-mode: difference;
 
-      // font-family: "Clash Display", sans-serif;
+      text-rendering: optimizeSpeed;
+
+      font-family: "Clash Display", sans-serif;
+
+      &::-moz-selection {
+        background: $primary;
+        // -webkit-text-stroke: 2px $light;
+        -webkit-text-stroke: 0.5px $primary;
+      }
 
       &::selection {
         background: $primary;
@@ -142,6 +162,8 @@
         font-family: inherit;
         letter-spacing: inherit;
         mix-blend-mode: inherit;
+
+        text-rendering: optimizeSpeed;
 
         opacity: 1;
         transform: none;
@@ -164,6 +186,12 @@
           @media only screen and (max-width: 640px) {
             display: none;
           }
+        }
+
+        &::-moz-selection {
+          background: $primary;
+          color: $light;
+          -webkit-text-stroke: 0.5px $light;
         }
 
         &::selection {
@@ -256,6 +284,10 @@ body.dark {
     &__container {
       h1 {
         -webkit-text-stroke: 0.5px $light;
+        &::-moz-selection {
+          background: $light;
+          -webkit-text-stroke: 0.5px $primary;
+        }
         &::selection {
           background: $light;
           -webkit-text-stroke: 0.5px $primary;
@@ -265,6 +297,11 @@ body.dark {
           &::after {
             background: rgba($color: $light, $alpha: 0.1);
             border-top: 2px solid rgba($color: $light, $alpha: 0.5);
+          }
+          &::-moz-selection {
+            background: $light;
+            color: $primary;
+            -webkit-text-stroke: 0.5px $primary;
           }
           &::selection {
             background: $light;
