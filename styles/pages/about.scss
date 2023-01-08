@@ -85,7 +85,7 @@
   @media screen and (max-width: 1280px) {
     &-left {
       width: 50%;
-      padding: 15rem 1.5rem 1.5rem 3rem;
+      padding: 12rem 1.5rem 1.5rem 3rem;
       &__title {
         h2 {
           font-size: 2.5rem;
@@ -102,12 +102,14 @@
     }
     &-right {
       width: 50%;
+      height: 100%;
+      min-height: auto;
       &__image {
         border-radius: 0 0 0 50px;
       }
     }
   }
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 810px) {
     flex-direction: column-reverse;
     align-items: center;
     &-left {
