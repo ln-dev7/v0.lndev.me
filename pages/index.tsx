@@ -74,7 +74,7 @@ export default function Home() {
             height={200}
           />
         </div>
-        <div className="home__lines"></div>
+        <div className="page__lines"></div>
         <div className="home__container">
           <Image
             className="home__container-img1"
