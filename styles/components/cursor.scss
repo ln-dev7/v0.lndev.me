@@ -14,6 +14,7 @@
   will-change: width, height, transform, border;
   z-index: 999;
   pointer-events: none;
+  mix-blend-mode: multiply;
 
   &.hovered {
     width: 50px;
@@ -22,13 +23,20 @@
     background-color: rgba(31, 30, 30, 0.4);
     border: none;
   }
+
+  // &:active {
+  //   width: 50px;
+  //   height: 50px;
+  //   border-width: 3px;
+  //   pointer-events: initial;
+  // }
 }
 .dot {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   background-color: $primary;
   border-radius: 100%;
   transform: translate(-50%, -50%);
