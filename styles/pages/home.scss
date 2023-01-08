@@ -6,19 +6,24 @@
   align-items: center;
   background-color: rgb(248 250 252/1);
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
   &__lines {
     position: absolute;
     inset: 0;
-    mask-image: linear-gradient(to top, transparent, black, black);
-    -webkit-mask-image: linear-gradient(to top, transparent, black, black);
+    mask-image: linear-gradient(to top, transparent, $primary, $primary);
+    -webkit-mask-image: linear-gradient(
+      to top,
+      transparent,
+      $primary,
+      $primary
+    );
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
     background-position: bottom 1px center;
     background-color: rgb(255 255 255/0.25);
   }
   &__container {
     z-index: 2;
-    padding: 0 1rem 2rem 1rem;
+    padding: 0 1rem 1rem 1rem;
     width: 100%;
     max-width: 58rem;
     display: flex;
@@ -35,13 +40,19 @@
       line-height: 1;
       font-weight: 700;
       color: transparent;
+      opacity: 1;
+      transform: none;
+      // -webkit-text-stroke: 2px $primary;
       -webkit-text-stroke: 0.5px $primary;
       letter-spacing: 0.125rem;
       padding-bottom: 0.25rem;
 
+      // font-family: "Clash Display", sans-serif;
+
       &::selection {
         background: $primary;
-        -webkit-text-stroke: 0.5px $light;
+        // -webkit-text-stroke: 2px $light;
+        -webkit-text-stroke: 0.5px $primary;
       }
 
       span {
@@ -52,6 +63,9 @@
         font-family: inherit;
         letter-spacing: inherit;
 
+        opacity: 1;
+        transform: none;
+
         color: $primary;
 
         cursor: help;
@@ -59,13 +73,17 @@
         &::after {
           position: absolute;
           content: "";
-          background: rgba($color: $primary, $alpha: .1);
-          border-top: 2px solid rgba($color: $primary, $alpha: .5);
+          background: rgba($color: $primary, $alpha: 0.1);
+          border-top: 2px solid rgba($color: $primary, $alpha: 0.5);
           left: 0;
           right: 0;
           bottom: 0;
           height: 15px;
           z-index: -1;
+
+          @media only screen and (max-width: 640px) {
+            display: none;
+          }
         }
 
         &::selection {
@@ -83,6 +101,10 @@
       @media only screen and (max-width: 640px) {
         font-size: 2rem;
         line-height: 2rem;
+
+        font-family: "Clash Display", sans-serif;
+
+        -webkit-text-stroke: .75px $primary;
       }
     }
 
@@ -133,6 +155,57 @@
         &::after {
           transform-origin: left;
           transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+body.dark {
+  .home {
+    background-color: rgb(0, 0, 0/1);
+    background: $primary;
+    &__lines {
+      mask-image: linear-gradient(to top, transparent, $light, $light);
+      -webkit-mask-image: linear-gradient(to top, transparent, $light, $light);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+      background-position: bottom 1px center;
+      background-color: rgb(0 0 0/0.25);
+    }
+    &__container {
+      h1 {
+        -webkit-text-stroke: 0.5px $light;
+        &::selection {
+          background: $light;
+          -webkit-text-stroke: 0.5px $primary;
+        }
+        span {
+          color: $light;
+          &::after {
+            background: rgba($color: $light, $alpha: 0.1);
+            border-top: 2px solid rgba($color: $light, $alpha: 0.5);
+          }
+          &::selection {
+            background: $light;
+            color: $primary;
+            -webkit-text-stroke: 0.5px $primary;
+          }
+        }
+      }
+      p {
+        color: $light;
+      }
+      a {
+        span {
+          color: $light;
+        }
+        svg {
+          path {
+            stroke: $light;
+          }
+        }
+        &::after {
+          background: $light;
         }
       }
     }
