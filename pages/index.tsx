@@ -28,8 +28,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="home">
+        <div className="home-velo">
+          <Image
+            src="/illustrations/2.png"
+            alt="velo"
+            width={200}
+            height={200}
+          />
+        </div>
         <div className="home__lines"></div>
         <div className="home__container">
+          <Image
+            className="home__container-img1"
+            src="/illustrations/4.png"
+            alt="illustration"
+            width={200}
+            height={200}
+          />
+          <Image
+            className="home__container-img2"
+            src="/illustrations/5.png"
+            alt="illustration"
+            width={200}
+            height={200}
+          />
           <h1>
             HEY, I’M{" "}
             <span

@@ -7,6 +7,39 @@
   background-color: rgb(248 250 252/1);
   overflow: hidden;
   height: 100vh;
+  &-velo {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      transform: translateX(-50%);
+      width: 350px;
+      filter: grayscale(1);
+      object-fit: cover;
+      animation: velo 10s ease infinite;
+    }
+    @keyframes velo {
+      0% {
+        left: calc(100% + 350px);
+      }
+      100% {
+        left: -350px;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      display: none;
+    }
+  }
   &__lines {
     position: absolute;
     inset: 0;
@@ -22,6 +55,7 @@
     background-color: rgb(255 255 255/0.25);
   }
   &__container {
+    position: relative;
     z-index: 2;
     padding: 0 1rem 1rem 1rem;
     width: 100%;
@@ -32,6 +66,45 @@
 
     @media only screen and (max-width: 640px) {
       //padding: 9rem 1rem 6rem 1rem;
+    }
+
+    img {
+      position: absolute;
+      z-index: -1;
+      width: 300px;
+      transform: rotate(45deg);
+      filter: grayscale(1);
+      @media only screen and (max-width: 640px) {
+        display: none;
+      }
+
+      &.home__container-img1 {
+        top: -100%;
+        left: -5%;
+        animation: animate1 30s ease infinite alternate;
+      }
+      &.home__container-img2 {
+        bottom: -50%;
+        right: -5%;
+        animation: animate2 30s ease infinite alternate;
+      }
+
+      @keyframes animate1 {
+        from {
+          transform: rotate(45deg) translateX(50px) rotate(45deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(50px) rotate(-360deg);
+        }
+      }
+      @keyframes animate2 {
+        from {
+          transform: rotate(-45deg) translateX(50px) rotate(-45deg);
+        }
+        to {
+          transform: rotate(-360deg) translateX(50px) rotate(360deg);
+        }
+      }
     }
 
     h1 {
@@ -46,6 +119,7 @@
       -webkit-text-stroke: 0.5px $primary;
       letter-spacing: 0.125rem;
       padding-bottom: 0.25rem;
+      mix-blend-mode: difference;
 
       // font-family: "Clash Display", sans-serif;
 
@@ -62,6 +136,7 @@
         font-weight: inherit;
         font-family: inherit;
         letter-spacing: inherit;
+        mix-blend-mode: inherit;
 
         opacity: 1;
         transform: none;
@@ -104,7 +179,7 @@
 
         font-family: "Clash Display", sans-serif;
 
-        -webkit-text-stroke: .75px $primary;
+        -webkit-text-stroke: 0.75px $primary;
       }
     }
 
