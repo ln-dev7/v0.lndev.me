@@ -7,7 +7,7 @@ import MouseContextProvider from "../context/mouseContext";
 
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { NextSeo } from "next-seo";
-import { NEXT_SEO_DEFAULT } from "../next-seo.config.js";
+import { NEXT_SEO_DEFAULT } from "../next-seo.config";
 
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
