@@ -109,10 +109,10 @@ export default function about() {
         <div className="about-right">
           <div className="about-right__image">
             <Image
-              src="/images/ln-pic.jpg"
+              src="/images/ln-pic-2.jpg"
               alt="leonel ngoya"
-              width={200}
-              height={200}
+              width={3024}
+              height={4032}
             />
           </div>
         </div>

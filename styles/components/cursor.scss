@@ -14,7 +14,6 @@
   will-change: width, height, transform, border;
   z-index: 999;
   pointer-events: none;
-  mix-blend-mode: multiply;
 
   @media only screen and (max-width: 640px) {
     display: none;

@@ -55,7 +55,7 @@ export default function Home() {
       transition={{ duration: 0, ease: "easeOut" }}
     >
       <Head>
-        <title>Leonel NGOYA</title>
+        <title>Leonel NGOYA • FrontEnd Developer</title>
         <meta
           name="description"
           content="
