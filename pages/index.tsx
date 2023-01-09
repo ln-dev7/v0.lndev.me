@@ -4,11 +4,49 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { container, item } from "../animation";
-import { useContext } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { MouseContext } from "../context/mouseContext";
+import useMousePosition from "./../Components/Cursor/UseMousePosition";
 
 export default function Home() {
   const { cursorChangeHandler } = useContext(MouseContext);
+  const { x, y } = useMousePosition();
+
+  const img1ref = useRef(null);
+  const img2ref = useRef(null);
+
+  useEffect(() => {
+    const img1: null | HTMLElement = document.querySelector(
+      ".home__container-img1"
+    );
+    const img2: null | HTMLElement = document.querySelector(
+      ".home__container-img2"
+    );
+    if (img1 && img2) {
+      img1.style.transform = `rotate(${x}deg) translateX(-30px) rotate(${y}deg)`;
+      img2.style.transform = `rotate(${x}deg) translateX(70px) rotate(${y}deg)`;
+    }
+  }, []);
+
+  useEffect(() => {
+    const img1: null | HTMLElement = document.querySelector(
+      ".home__container-img1"
+    );
+    const img2: null | HTMLElement = document.querySelector(
+      ".home__container-img2"
+    );
+    window.addEventListener("mousemove", (e) => {
+      if (img1 && img2) {
+        img1.style.transform = `rotate(${
+          (e.clientX - x) / 100
+        }deg) translateX(-30px) rotate(${(e.clientY - y) / 100}deg)`;
+        img2.style.transform = `rotate(${
+          (e.clientX - x) / 100
+        }deg) translateX(70px) rotate(${(e.clientY - y) / 100}deg)`;
+      }
+    });
+  }, [img1ref.current, img2ref.current]);
+
   return (
     <motion.div
       animate={{ y: "0%" }}
@@ -28,8 +66,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="home">
-        <div className="home__lines"></div>
+        <div className="home-velo">
+          <Image
+            src="/illustrations/2.png"
+            alt="velo"
+            width={200}
+            height={200}
+          />
+        </div>
+        <div className="page__lines"></div>
         <div className="home__container">
+          <Image
+            className="home__container-img1"
+            src="/illustrations/4.png"
+            alt="illustration"
+            width={200}
+            height={200}
+            ref={img1ref}
+          />
+          <Image
+            className="home__container-img2"
+            src="/illustrations/5.png"
+            alt="illustration"
+            width={200}
+            height={200}
+            ref={img2ref}
+          />
           <h1>
             HEY, I’M{" "}
             <span

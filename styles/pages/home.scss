@@ -7,21 +7,53 @@
   background-color: rgb(248 250 252/1);
   overflow: hidden;
   height: 100vh;
-  &__lines {
+  &-velo {
     position: absolute;
-    inset: 0;
-    mask-image: linear-gradient(to top, transparent, $primary, $primary);
-    -webkit-mask-image: linear-gradient(
-      to top,
-      transparent,
-      $primary,
-      $primary
-    );
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-    background-position: bottom 1px center;
-    background-color: rgb(255 255 255/0.25);
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 350px;
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
+      -o-object-fit: cover;
+         object-fit: cover;
+      //animation: velo 10s ease infinite;
+    }
+    @-webkit-keyframes velo {
+      0% {
+        left: calc(100% + 350px);
+      }
+      100% {
+        left: -350px;
+      }
+    }
+    @keyframes velo {
+      0% {
+        left: calc(100% + 350px);
+      }
+      100% {
+        left: -350px;
+      }
+    }
+    @media only screen and (max-width: 640px) {
+      display: none;
+    }
   }
   &__container {
+    position: relative;
     z-index: 2;
     padding: 0 1rem 1rem 1rem;
     width: 100%;
@@ -34,6 +66,50 @@
       //padding: 9rem 1rem 6rem 1rem;
     }
 
+    img {
+      position: absolute;
+      z-index: -1;
+      width: 300px;
+      transform: rotate(45deg);
+      -webkit-filter: grayscale(1);
+              filter: grayscale(1);
+      -o-object-fit: cover;
+         object-fit: cover;
+      @media only screen and (max-width: 640px) {
+        display: none;
+      }
+
+      &.home__container-img1 {
+        top: -100%;
+        left: -5%;
+        transform: rotate(0deg) translateX(-30px) rotate(0deg);
+        // animation: animate1 30s ease infinite alternate;
+      }
+      &.home__container-img2 {
+        bottom: -50%;
+        right: -5%;
+        transform: rotate(40deg) translateX(70px) rotate(0deg);
+        // animation: animate2 30s ease infinite alternate;
+      }
+
+      // @keyframes animate1 {
+      //   from {
+      //     transform: rotate(45deg) translateX(50px) rotate(45deg);
+      //   }
+      //   to {
+      //     transform: rotate(360deg) translateX(50px) rotate(-360deg);
+      //   }
+      // }
+      // @keyframes animate2 {
+      //   from {
+      //     transform: rotate(-45deg) translateX(50px) rotate(-45deg);
+      //   }
+      //   to {
+      //     transform: rotate(-360deg) translateX(50px) rotate(360deg);
+      //   }
+      // }
+    }
+
     h1 {
       text-align: center;
       font-size: 3rem;
@@ -42,12 +118,21 @@
       color: transparent;
       opacity: 1;
       transform: none;
-      // -webkit-text-stroke: 2px $primary;
-      -webkit-text-stroke: 0.5px $primary;
+      -webkit-text-stroke: 1.5px $primary;
+      // -webkit-text-stroke: 0.5px $primary;
       letter-spacing: 0.125rem;
       padding-bottom: 0.25rem;
+      mix-blend-mode: difference;
 
-      // font-family: "Clash Display", sans-serif;
+      text-rendering: optimizeSpeed;
+
+      font-family: "Clash Display", sans-serif;
+
+      &::-moz-selection {
+        background: $primary;
+        // -webkit-text-stroke: 2px $light;
+        -webkit-text-stroke: 0.5px $primary;
+      }
 
       &::selection {
         background: $primary;
@@ -62,6 +147,9 @@
         font-weight: inherit;
         font-family: inherit;
         letter-spacing: inherit;
+        mix-blend-mode: inherit;
+
+        text-rendering: optimizeSpeed;
 
         opacity: 1;
         transform: none;
@@ -86,6 +174,12 @@
           }
         }
 
+        &::-moz-selection {
+          background: $primary;
+          color: $light;
+          -webkit-text-stroke: 0.5px $light;
+        }
+
         &::selection {
           background: $primary;
           color: $light;
@@ -104,7 +198,7 @@
 
         font-family: "Clash Display", sans-serif;
 
-        -webkit-text-stroke: .75px $primary;
+        -webkit-text-stroke: 0.75px $primary;
       }
     }
 
@@ -115,6 +209,7 @@
       color: $primary;
       text-align: center;
       padding: 0.375rem 0 1.5rem 0;
+      mix-blend-mode: difference;
       span {
         font-size: inherit;
         font-weight: inherit;
@@ -165,16 +260,13 @@ body.dark {
   .home {
     background-color: rgb(0, 0, 0/1);
     background: $primary;
-    &__lines {
-      mask-image: linear-gradient(to top, transparent, $light, $light);
-      -webkit-mask-image: linear-gradient(to top, transparent, $light, $light);
-      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-      background-position: bottom 1px center;
-      background-color: rgb(0 0 0/0.25);
-    }
     &__container {
       h1 {
         -webkit-text-stroke: 0.5px $light;
+        &::-moz-selection {
+          background: $light;
+          -webkit-text-stroke: 0.5px $primary;
+        }
         &::selection {
           background: $light;
           -webkit-text-stroke: 0.5px $primary;
@@ -184,6 +276,11 @@ body.dark {
           &::after {
             background: rgba($color: $light, $alpha: 0.1);
             border-top: 2px solid rgba($color: $light, $alpha: 0.5);
+          }
+          &::-moz-selection {
+            background: $light;
+            color: $primary;
+            -webkit-text-stroke: 0.5px $primary;
           }
           &::selection {
             background: $light;

@@ -2,11 +2,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  transform: translate(-50%, -50%);
   width: 30px;
   height: 30px;
   border: 2px solid $primary;
-  border-radius: 100%;
-  transform: translate(-50%, -50%);
+  border-radius: 50%;
   -webkit-transition-duration: 100ms;
   transition-duration: 100ms;
   -webkit-transition-timing-function: ease-out;
@@ -14,6 +14,11 @@
   will-change: width, height, transform, border;
   z-index: 999;
   pointer-events: none;
+  mix-blend-mode: multiply;
+
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
 
   &.hovered {
     width: 50px;
@@ -22,18 +27,28 @@
     background-color: rgba(31, 30, 30, 0.4);
     border: none;
   }
+
+  // &.expand {
+  //   width: 50px;
+  //   height: 50px;
+  //   border-width: 3px;
+  // }
 }
 .dot {
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
-  background-color: $primary;
-  border-radius: 100%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: $primary;
   z-index: 999;
   pointer-events: none;
+
+  @media only screen and (max-width: 640px) {
+    display: none;
+  }
 
   &.hovered {
     display: none;
