@@ -23,6 +23,7 @@ export default function Experience() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="experience">
+        <div className="page__lines"></div>
       </main>
     </>
   );

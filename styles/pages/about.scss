@@ -23,6 +23,8 @@
         font-size: 3.5rem;
         font-weight: 700;
         color: transparent;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
         -webkit-text-stroke: 2px $primary;
         // font-family: $font-primary;
         @media only screen and (max-width: 640px) {
@@ -46,14 +48,48 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
+      margin-top: 1rem;
       a {
+        position: relative;
         display: flex;
         font-size: 1.25rem;
         font-weight: 500;
         color: $primary;
-        text-decoration: underline;
+        font-family: $font-primary;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        svg {
+          width: 15px;
+        }
+        &:first-child {
+        }
         &:last-child {
           margin-right: 0;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: $primary;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.25s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            height: 1px;
+            transform-origin: left;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            transform: scaleX(1);
+          }
         }
       }
     }
@@ -114,19 +150,18 @@
     flex-direction: column-reverse;
     align-items: center;
     &-left {
-      width: 90%;
-      padding: 2rem 0 8rem 0;
+      width: 100%;
+      padding: 2rem 1rem 8rem 1rem;
     }
     &-right {
-      width: 90%;
+      width: 100%;
       height: 100%;
       min-height: 100%;
-      padding-left: 0;
       margin-top: 5rem;
+      padding-left: 0;
       &__image {
-        border-radius: 30px;
-        img{
-
+        border-radius: 20px 20px 0 0;
+        img {
         }
       }
     }
@@ -152,6 +187,9 @@ body.dark {
       &__links {
         a {
           color: $light;
+          &::after {
+            background: $light;
+          }
         }
       }
     }

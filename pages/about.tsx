@@ -53,7 +53,9 @@ export default function about() {
           />
         </div> */}
         <div className="page__lines"></div>
-        <div className="about-left">
+        <motion.div className="about-left" animate={{ y: 0, opacity: 1 }}
+          initial={{ y: "-5%", opacity: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}>
           <div className="about-left__title">
             <h2>About</h2>
           </div>
@@ -95,6 +97,19 @@ export default function about() {
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>{" "}
               Resume
             </a>
             <a
@@ -102,10 +117,23 @@ export default function about() {
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                />
+              </svg>{" "}
               Testimonials
             </a>
           </div>
-        </div>
+        </motion.div>
         <div className="about-right">
           <div className="about-right__image">
             <Image

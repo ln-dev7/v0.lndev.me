@@ -23,6 +23,7 @@ export default function Skills() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="skills">
+        <div className="page__lines"></div>
         {/* https://www.svgrepo.com/ */}
       </main>
     </>
