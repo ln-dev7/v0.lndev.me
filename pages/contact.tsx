@@ -30,7 +30,7 @@ export default function Contact() {
           className="contact-illus"
           animate={{ x: 0, opacity: 1 }}
           initial={{ x: "-20%", opacity: 0 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          transition={{ delay: 0.75, duration: 0.5 }}
         >
           <Image
             src="/illustrations/3.png"
