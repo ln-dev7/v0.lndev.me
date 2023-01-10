@@ -67,6 +67,7 @@ export default function Home() {
             alt="velo"
             width={2160}
             height={2160}
+            priority={true}
           />
         </div>
         <div className="page__lines"></div>
@@ -83,6 +84,7 @@ export default function Home() {
             width={2160}
             height={2160}
             ref={img1ref}
+            priority={true}
           />
           <Image
             className="home__container-img2"
@@ -91,6 +93,7 @@ export default function Home() {
             width={3000}
             height={3000}
             ref={img2ref}
+            priority={true}
           />
           <div
             style={{

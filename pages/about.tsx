@@ -50,6 +50,7 @@ export default function about() {
             alt="illustration"
             width={200}
             height={200}
+            priority={true}
           />
         </div> */}
         <div className="page__lines"></div>
@@ -93,7 +94,7 @@ export default function about() {
           </p>
           <div className="about-left__links">
             <a
-              href="#"
+              href="https://drive.google.com/file/d/176ifY1e-_G-9muqsIhyvsPR3TbvilXwQ/view?usp=share_link"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >
@@ -141,6 +142,7 @@ export default function about() {
               alt="leonel ngoya"
               width={3024}
               height={4032}
+              priority={true}
             />
           </div>
         </div>
