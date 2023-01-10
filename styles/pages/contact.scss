@@ -20,10 +20,16 @@
     position: absolute;
     z-index: 1;
     width: 300px;
-    top: 0;
-    left: 0%;
-    transform: rotate(0deg) translateX(-30px) rotate(0deg);
-    display: none;
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(0deg) translateX(0) rotate(0deg);
+    //display: none;
+    @media screen and (max-width: 980px) {
+      width: 200px;
+    }
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
   }
   &-title {
     z-index: 2;
@@ -82,7 +88,7 @@
             align-items: center;
             gap: 0.5rem;
             svg {
-                width: 15px;
+              width: 15px;
             }
 
             &::after {

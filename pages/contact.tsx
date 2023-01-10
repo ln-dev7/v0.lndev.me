@@ -18,7 +18,7 @@ export default function Contact() {
   useEffect(() => {
     const illus: null | HTMLElement = document.querySelector(".contact-illus");
     if (illus) {
-      illus.style.transform = `rotate(${x}deg) translateX(-30px) rotate(${y}deg)`;
+      //illus.style.transform = `rotate(${x}deg) translateX(0) rotate(${y}deg)`;
     }
   }, []);
 
@@ -28,7 +28,9 @@ export default function Contact() {
       if (illus) {
         illus.style.transform = `rotate(${
           (e.clientX - x) / 100
-        }deg) translateX(-30px) rotate(${(e.clientY - y) / 100}deg)`;
+        }deg) translateX(${(e.clientX - x) / 100}) rotate(${
+          (e.clientY - y) / 100
+        }deg)`;
       }
     });
   }, [illusRef.current]);
@@ -47,30 +49,46 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="contact">
-        <div className="contact-illus">
+        <motion.div
+          className="contact-illus"
+          ref={illusRef}
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: "-30%", opacity: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <Image
             src="/illustrations/3.png"
             alt="illustration"
             width={2160}
             height={2160}
-            ref={illusRef}
           />
-        </div>
+        </motion.div>
         <div className="page__lines"></div>
         <div className="contact-title">
           <motion.h2
-            animate={{ y: 0 }}
-            initial={{ y: "100%" }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: "50%", opacity: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
           >
             Contact
           </motion.h2>
         </div>
         <div className="contact-infos">
-          <div className="contact-infos__left">
-            <h3>Email</h3>
+          <motion.div
+            className="contact-infos__left"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.h3
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: "100%", opacity: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              Email
+            </motion.h3>
             <ul>
-              <li>
+              <motion.li variants={item}>
                 <a
                   href="mailto:me@leonelngoya.com"
                   target="_blank"
@@ -93,8 +111,8 @@ export default function Contact() {
                   </svg>
                   me@leonelngoya.com
                 </a>
-              </li>
-              <li>
+              </motion.li>
+              <motion.li variants={item}>
                 <Link
                   href="https://github.com/ln-dev7/"
                   target="_blank"
@@ -117,16 +135,22 @@ export default function Contact() {
                   </svg>{" "}
                   GitHub
                 </Link>
-              </li>
+              </motion.li>
             </ul>
-          </div>
+          </motion.div>
           <motion.div
             className="contact-infos__right"
             variants={container}
             initial="hidden"
             animate="show"
           >
-            <h3>Social Medias </h3>
+            <motion.h3
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: "100%", opacity: 0 }}
+              transition={{ delay: 0, duration: 0.5 }}
+            >
+              Social Medias{" "}
+            </motion.h3>
             <ul>
               <motion.li variants={item}>
                 <Link
