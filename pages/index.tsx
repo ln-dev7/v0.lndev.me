@@ -70,7 +70,12 @@ export default function Home() {
           />
         </div>
         <div className="page__lines"></div>
-        <div className="home__container">
+        <motion.div
+          className="home__container"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
           <Image
             className="home__container-img1"
             src="/illustrations/4.png"
@@ -87,57 +92,76 @@ export default function Home() {
             height={3000}
             ref={img2ref}
           />
-          <h1>
-            HEY, I’M{" "}
-            <span
-              onMouseEnter={() => cursorChangeHandler("hovered")}
-              onMouseLeave={() => cursorChangeHandler("")}
-            >
-              {" "}
-              LEONEL NGOYA{" "}
-            </span>
-          </h1>
-          <h1>
-            BUT YOU CAN CALL ME{" "}
-            <span
-              onMouseEnter={() => cursorChangeHandler("hovered")}
-              onMouseLeave={() => cursorChangeHandler("")}
-            >
-              {" "}
-              LN{" "}
-            </span>
-          </h1>
-          <p>I’m a Front-end Developer & Web Integrator.</p>
-          <Link
-            href="/about"
-            onMouseEnter={() => cursorChangeHandler("hovered")}
-            onMouseLeave={() => cursorChangeHandler("")}
+          <div
+            style={{
+              overflow: "hidden",
+            }}
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            {" "}
+            <motion.h1 variants={item}>
+              HEY, I’M{" "}
+              <span
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
+                {" "}
+                LEONEL NGOYA{" "}
+              </span>
+            </motion.h1>
+          </div>
+          <div style={{ overflow: "hidden" }}>
+            <motion.h1 variants={item}>
+              BUT YOU CAN CALL ME{" "}
+              <span
+                onMouseEnter={() => cursorChangeHandler("hovered")}
+                onMouseLeave={() => cursorChangeHandler("")}
+              >
+                {" "}
+                LN{" "}
+              </span>
+            </motion.h1>
+          </div>
+          <div
+            style={{
+              overflow: "hidden",
+            }}
+          >
+            <motion.p variants={item}>
+              I’m a Front-end Developer & Web Integrator.
+            </motion.p>
+          </div>
+          <motion.h3 variants={item}>
+            <Link
+              href="/about"
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("")}
             >
-              <path
-                d="M19.7501 11.7258L4.75012 11.7258"
-                stroke="#222"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M13.6998 5.70124C13.6998 5.70124 19.7498 8.96224 19.7498 11.7242C19.7498 14.4882 13.6998 17.7502 13.6998 17.7502"
-                stroke="#222"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <span>About me</span>
-          </Link>
-        </div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.7501 11.7258L4.75012 11.7258"
+                  stroke="#222"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M13.6998 5.70124C13.6998 5.70124 19.7498 8.96224 19.7498 11.7242C19.7498 14.4882 13.6998 17.7502 13.6998 17.7502"
+                  stroke="#222"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span>About me</span>
+            </Link>
+          </motion.h3>
+        </motion.div>
       </main>
     </div>
   );

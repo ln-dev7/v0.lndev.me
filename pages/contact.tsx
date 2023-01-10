@@ -11,29 +11,6 @@ import useMousePosition from "../Components/Cursor/UseMousePosition";
 
 export default function Contact() {
   const { cursorChangeHandler } = useContext(MouseContext);
-  const { x, y } = useMousePosition();
-
-  const illusRef = useRef(null);
-
-  useEffect(() => {
-    const illus: null | HTMLElement = document.querySelector(".contact-illus");
-    if (illus) {
-      //illus.style.transform = `rotate(${x}deg) translateX(0) rotate(${y}deg)`;
-    }
-  }, []);
-
-  useEffect(() => {
-    const illus: null | HTMLElement = document.querySelector(".contact-illus");
-    window.addEventListener("mousemove", (e) => {
-      if (illus) {
-        illus.style.transform = `rotate(${
-          (e.clientX - x) / 100
-        }deg) translateX(${(e.clientX - x) / 100}) rotate(${
-          (e.clientY - y) / 100
-        }deg)`;
-      }
-    });
-  }, [illusRef.current]);
 
   return (
     <>
@@ -51,9 +28,8 @@ export default function Contact() {
       <main className="contact">
         <motion.div
           className="contact-illus"
-          ref={illusRef}
           animate={{ x: 0, opacity: 1 }}
-          initial={{ x: "-30%", opacity: 0 }}
+          initial={{ x: "-20%", opacity: 0 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
           <Image
@@ -64,7 +40,7 @@ export default function Contact() {
           />
         </motion.div>
         <div className="page__lines"></div>
-        <div className="contact-title">
+        <div className="contact-title" style={{ overflow: "hidden" }}>
           <motion.h2
             animate={{ y: 0, opacity: 1 }}
             initial={{ y: "50%", opacity: 0 }}
@@ -80,13 +56,19 @@ export default function Contact() {
             initial="hidden"
             animate="show"
           >
-            <motion.h3
-              animate={{ y: 0, opacity: 1 }}
-              initial={{ y: "100%", opacity: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
+            <div
+              style={{
+                overflow: "hidden",
+              }}
             >
-              Email
-            </motion.h3>
+              <motion.h3
+                animate={{ y: 0, opacity: 1 }}
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+              >
+                Email
+              </motion.h3>
+            </div>
             <ul>
               <motion.li variants={item}>
                 <a
@@ -144,13 +126,15 @@ export default function Contact() {
             initial="hidden"
             animate="show"
           >
-            <motion.h3
-              animate={{ y: 0, opacity: 1 }}
-              initial={{ y: "100%", opacity: 0 }}
-              transition={{ delay: 0, duration: 0.5 }}
-            >
-              Social Medias{" "}
-            </motion.h3>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                animate={{ y: 0, opacity: 1 }}
+                initial={{ y: "100%", opacity: 0 }}
+                transition={{ delay: 0, duration: 0.5 }}
+              >
+                Social Medias{" "}
+              </motion.h3>
+            </div>
             <ul>
               <motion.li variants={item}>
                 <Link
