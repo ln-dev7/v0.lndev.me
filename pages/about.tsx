@@ -53,7 +53,9 @@ export default function about() {
           />
         </div> */}
         <div className="page__lines"></div>
-        <div className="about-left">
+        <motion.div className="about-left" animate={{ y: 0, opacity: 1 }}
+          initial={{ y: "-5%", opacity: 0 }}
+          transition={{ delay: 0.1, duration: 0.5 }}>
           <div className="about-left__title">
             <h2>About</h2>
           </div>
@@ -131,7 +133,7 @@ export default function about() {
               Testimonials
             </a>
           </div>
-        </div>
+        </motion.div>
         <div className="about-right">
           <div className="about-right__image">
             <Image
