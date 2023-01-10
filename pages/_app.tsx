@@ -78,7 +78,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
               secureUrl: "https://raw.githubusercontent.com/ln-dev7/House/master/public/images/lndev.JPG?token=GHSAT0AAAAAAB4MONJFKGTPHO7YE2UJJ4YUY54U5IA",
             },
           ],
-          siteName: "Leonel NGOYA",
+          siteName: "Leonel NGOYA | Frontend Developer",
         }}
         twitter={{
           handle: "@ln_dev7",

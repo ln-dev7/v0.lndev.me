@@ -70,8 +70,8 @@ export default function Home() {
           <Image
             src="/illustrations/2.png"
             alt="velo"
-            width={200}
-            height={200}
+            width={2160}
+            height={2160}
           />
         </div>
         <div className="page__lines"></div>
@@ -80,16 +80,16 @@ export default function Home() {
             className="home__container-img1"
             src="/illustrations/4.png"
             alt="illustration"
-            width={200}
-            height={200}
+            width={2160}
+            height={2160}
             ref={img1ref}
           />
           <Image
             className="home__container-img2"
             src="/illustrations/5.png"
             alt="illustration"
-            width={200}
-            height={200}
+            width={3000}
+            height={3000}
             ref={img2ref}
           />
           <h1>

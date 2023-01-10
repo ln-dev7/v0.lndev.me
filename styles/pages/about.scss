@@ -23,6 +23,8 @@
         font-size: 3.5rem;
         font-weight: 700;
         color: transparent;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
         -webkit-text-stroke: 2px $primary;
         // font-family: $font-primary;
         @media only screen and (max-width: 640px) {
@@ -52,6 +54,7 @@
         font-weight: 500;
         color: $primary;
         text-decoration: underline;
+        font-family: $font-primary;
         &:last-child {
           margin-right: 0;
         }
