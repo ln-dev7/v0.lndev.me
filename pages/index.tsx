@@ -48,12 +48,7 @@ export default function Home() {
   }, [img1ref.current, img2ref.current]);
 
   return (
-    <motion.div
-      animate={{ y: "0%" }}
-      exit={{ opacity: 1 }}
-      initial={{ y: "100%" }}
-      transition={{ duration: 0, ease: "easeOut" }}
-    >
+    <div>
       <Head>
         <title>Leonel NGOYA • FrontEnd Developer</title>
         <meta
@@ -144,6 +139,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-    </motion.div>
+    </div>
   );
 }

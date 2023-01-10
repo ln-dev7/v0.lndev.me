@@ -46,16 +46,7 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.main
-        animate={{ y: "0%" }}
-        exit={{ opacity: 1 }}
-        initial={{ y: "100%" }}
-        transition={{
-          duration: 0.75,
-          ease: "easeOut",
-        }}
-        className="contact"
-      >
+      <main className="contact">
         <div className="contact-illus">
           <Image
             src="/illustrations/3.png"
@@ -77,14 +68,31 @@ export default function Contact() {
         </div>
         <div className="contact-infos">
           <div className="contact-infos__left">
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:me@leonelngoya.com">me@leonelngoya.com</a>
-            </div>
-            <div>
-              <h4>GitHub</h4>
-              <a href="https://github.com/ln-dev7/">ln-dev7</a>
-            </div>
+            <h3>Email</h3>
+            <ul>
+              <li>
+                <a
+                  href="mailto:me@leonelngoya.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ me@leonelngoya.com
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="https://github.com/ln-dev7/"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ GitHub
+                </Link>
+              </li>
+            </ul>
           </div>
           <motion.div
             className="contact-infos__right"
@@ -92,35 +100,67 @@ export default function Contact() {
             initial="hidden"
             animate="show"
           >
-            <h4>Social Medias :</h4>
-            <div>
+            <h3>Social Medias </h3>
+            <ul>
               <motion.li variants={item}>
-                <Link href="https://twitter.com/ln_dev7">Twitter</Link>
+                <Link
+                  href="https://twitter.com/ln_dev7"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ Twitter
+                </Link>
               </motion.li>
-            </div>
-            <div>
               <motion.li variants={item}>
-                <Link href="https://www.linkedin.com/in/lndev/">LinkedIn</Link>
+                <Link
+                  href="https://www.linkedin.com/in/lndev/"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ LinkedIn
+                </Link>
               </motion.li>
-            </div>
-            <div>
               <motion.li variants={item}>
-                <Link href="https://www.youtube.com/c/LNDev">YouTube</Link>
+                <Link
+                  href="https://www.youtube.com/c/LNDev"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ YouTube
+                </Link>
               </motion.li>
-            </div>
-            <div>
               <motion.li variants={item}>
-                <Link href="https://www.instagram.com/ln_dev7">Instagram</Link>
+                <Link
+                  href="https://www.instagram.com/ln_dev7"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ Instagram
+                </Link>
               </motion.li>
-            </div>
-            <div>
               <motion.li variants={item}>
-                <Link href="https://www.twitch.tv/ln_dev7">Twitch</Link>
+                <Link
+                  href="https://www.twitch.tv/ln_dev7"
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  ↗ Twitch
+                </Link>
               </motion.li>
-            </div>
+            </ul>
           </motion.div>
         </div>
-      </motion.main>
+      </main>
     </>
   );
 }

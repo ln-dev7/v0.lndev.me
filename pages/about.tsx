@@ -95,14 +95,14 @@ export default function about() {
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >
-              Resume
+              ↗ Resume
             </a>
             <a
               href="https://testimonial.to/ln-dev/all"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >
-              Testimonials
+              ↗ Testimonials
             </a>
           </div>
         </div>
