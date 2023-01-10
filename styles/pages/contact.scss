@@ -78,6 +78,12 @@
             font-weight: 500;
             color: $primary;
             font-family: $font-primary;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            svg {
+                width: 15px;
+            }
 
             &::after {
               content: "";

@@ -78,7 +78,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ me@leonelngoya.com
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                  me@leonelngoya.com
                 </a>
               </li>
               <li>
@@ -89,7 +102,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ GitHub
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>{" "}
+                  GitHub
                 </Link>
               </li>
             </ul>
@@ -110,7 +136,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ Twitter
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>{" "}
+                  Twitter
                 </Link>
               </motion.li>
               <motion.li variants={item}>
@@ -121,7 +160,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ LinkedIn
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>{" "}
+                  LinkedIn
                 </Link>
               </motion.li>
               <motion.li variants={item}>
@@ -132,7 +184,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ YouTube
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>{" "}
+                  YouTube
                 </Link>
               </motion.li>
               <motion.li variants={item}>
@@ -143,7 +208,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ Instagram
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>{" "}
+                  Instagram
                 </Link>
               </motion.li>
               <motion.li variants={item}>
@@ -154,7 +232,20 @@ export default function Contact() {
                   onMouseEnter={() => cursorChangeHandler("hovered")}
                   onMouseLeave={() => cursorChangeHandler("")}
                 >
-                  ↗ Twitch
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>{" "}
+                  Twitch
                 </Link>
               </motion.li>
             </ul>
