@@ -50,12 +50,16 @@ export default function about() {
             alt="illustration"
             width={200}
             height={200}
+            
           />
         </div> */}
         <div className="page__lines"></div>
-        <motion.div className="about-left" animate={{ y: 0, opacity: 1 }}
+        <motion.div
+          className="about-left"
+          animate={{ y: 0, opacity: 1 }}
           initial={{ y: "-5%", opacity: 0 }}
-          transition={{ delay: 0.1, duration: 0.5 }}>
+          transition={{ delay: 0.1, duration: 0.5 }}
+        >
           <div className="about-left__title">
             <h2>About</h2>
           </div>
@@ -93,7 +97,7 @@ export default function about() {
           </p>
           <div className="about-left__links">
             <a
-              href="#"
+              href="https://drive.google.com/file/d/176ifY1e-_G-9muqsIhyvsPR3TbvilXwQ/view?usp=share_link"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >

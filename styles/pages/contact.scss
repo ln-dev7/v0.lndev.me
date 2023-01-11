@@ -22,7 +22,7 @@
     width: 300px;
     bottom: 10%;
     left: 10%;
-     // transform: rotate(0deg) translateX(0) rotate(0deg);
+    // transform: rotate(0deg) translateX(0) rotate(0deg);
     //display: none;
     @media screen and (max-width: 980px) {
       width: 200px;
@@ -125,9 +125,16 @@
     @media screen and (max-width: 980px) {
       flex-direction: column;
       gap: 2.5rem;
-      h3 {
-        flex-shrink: 0;
-        flex-grow: 1;
+      &__left,
+      &__right {
+        // h3 {
+        //   flex-shrink: 0;
+        //   flex-grow: 1;
+        // }
+        div {
+          flex-shrink: 0;
+          flex-grow: 1;
+        }
       }
       ul {
         align-items: flex-end;

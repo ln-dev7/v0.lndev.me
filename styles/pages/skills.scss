@@ -1,1 +1,106 @@
-.skills{}
+.skills {
+  background: $light;
+  display: flex;
+  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 9rem 15rem 4rem;
+  @media screen and (max-width: 1340px) {
+    padding: 9rem 6rem 4rem;
+  }
+  @media screen and (max-width: 640px) {
+    padding: 9rem 1rem 4rem;
+  }
+  &-section {
+    z-index: 2;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &__title {
+      border-bottom: 1.25px solid $primary;
+      margin-bottom: 1.5rem;
+      h2 {
+        position: relative;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        color: transparent;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1.5px $primary;
+        // font-family: $font-primary;
+        @media only screen and (max-width: 640px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__cards {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      @media screen and (max-width: 640px) {
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5rem;
+        .card {
+            &-icon {
+                img {
+                    width: 30px;
+                }
+            }
+        }
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        &-icon {
+          padding: 1rem;
+          border-radius: 50%;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            border-radius: 0.25rem;
+            width: 40px;
+          }
+        }
+        h3 {
+          font-size: 1rem;
+          font-weight: 500;
+          letter-spacing: 0.15rem;
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+body.dark {
+  .skills {
+    background: $primary;
+    &-section {
+      &__title {
+        border-color: $light;
+        h2 {
+          -webkit-text-stroke: 1.5px $light;
+        }
+      }
+      &__cards {
+        .card {
+          h3 {
+            color: $light;
+          }
+        }
+      }
+    }
+  }
+}
