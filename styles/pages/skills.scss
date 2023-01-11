@@ -69,9 +69,18 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: 0.3s ease;
           img {
             border-radius: 0.25rem;
             width: 40px;
+          }
+          &:hover {
+            transform: scale(0.9);
+            border-color: transparent !important;
+          }
+          &:active {
+            transform: scale(.8);
+            border-color: transparent !important;
           }
         }
         h3 {
@@ -185,6 +194,9 @@ body.dark {
             color: $light;
             span {
               color: inherit;
+            }
+            &::after {
+              background: $light;
             }
           }
         }

@@ -247,7 +247,12 @@ export default function Skills() {
           <ul className="skills-certif__cards">
             {certifications.map((certif, index) => (
               <motion.li key={index} variants={skillsItem}>
-                <Link href={certif.url} passHref>
+                <Link
+                  href={certif.url}
+                  passHref
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
