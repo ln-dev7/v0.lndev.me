@@ -9,7 +9,22 @@ import { MouseContext } from "../context/mouseContext";
 
 export default function Skills() {
   const { cursorChangeHandler } = useContext(MouseContext);
-  const allSkills = [
+  interface Skill {
+    url: string;
+    name: string;
+    color: string;
+    colorRGB: string;
+  }
+  interface SkillSection {
+    title: string;
+    skills: Skill[];
+  }
+
+  interface Certifications {
+    name: string;
+    url: string;
+  }
+  const allSkills: SkillSection[] = [
     {
       title: "Web",
       skills: [
@@ -133,7 +148,7 @@ export default function Skills() {
       ],
     },
   ];
-  const certifications = [
+  const certifications: Certifications[] = [
     {
       name: "OpenClassrooms",
       url: "https://drive.google.com/drive/folders/1mTQ98vR_POncLTRs8jGD4eTJoI5U5jHU?usp=share_link",

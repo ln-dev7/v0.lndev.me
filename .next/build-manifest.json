@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/skills": [
+    "/experience": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/skills.js"
+      "static/chunks/pages/experience.js"
     ]
   },
   "ampFirstPages": []
