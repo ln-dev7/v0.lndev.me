@@ -72,66 +72,6 @@ export default function Experience() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="experience">
-        <div className="page__lines"></div>
-        {works.map((skill, index) => (
-          <motion.div
-            className="skills-section"
-            key={index}
-            variants={container}
-            initial="hidden"
-            animate="show"
-          >
-            <div
-              className="skills-section__title"
-              style={{ overflow: "hidden" }}
-            >
-              <motion.h2
-                animate={{ y: 0, opacity: 1 }}
-                initial={{ y: "50%", opacity: 0 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-              >
-                {skill.title}
-              </motion.h2>
-            </div>
-            <div className="skills-section__cards">
-              {skill.skills.map((skill, index) => (
-                <div
-                  style={{
-                    overflow: "hidden",
-                  }}
-                >
-                  <motion.div
-                    className="card"
-                    key={index}
-                    variants={skillsItem}
-                  >
-                    <div
-                      className="card-icon"
-                      style={{
-                        backgroundColor: `rgba(${skill.colorRGB}, .1)`,
-                        border: `1px solid ${skill.color}`,
-                      }}
-                    >
-                      <Image
-                        src={skill.url}
-                        alt={skill.name}
-                        width={50}
-                        height={50}
-                      />
-                    </div>
-                    <h3
-                      style={{
-                        color: skill.color,
-                      }}
-                    >
-                      {skill.name}
-                    </h3>
-                  </motion.div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        ))}
         <motion.div
           className="skills-certif"
           variants={container}
@@ -144,33 +84,35 @@ export default function Experience() {
               initial={{ y: "50%", opacity: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Certifications
+              Works
             </motion.h2>
           </div>
           <ul className="skills-certif__cards">
-            {certifications.map((certif, index) => (
+            {works.map((work, index) => (
               <motion.li key={index} variants={skillsItem}>
-                <Link
-                  href={certif.url}
-                  passHref
-                  onMouseEnter={() => cursorChangeHandler("hovered")}
-                  onMouseLeave={() => cursorChangeHandler("")}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
+                {work.url && (
+                  <Link
+                    href={work.url}
+                    passHref
+                    onMouseEnter={() => cursorChangeHandler("hovered")}
+                    onMouseLeave={() => cursorChangeHandler("")}
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                    />
-                  </svg>
-                  <span>{certif.name}</span>
-                </Link>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                      />
+                    </svg>
+                    <span>{work.name}</span>
+                  </Link>
+                )}
               </motion.li>
             ))}
           </ul>
