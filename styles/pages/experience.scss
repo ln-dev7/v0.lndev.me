@@ -47,15 +47,13 @@
       align-items: flex-start;
       gap: 1rem;
       margin-bottom: 1rem;
-      height: 450px;
-      overflow: hidden;
       .personal-view {
         position: sticky;
         top: 0;
         width: 50%;
         height: 450px;
-      height: 100vh;
-        border-radius: 0 20px 0 0;
+        height: 100%;
+        border-radius: 20px;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -77,8 +75,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        overflow-y: scroll;
-        scrollbar-width: none;
         li {
           width: 100%;
           display: flex;
