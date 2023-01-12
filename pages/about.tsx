@@ -97,7 +97,7 @@ export default function about() {
           </p>
           <div className="about-left__links">
             <a
-              href="https://drive.google.com/file/d/176ifY1e-_G-9muqsIhyvsPR3TbvilXwQ/view?usp=share_link"
+              href="https://drive.google.com/file/d/186_VYbpHc8o3XKNyrXYJOV_3Px6Y-LPM/view?usp=share_link"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >
