@@ -29,7 +29,7 @@ export default function Contact() {
         <motion.div
           className="contact-illus"
           animate={{ x: 0, opacity: 1 }}
-          initial={{ x: "-20%", opacity: 0 }}
+          initial={{ x: "-10%", opacity: 0 }}
           transition={{ delay: 0.75, duration: 0.5 }}
         >
           <Image

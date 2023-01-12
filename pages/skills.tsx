@@ -9,7 +9,22 @@ import { MouseContext } from "../context/mouseContext";
 
 export default function Skills() {
   const { cursorChangeHandler } = useContext(MouseContext);
-  const allSkills = [
+  interface Skill {
+    url: string;
+    name: string;
+    color: string;
+    colorRGB: string;
+  }
+  interface SkillSection {
+    title: string;
+    skills: Skill[];
+  }
+
+  interface Certifications {
+    name: string;
+    url: string;
+  }
+  const allSkills: SkillSection[] = [
     {
       title: "Web",
       skills: [
@@ -133,6 +148,28 @@ export default function Skills() {
       ],
     },
   ];
+  const certifications: Certifications[] = [
+    {
+      name: "OpenClassrooms",
+      url: "https://drive.google.com/drive/folders/1mTQ98vR_POncLTRs8jGD4eTJoI5U5jHU?usp=share_link",
+    },
+    {
+      name: "Udemy",
+      url: "https://drive.google.com/drive/folders/1iBz8zi92uPJse4o6n4iwDDvQd-atU6OH?usp=share_link",
+    },
+    {
+      name: "Dyma",
+      url: "https://drive.google.com/drive/folders/1GbzS-5-Fpu_ZJlEc8SGu036O3gopZBy3?usp=share_link",
+    },
+    {
+      name: "Uxcel",
+      url: "https://drive.google.com/drive/folders/1mvo_idj5Kq2OhOPNFiUewFEgGPbyRqq0?usp=share_link",
+    },
+    {
+      name: "LinkedIn Learning",
+      url: "https://drive.google.com/drive/folders/1U677r2Nnmtq8pm8klai63iOYFMSuWxl6?usp=share_link",
+    },
+  ];
   return (
     <>
       <Head>
@@ -207,6 +244,49 @@ export default function Skills() {
             </div>
           </motion.div>
         ))}
+        <motion.div
+          className="skills-certif"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <div className="skills-certif__title">
+            <motion.h2
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: "50%", opacity: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+            >
+              Certifications
+            </motion.h2>
+          </div>
+          <ul className="skills-certif__cards">
+            {certifications.map((certif, index) => (
+              <motion.li key={index} variants={skillsItem}>
+                <Link
+                  href={certif.url}
+                  passHref
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                  <span>{certif.name}</span>
+                </Link>
+              </motion.li>
+            ))}
+          </ul>
+        </motion.div>
       </main>
     </>
   );
