@@ -6,6 +6,7 @@
 .next
 
 /.vscode
+/.next
 /.DS_Store
 
 # dependencies
