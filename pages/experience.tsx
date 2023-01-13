@@ -171,6 +171,7 @@ export default function Experience() {
     setImageUrl("");
     setImageName("");
   };
+
   return (
     <>
       <Head>
@@ -192,7 +193,10 @@ export default function Experience() {
           initial="hidden"
           animate="show"
         >
-          <div className="experience-works__title">
+          <div
+            className="experience-works__title"
+            style={{ overflow: "hidden" }}
+          >
             <motion.h2
               animate={{ y: 0, opacity: 1 }}
               initial={{ y: "50%", opacity: 0 }}
@@ -201,35 +205,113 @@ export default function Experience() {
               Works
             </motion.h2>
           </div>
-          <ul className="experience-works__cards">
+          <div className="experience-works__cards">
             {works.map((work, index) => (
-              <motion.li key={index} variants={skillsItem}>
-                {work.url && (
-                  <Link
-                    href={work.url}
-                    passHref
-                    onMouseEnter={() => cursorChangeHandler("hovered")}
-                    onMouseLeave={() => cursorChangeHandler("")}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
+              <motion.div className="card" key={index} variants={skillsItem}>
+                <div className="card-header">
+                  <div className="card-header__left">
+                    <h3>{work.name}</h3>
+                    <p>{work.position}</p>
+                  </div>
+                  <div className="card-header__right">
+                    <h3>{work.date}</h3>
+                    <p>{work.location}</p>
+                  </div>
+                </div>
+                <div className="card-description">
+                  <p>{work.description}</p>
+                </div>
+                <div className="card-footer">
+                  {work.url && (
+                    <Link
+                      href={work.url}
+                      passHref
+                      onMouseEnter={() => cursorChangeHandler("hovered")}
+                      onMouseLeave={() => cursorChangeHandler("")}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                      />
-                    </svg>
-                    <span>{work.name}</span>
-                  </Link>
-                )}
-              </motion.li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                      <span>Website</span>
+                    </Link>
+                  )}
+                </div>
+              </motion.div>
             ))}
-          </ul>
+          </div>
+        </motion.div>
+        <motion.div
+          className="experience-intership"
+          variants={container}
+          initial="hidden"
+          animate="show"
+        >
+          <div
+            className="experience-intership__title"
+            style={{ overflow: "hidden" }}
+          >
+            <motion.h2
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: "50%", opacity: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+            >
+              Interships
+            </motion.h2>
+          </div>
+          <div className="experience-intership__cards">
+            {interships.map((intership, index) => (
+              <motion.div className="card" key={index} variants={skillsItem}>
+                <div className="card-header">
+                  <div className="card-header__left">
+                    <h3>{intership.name}</h3>
+                    <p>{intership.position}</p>
+                  </div>
+                  <div className="card-header__right">
+                    <h3>{intership.date}</h3>
+                    <p>{intership.location}</p>
+                  </div>
+                </div>
+                <div className="card-description">
+                  <p>{intership.description}</p>
+                </div>
+                <div className="card-footer">
+                  {intership.url && (
+                    <Link
+                      href={intership.url}
+                      passHref
+                      onMouseEnter={() => cursorChangeHandler("hovered")}
+                      onMouseLeave={() => cursorChangeHandler("")}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                        />
+                      </svg>
+                      <span>Website</span>
+                    </Link>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
         <motion.div
           className="experience-personal"
@@ -237,7 +319,10 @@ export default function Experience() {
           initial="hidden"
           animate="show"
         >
-          <div className="experience-personal__title">
+          <div
+            className="experience-personal__title"
+            style={{ overflow: "hidden" }}
+          >
             <motion.h2
               animate={{ y: 0, opacity: 1 }}
               initial={{ y: "50%", opacity: 0 }}
@@ -252,14 +337,19 @@ export default function Experience() {
                 <Image
                   src={imageUrl}
                   alt={imageName}
-                  width={500}
-                  height={500}
+                  width={2880}
+                  height={1576}
                 />
               )}
+              {/* <Imagesrc={"/projects/8.png"}
+                alt={"hello"}
+                width={2880}
+                height={1576}
+              /> */}
             </div>
             <ul className="personal-lists">
               {sideProjects.map((project, index) => (
-                <li key={index}>
+                <motion.li key={index} variants={skillsItem}>
                   <Link
                     href={project.url}
                     passHref
@@ -287,32 +377,32 @@ export default function Experience() {
                     </svg>
                     <span>{project.name}</span>
                   </Link>
-                </li>
+                </motion.li>
               ))}
+              <h3>
+                <Link
+                  href="https://github.com/ln-dev7?tab=repositories"
+                  passHref
+                  onMouseEnter={() => cursorChangeHandler("hovered")}
+                  onMouseLeave={() => cursorChangeHandler("")}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                    />
+                  </svg>
+                  <span>See more on GitHub</span>
+                </Link>
+              </h3>
             </ul>
-          </div>
-          <div className="experience-personal__seemore">
-            <Link
-              href="https://github.com/ln-dev7?tab=repositories"
-              passHref
-              onMouseEnter={() => cursorChangeHandler("hovered")}
-              onMouseLeave={() => cursorChangeHandler("")}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                />
-              </svg>
-              <span>See more on GitHub</span>
-            </Link>
           </div>
         </motion.div>
       </main>
