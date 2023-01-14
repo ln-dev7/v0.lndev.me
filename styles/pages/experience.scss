@@ -9,20 +9,25 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  padding: 9rem 15rem 4rem;
+  padding: 9rem 0 4rem;
   @media screen and (max-width: 1340px) {
-    padding: 9rem 6rem 4rem;
+    padding: 9rem 0 4rem;
   }
   @media screen and (max-width: 640px) {
-    padding: 9rem 1rem 4rem;
+    padding: 9rem 0 4rem;
   }
-  &-works {
-    display: none;
-  }
-  &-personal {
+  &-works, &-intership {
     z-index: 2;
     width: 100%;
     margin-bottom: 2rem;
+    
+    padding: 0 15rem 0;
+    @media screen and (max-width: 1340px) {
+      padding: 0 6rem 0;
+    }
+    @media screen and (max-width: 640px) {
+      padding: 0 1rem 0;
+    }
 
     &__title {
       border-bottom: 1.25px solid $primary;
@@ -43,38 +48,148 @@
     }
 
     &__cards {
+      .card {
+        &-header {
+          &__left {
+            h3 {}
+            p{}
+          }
+          &__right {h3 {}
+          p{}}
+        }
+        &-description {
+          p{}
+        }
+        &-footer {
+          a {
+            position: relative;
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: $primary;
+            font-family: $font-primary;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            svg {
+              width: 15px;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background: $primary;
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.25s ease-in-out;
+            }
+
+            &:hover {
+              &::after {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &-personal {
+    z-index: 2;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    &__title {
+      border-bottom: 1.25px solid $primary;
+      // 1.5rem;
+
+      margin: 0 15rem 1.5rem;
+      @media screen and (max-width: 1340px) {
+        margin: 0 6rem 1.5rem;
+      }
+      @media screen and (max-width: 640px) {
+        margin: 0 1rem 1.5rem;
+      }
+      h2 {
+        position: relative;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        color: transparent;
+        text-transform: uppercase;
+        -webkit-text-stroke: 1.5px $primary;
+        // font-family: $font-primary;
+        @media only screen and (max-width: 640px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &__cards {
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
+      justify-content: center;
+      gap: 2rem;
       margin-bottom: 1rem;
+
+      height: 600px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       .personal-view {
+        //border: 1px solid $primary;
         position: sticky;
         top: 0;
         width: 50%;
-        height: 450px;
         height: 100%;
-        border-radius: 20px;
+        border-radius: 0 30px 0 0;
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 800px) {
           display: none;
         }
 
         img {
+          position: relative;
           width: 100%;
           height: 100%;
           object-fit: cover;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: $primary;
+          }
         }
       }
       .personal-lists {
         width: 50%;
-        flex-grow: 1;
-        flex-shrink: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+
+        padding-right: 15rem;
+        @media screen and (max-width: 1340px) {
+          padding-right: 6rem;
+        }
+        @media screen and (max-width: 800px) {
+          width: 100%;
+          padding: 0 6rem;
+        }
+        @media screen and (max-width: 640px) {
+          padding: 0 1rem;
+        }
+
         li {
           width: 100%;
           display: flex;
@@ -94,8 +209,12 @@
             transition: transform 0.25s ease-in-out;
             span {
               font-size: 1.25rem;
+              margin-bottom: -4px;
               font-weight: 500;
               color: inherit;
+              display: flex;
+              align-items: center;
+              justify-content: center;
               font-family: $font-secondary;
             }
             svg {
@@ -107,47 +226,46 @@
             }
           }
         }
-      }
-    }
-
-    &__seemore {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      width: 100%;
-      a {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-
-        color: $primary;
-        span {
-          font-size: 1rem;
-          font-weight: 500;
-          color: inherit;
-        }
-        svg {
-          width: 15px;
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
+        h3 {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
           width: 100%;
-          height: 1px;
-          background: $primary;
-          transform: scaleX(0);
-          transform-origin: right;
-          transition: transform 0.25s ease-in-out;
-        }
+          a {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 0;
 
-        &:hover {
-          &::after {
-            transform-origin: left;
-            transform: scaleX(1);
+            color: $primary;
+            span {
+              font-size: 1rem;
+              font-weight: 500;
+              color: inherit;
+            }
+            svg {
+              width: 15px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background: $primary;
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.25s ease-in-out;
+            }
+
+            &:hover {
+              &::after {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+            }
           }
         }
       }
@@ -165,14 +283,25 @@ body.dark {
         }
       }
       &__cards {
-        li {
-          a {
-            color: $light;
-            span {
-              color: inherit;
+        .personal-lists {
+          li {
+            border-color: $light;
+            a {
+              color: $light;
+              span {
+                color: inherit;
+              }
             }
-            &::after {
-              background: $light;
+          }
+          h3 {
+            a {
+              color: $light;
+              span {
+                color: inherit;
+              }
+              &::after {
+                background: $light;
+              }
             }
           }
         }
