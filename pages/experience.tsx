@@ -29,7 +29,7 @@ export default function Experience() {
     {
       name: "Mboa Digital",
       url: "https://www.mboadigital.tech/",
-      position: "Front-end Developer",
+      position: "Digital Consultant",
       location: "Yaoundé, Cameroon",
       date: "2022 - Present",
       description:
@@ -51,7 +51,7 @@ export default function Experience() {
       location: "Douala",
       date: "April 2021",
       description:
-        "For two weeks I trained students to become apprentices in web development including the basics of HTML5 CSS3 JavaScript.",
+        "For two weeks I trained students to become apprentices in web development including the basics of HTML5 - CSS3 - JavaScript.",
     },
   ];
   const interships: Work[] = [
