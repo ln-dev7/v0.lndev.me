@@ -334,12 +334,14 @@ export default function Experience() {
           <div className="experience-personal__cards">
             <div className="personal-view">
               {imageUrl && (
-                <Image
-                  src={imageUrl}
-                  alt={imageName}
-                  width={2880}
-                  height={1576}
-                />
+                <div className="personal-view__image">
+                  <Image
+                    src={imageUrl}
+                    alt={imageName}
+                    width={2880}
+                    height={1576}
+                  />
+                </div>
               )}
               {/* <Imagesrc={"/projects/8.png"}
                 alt={"hello"}
