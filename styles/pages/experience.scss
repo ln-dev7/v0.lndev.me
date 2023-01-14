@@ -17,7 +17,7 @@
     padding: 9rem 0 4rem;
   }
   &-works,
-  &-intership {
+  &-internship {
     z-index: 2;
     width: 100%;
     margin-bottom: 2rem;
@@ -359,7 +359,7 @@ body.dark {
   .experience {
     background: $primary;
     &-works,
-    &-intership {
+    &-internship {
       &__title {
         border-color: $light;
         h2 {

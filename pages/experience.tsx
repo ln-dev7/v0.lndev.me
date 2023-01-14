@@ -54,7 +54,7 @@ export default function Experience() {
         "For two weeks I trained students to become apprentices in web development including the basics of HTML5 - CSS3 - JavaScript.",
     },
   ];
-  const interships: Work[] = [
+  const internships: Work[] = [
     {
       name: "Mboa Digital",
       url: "https://www.mboadigital.tech/",
@@ -251,13 +251,13 @@ export default function Experience() {
           </div>
         </motion.div>
         <motion.div
-          className="experience-intership"
+          className="experience-internship"
           variants={container}
           initial="hidden"
           animate="show"
         >
           <div
-            className="experience-intership__title"
+            className="experience-internship__title"
             style={{ overflow: "hidden" }}
           >
             <motion.h2
@@ -265,29 +265,29 @@ export default function Experience() {
               initial={{ y: "50%", opacity: 0 }}
               transition={{ delay: 0.1, duration: 0.5 }}
             >
-              Interships
+              Internships
             </motion.h2>
           </div>
-          <div className="experience-intership__cards">
-            {interships.map((intership, index) => (
+          <div className="experience-internship__cards">
+            {internships.map((internship, index) => (
               <motion.div className="card" key={index} variants={skillsItem}>
                 <div className="card-header">
                   <div className="card-header__left">
-                    <h3>{intership.name}</h3>
-                    <p>{intership.position}</p>
+                    <h3>{internship.name}</h3>
+                    <p>{internship.position}</p>
                   </div>
                   <div className="card-header__right">
-                    <h3>{intership.date}</h3>
-                    <p>{intership.location}</p>
+                    <h3>{internship.date}</h3>
+                    <p>{internship.location}</p>
                   </div>
                 </div>
                 <div className="card-description">
-                  <p>{intership.description}</p>
+                  <p>{internship.description}</p>
                 </div>
                 <div className="card-footer">
-                  {intership.url && (
+                  {internship.url && (
                     <Link
-                      href={intership.url}
+                      href={internship.url}
                       passHref
                       onMouseEnter={() => cursorChangeHandler("hovered")}
                       onMouseLeave={() => cursorChangeHandler("")}
