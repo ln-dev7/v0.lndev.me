@@ -16,11 +16,12 @@
   @media screen and (max-width: 640px) {
     padding: 9rem 0 4rem;
   }
-  &-works, &-intership {
+  &-works,
+  &-intership {
     z-index: 2;
     width: 100%;
     margin-bottom: 2rem;
-    
+
     padding: 0 15rem 0;
     @media screen and (max-width: 1340px) {
       padding: 0 6rem 0;
@@ -48,30 +49,66 @@
     }
 
     &__cards {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 2rem;
       .card {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
         &-header {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 1rem;
+          flex-wrap: wrap;
           &__left {
-            h3 {}
-            p{}
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25rem;
+            h3 {
+            }
+            p {
+            }
           }
-          &__right {h3 {}
-          p{}}
+          &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.25rem;
+            h3 {
+            }
+            p {
+            }
+          }
         }
         &-description {
-          p{}
+          padding: 1rem 0 .5rem 0;
+          p {
+          }
         }
         &-footer {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
           a {
             position: relative;
-            font-size: 1.25rem;
-            font-weight: 500;
-            color: $primary;
-            font-family: $font-primary;
             display: flex;
             align-items: center;
             gap: 0.5rem;
+
+            color: $primary;
             svg {
               width: 15px;
+            }
+
+            span {
+              font-size: 1rem;
+              font-weight: 400;
+              color: inherit;
+              font-family: $font-primary;
             }
 
             &::after {
@@ -169,6 +206,7 @@
             width: 100%;
             height: 100%;
             background: $primary;
+            z-index: 2;
           }
         }
       }
@@ -275,6 +313,36 @@
 body.dark {
   .experience {
     background: $primary;
+    &-works, &-intership {
+      &__title {
+        border-color: $light;
+        h2 {
+          -webkit-text-stroke: 1.5px $light;
+        }
+      }
+      &__cards {
+        .card {
+          &-header {
+            h3, p {
+              color: $light;
+            }
+          }
+          &-description {
+            p {
+              color: $light;
+            }
+          }
+          &-footer {
+            a {
+              color: $light;
+              &::after {
+                background: $light;
+              }
+            }
+          }
+        }
+      }
+    }
     &-personal {
       &__title {
         border-color: $light;

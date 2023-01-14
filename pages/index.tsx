@@ -78,7 +78,7 @@ export default function Home() {
         >
           <Image
             className="home__container-img1"
-            src="/illustrations/4.png"
+            src="/illustrations/6.png"
             alt="illustration"
             width={2160}
             height={2160}

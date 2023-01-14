@@ -94,6 +94,12 @@ export default function Skills() {
           color: "#0081CB",
           colorRGB: "0, 129, 203",
         },
+        // {
+        //   url: "/images/lnui.svg",
+        //   name: "LNUI",
+        //   color: "#4ae3e7",
+        //   colorRGB: "74, 227, 231",
+        // },
       ],
     },
     {
