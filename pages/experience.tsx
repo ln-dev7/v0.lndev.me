@@ -31,7 +31,7 @@ export default function Experience() {
       url: "https://www.mboadigital.tech/",
       position: "Digital Consultant",
       location: "Yaoundé, Cameroon",
-      date: "2022 - Present",
+      date: "August 2022 - Present",
       description:
         "More than a front-end developer, I am here a Digital consultant. My goal is to design robust web applications with good UI/UX. While working as a team.",
       stacks: ["ReactJS", "Framer Motion", "TypeScript", "JavaScript", "SASS"],
