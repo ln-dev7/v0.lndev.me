@@ -119,7 +119,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}
                     <title>moon</title>{" "}
@@ -132,7 +132,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}
                     <path
@@ -142,42 +142,42 @@ export default function App({ Component, pageProps, router }: AppProps) {
                     <path
                       d="M12 3.5V5.5"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M20.5 12H18.5"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M5.5 12H3.5"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M12 18.5V20.5"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M16.5 7.5L18 6"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M6 18L7.5 16.5"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M6 6L7.5 7.5"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                     <path
                       d="M16.5 16.5L18 18"
                       stroke="#000000"
-                      stroke-linecap="round"
+                      strokeLinecap="round"
                     ></path>{" "}
                   </g>
                 </svg>

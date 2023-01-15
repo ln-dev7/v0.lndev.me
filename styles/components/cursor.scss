@@ -1,4 +1,4 @@
-.ring {
+.mouse-2 {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,11 +7,16 @@
   height: 30px;
   border: 2px solid $primary;
   border-radius: 50%;
-  -webkit-transition-duration: 100ms;
-  transition-duration: 100ms;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+
+  -webkit-transition: 100ms ease-out;
+  -moz-transition: 100ms ease-out;
+  -ms-transition: 100ms ease-out;
+  -o-transition: 100ms ease-out;
+  transition: 100ms ease-out;
+
+  -webkit-will-change: width, height, transform, border;
   will-change: width, height, transform, border;
+
   z-index: 999;
   pointer-events: none;
 
@@ -33,7 +38,7 @@
   //   border-width: 3px;
   // }
 }
-.dot {
+.mouse-1 {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -51,17 +56,33 @@
 
   &.hovered {
     display: none;
+
+    &.mouse-1-special {
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-width: 3px;
+      background-color: rgba(31, 30, 30, 0.3);
+      border: none;
+    }
+  }
+
+  &.mouse-1-special {
+    width: 30px;
+    height: 30px;
+    border: 2px solid $primary;
+    background-color: transparent;
   }
 }
 
 body.dark {
-  .ring {
+  .mouse-2 {
     border-color: $light;
     &.hovered {
       background-color: rgba(255, 255, 255, 0.4);
     }
   }
-  .dot {
+  .mouse-1 {
     background-color: $light;
   }
 }

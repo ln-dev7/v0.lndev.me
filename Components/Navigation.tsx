@@ -79,7 +79,7 @@ export default function Navigation() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
               <g id="style=linear">
@@ -90,22 +90,22 @@ export default function Navigation() {
                     id="vector"
                     d="M5 6H19"
                     stroke="#ffffff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   ></path>{" "}
                   <path
                     id="vector_2"
                     d="M3 12H21"
                     stroke="#ffffff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   ></path>{" "}
                   <path
                     id="vector_3"
                     d="M5 18H19"
                     stroke="#ffffff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   ></path>{" "}
                 </g>{" "}
               </g>{" "}
@@ -119,7 +119,7 @@ export default function Navigation() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g id="SVGRepo_iconCarrier">
               {" "}
               <g id="style=linear">
@@ -130,15 +130,15 @@ export default function Navigation() {
                     id="vector"
                     d="M6.75024 6.74512L17.2551 17.25"
                     stroke="#ffffff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   ></path>{" "}
                   <path
                     id="vector_2"
                     d="M17.255 6.74512L6.75006 17.2499"
                     stroke="#ffffff"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   ></path>{" "}
                 </g>{" "}
               </g>{" "}
