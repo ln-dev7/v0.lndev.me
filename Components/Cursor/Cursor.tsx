@@ -7,13 +7,12 @@ const Cursor = () => {
 
   useEffect(() => {
     if (!(navigator.userAgent.indexOf("Chrome") != -1)) {
-      const mouse1: HTMLElement | null = document.querySelector(".mouse-1");
-      const mouse2: HTMLElement | null = document.querySelector(".mouse-2");
+      const dot: HTMLElement | null = document.querySelector(".dot");
+      const ring: HTMLElement | null = document.querySelector(".ring")
 
-      if (mouse1 && mouse2) {
-        mouse2.style.display = "none";
-        // add a class to the mouse1 element
-        mouse1.classList.add("mouse-1-special");
+      if (dot && ring) {
+        //dot.style.display = "none";
+        ring.style.display = "none";
       }
     }
 
@@ -35,11 +34,11 @@ const Cursor = () => {
   return (
     <>
       <div
-        className={`mouse-2 ${cursorType}`}
+        className={`dot ${cursorType}`}
         style={{ left: `${x}px`, top: `${y}px` }}
       ></div>
       <div
-        className={`mouse-1 ${cursorType}`}
+        className={`ring ${cursorType}`}
         style={{ left: `${x}px`, top: `${y}px` }}
       ></div>
     </>
