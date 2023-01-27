@@ -100,9 +100,9 @@ export default function Experience() {
       image: "/projects/1.png",
     },
     {
-      name: "Queen Elizabeth II",
-      url: "https://queenelizabeth2.leonelngoya.com/",
-      image: "/projects/2.png",
+      name: "Pro Chakra UI",
+      url: "https://pro-chakra-ui-web.vercel.app/",
+      image: "/projects/pro-chakra-ui.png",
     },
     {
       name: "Canon Yaounde",
@@ -133,6 +133,11 @@ export default function Experience() {
       name: "Warifa",
       url: "https://warfira.leonelngoya.com/",
       image: "/projects/8.png",
+    },
+    {
+      name: "Queen Elizabeth II",
+      url: "https://queenelizabeth2.leonelngoya.com/",
+      image: "/projects/2.png",
     },
     {
       name: "App Formation",
