@@ -65,9 +65,17 @@ export default function about() {
           </div>
           <p className="about-left__text">
             Hey, my name is Leonel NGOYA but I am much better known as LN. I am
-            a {age} year old frontend developer and web integrator from
-            Cameroon, I’m passionate about creating beautiful, intuitive and
-            responsive websites. I also like to listen to{" "}
+            a {age} year old Frontend Developer and{" "}
+            <a
+              href="https://www.awwwards.com/jury-member/ln-dev"
+              onMouseEnter={() => cursorChangeHandler("hovered")}
+              onMouseLeave={() => cursorChangeHandler("")}
+              target="_blank"
+            >
+              Awwwards Young Jury
+            </a>{" "}
+            from Cameroon, I’m passionate about creating beautiful, intuitive
+            and responsive websites. I also like to listen to{" "}
             <a
               href="https://open.spotify.com/playlist/2akHeWgVqLdf453oKj4lPH?si=ZdA5H7VMTm2OtjfdxFiEtg"
               onMouseEnter={() => cursorChangeHandler("hovered")}
@@ -95,6 +103,21 @@ export default function about() {
               youtube videos
             </a>
           </p>
+          <div className="about-left__langs">
+            <h3>LANGUAGES</h3>
+            <li>
+              <span>French</span>
+              <span>Native</span>
+            </li>
+            <li>
+              <span>Italian</span>
+              <span>Fluent</span>
+            </li>
+            <li>
+              <span>English</span>
+              <span>Basic</span>
+            </li>
+          </div>
           <div className="about-left__links">
             <a
               href="https://drive.google.com/file/d/186_VYbpHc8o3XKNyrXYJOV_3Px6Y-LPM/view?usp=share_link"

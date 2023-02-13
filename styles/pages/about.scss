@@ -44,6 +44,32 @@
         text-decoration: underline;
       }
     }
+    &__langs {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-top: 0.5rem;
+      h3 {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span {
+          &:first-child {
+            font-size: 1.125rem;
+            font-weight: 400;
+            margin-right: 0.25rem;
+          }
+          &:last-child {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
     &__links {
       display: flex;
       align-items: center;
@@ -182,6 +208,18 @@ body.dark {
         color: $light;
         a {
           color: $light;
+        }
+      }
+      &__langs {
+        h3 {
+          color: $light;
+        }
+        li {
+          span {
+            &:first-child, &:last-child {
+              color: $light;
+            }
+          }
         }
       }
       &__links {
