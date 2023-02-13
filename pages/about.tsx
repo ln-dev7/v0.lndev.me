@@ -56,16 +56,32 @@ export default function about() {
         <div className="page__lines"></div>
         <motion.div
           className="about-left"
-          animate={{ y: 0, opacity: 1 }}
-          initial={{ y: "-5%", opacity: 0 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
+          variants={container}
+          initial="hidden"
+          animate="show"
         >
-          <div className="about-left__title">
-            <h2>About</h2>
+          <div
+            style={{
+              overflow: "hidden",
+            }}
+            className="about-left__title"
+          >
+            <motion.h2
+              animate={{ y: 0, opacity: 1 }}
+              initial={{ y: "50%", opacity: 0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+            >
+              About
+            </motion.h2>
           </div>
-          <p className="about-left__text">
+          <motion.p
+            animate={{ y: 0, opacity: 1 }}
+            initial={{ y: "15%", opacity: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="about-left__text"
+          >
             Hey, my name is Leonel NGOYA but I am much better known as LN. I am
-            a {age} year old Frontend Developer and{" "}
+            a {age} year old Frontend Developer, Web Integrator and{" "}
             <a
               href="https://www.awwwards.com/jury-member/ln-dev"
               onMouseEnter={() => cursorChangeHandler("hovered")}
@@ -102,24 +118,25 @@ export default function about() {
             >
               youtube videos
             </a>
-          </p>
+          </motion.p>
           <div className="about-left__langs">
-            <h3>LANGUAGES</h3>
-            <li>
+            <motion.h3 variants={item}>LANGUAGES</motion.h3>
+            <motion.li variants={item}>
               <span>French</span>
               <span>Native</span>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <span>Italian</span>
               <span>Fluent</span>
-            </li>
-            <li>
+            </motion.li>
+            <motion.li variants={item}>
               <span>English</span>
               <span>Basic</span>
-            </li>
+            </motion.li>
           </div>
           <div className="about-left__links">
-            <a
+            <motion.a
+              variants={item}
               href="https://drive.google.com/file/d/186_VYbpHc8o3XKNyrXYJOV_3Px6Y-LPM/view?usp=share_link"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
@@ -138,8 +155,9 @@ export default function about() {
                 />
               </svg>{" "}
               Resume
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              variants={item}
               href="https://testimonial.to/ln-dev/all"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
@@ -158,7 +176,7 @@ export default function about() {
                 />
               </svg>{" "}
               Testimonials
-            </a>
+            </motion.a>
           </div>
         </motion.div>
         <div className="about-right">
