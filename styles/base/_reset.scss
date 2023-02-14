@@ -36,7 +36,8 @@ h6 {
   // font-weight: normal;
 }
 
-ul, li{
+ul,
+li {
   list-style: none;
 }
 
@@ -100,12 +101,12 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent; 
+  background: transparent;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $primary; 
+  background: $primary;
 }
 
 /* Make clicks pass-through */
@@ -135,10 +136,10 @@ a {
 
 body.dark {
   &::-webkit-scrollbar-thumb {
-    background: $light; 
+    background: $light;
   }
   &::-webkit-scrollbar-track {
-    background: $primary; 
+    background: $primary;
   }
   .page__lines {
     mask-image: linear-gradient(to top, transparent, $light, $light);
@@ -146,5 +147,22 @@ body.dark {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
     background-position: bottom 1px center;
     background-color: rgb(0 0 0/0.25);
+  }
+}
+
+#awwwards {
+  position: fixed;
+  z-index: 999;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  transition: .3s ease;
+  @media screen and (max-width: 640px) {
+    top: -130px;
+    transform: translateX(calc(50% + 25px)) rotate(180deg);
+    right: 50%;
+    &:hover{
+      top: 0;
+    }
   }
 }

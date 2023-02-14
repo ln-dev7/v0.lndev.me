@@ -7,13 +7,6 @@ export default function Document() {
       <body>
         <div
           id="awwwards"
-          style={{
-            position: "fixed",
-            zIndex: 999,
-            transform: "translateY(-50%)",
-            top: "50%",
-            right: 0,
-          }}
         >
           <a href="https://www.awwwards.com/sites/ln-dev" target="_blank">
             <svg width="53.08" height="171.358">
