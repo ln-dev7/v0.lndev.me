@@ -156,6 +156,10 @@ export default function Skills() {
   ];
   const certifications: Certifications[] = [
     {
+      name: "Awwwards Young Jury",
+      url: "https://drive.google.com/file/d/1UTyq4cPwsTLQt2wqqBBb9Lp_bU0gMea6/view?usp=share_link",
+    },
+    {
       name: "OpenClassrooms",
       url: "https://drive.google.com/drive/folders/1mTQ98vR_POncLTRs8jGD4eTJoI5U5jHU?usp=share_link",
     },
