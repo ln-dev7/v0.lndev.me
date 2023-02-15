@@ -27,6 +27,15 @@ export default function Experience() {
 
   const works: Work[] = [
     {
+      name: "Awwwards",
+      url: "https://www.awwwards.com/jury-member/ln-dev",
+      position: "Awwwards Young Jury",
+      location: "Remote",
+      date: "February 2023 - Present",
+      description:
+        "Member of the awwwards jury, a group of leading digital design professionals who use their experience and knowledge to judge web projects from all over the world.",
+    },
+    {
       name: "Mboa Digital",
       url: "https://www.mboadigital.tech/",
       position: "Digital Consultant",
