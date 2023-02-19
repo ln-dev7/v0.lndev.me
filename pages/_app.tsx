@@ -72,10 +72,10 @@ export default function App({ Component, pageProps, router }: AppProps) {
             "Hey, my name is Leonel NGOYA but I am much better known as LN. I am frontend developer and web integrator from Cameroon, I’m passionate about creating beautiful, intuitive and responsive websites.",
           images: [
             {
-              url: "https://leonelngoya.vercel.app/assets/img/lndev.JPG",
+              url: "https://lndev.me/images/lndev.JPG",
               alt: "LN Dev",
               type: "image/jpeg",
-              secureUrl: "https://leonelngoya.vercel.app/assets/img/lndev.JPG",
+              secureUrl: "https://lndev.me/images/lndev.JPG",
             },
           ],
           siteName: "Leonel NGOYA | Frontend Developer",
