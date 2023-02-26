@@ -46,6 +46,15 @@ export default function Experience() {
       stacks: ["ReactJS", "Framer Motion", "TypeScript", "JavaScript", "SASS"],
     },
     {
+      name: "Diadromoove",
+      url: "https://diadromoove.leonelngoya.com/",
+      position: "Web Integrator",
+      location: "Remote",
+      date: "January 2023 - February 2023",
+      description: "Design of the user interfaces of the Diadromoove platform",
+      stacks: ["NextJS", "MUI", "TypeScript", "SASS"],
+    },
+    {
       name: "Freelance",
       position: "Front-end Developer",
       location: "Remote",
@@ -157,7 +166,8 @@ export default function Experience() {
       name: "Monarc",
       url: "https://monarc.leonelngoya.com/",
       image: "/projects/10.png",
-    },{
+    },
+    {
       name: "GitHub User",
       url: "https://githubuser.vercel.app/",
       image: "/projects/14.png",
