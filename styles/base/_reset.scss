@@ -156,13 +156,7 @@ body.dark {
   transform: translateY(-50%);
   top: 50%;
   right: 0;
-  transition: 0.3s ease;
   @media screen and (max-width: 640px) {
-    top: -130px;
-    transform: translateX(calc(50% + 0px)) rotate(180deg);
-    right: 50%;
-    &:hover {
-      top: 0;
-    }
+    display: none;
   }
 }
