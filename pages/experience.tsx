@@ -113,7 +113,7 @@ export default function Experience() {
       image: "/projects/camer-portfolio.png",
     },
     {
-      name: "Find A Jobg",
+      name: "Find A Job",
       url: "https://find-a-job.vercel.app/",
       image: "/projects/find-a-job.png",
     },
