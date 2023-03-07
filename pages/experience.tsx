@@ -114,7 +114,7 @@ export default function Experience() {
     },
     {
       name: "Find A Job",
-      url: "https://find-a-job.vercel.app/",
+      url: "http://findajob.lndev.me/",
       image: "/projects/find-a-job.png",
     },
     {
