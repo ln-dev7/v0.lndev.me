@@ -79,7 +79,7 @@
             border-color: transparent !important;
           }
           &:active {
-            transform: scale(.8);
+            transform: scale(0.8);
             border-color: transparent !important;
           }
         }
@@ -174,9 +174,12 @@ body.dark {
         }
       }
       &__cards {
-        .card {
+        .card.card-black {
+          .card-icon {
+            background: rgba($color: $light, $alpha: 1) !important;
+          }
           h3 {
-            color: $light;
+            color: $light !important;
           }
         }
       }

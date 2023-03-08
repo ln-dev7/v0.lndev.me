@@ -14,6 +14,7 @@ export default function Skills() {
     name: string;
     color: string;
     colorRGB: string;
+    isBgBlack?: boolean;
   }
   interface SkillSection {
     title: string;
@@ -69,6 +70,7 @@ export default function Skills() {
           name: "NextJS",
           color: "#000000",
           colorRGB: "0, 0, 0",
+          isBgBlack: true,
         },
         {
           url: "https://www.svgrepo.com/show/374109/svelte.svg",
@@ -100,6 +102,18 @@ export default function Skills() {
         //   color: "#4ae3e7",
         //   colorRGB: "74, 227, 231",
         // },
+      ],
+    },
+    {
+      title: "Documentation",
+      skills: [
+        {
+          url: "https://nextra.site/_next/static/media/favicon.69cb336f.svg",
+          name: "Nextra",
+          color: "#000000",
+          colorRGB: "0, 0, 0",
+          isBgBlack: true,
+        },
       ],
     },
     {
@@ -223,7 +237,7 @@ export default function Skills() {
                   }}
                 >
                   <motion.div
-                    className="card"
+                    className={skill.isBgBlack ? "card card-black" : "card"}
                     key={index}
                     variants={skillsItem}
                   >
