@@ -135,6 +135,7 @@ export default function Skills() {
           name: "Vercel",
           color: "#000000",
           colorRGB: "0, 0, 0",
+          isBgBlack: true,
         },
       ],
     },
