@@ -178,8 +178,8 @@ export default function Experience() {
       image: "/projects/14.png",
     },
     {
-      name: "Cameroon Logo",
-      url: "https://cmr-logo-inte.vercel.app/",
+      name: "Cameroon Logos",
+      url: "https://cameroon-logos.vercel.app/",
       image: "/projects/11.png",
     },
     {
