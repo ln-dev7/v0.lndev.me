@@ -125,6 +125,12 @@ export default function Skills() {
           color: "#02569B",
           colorRGB: "2, 86, 155",
         },
+        {
+          url: "https://www.svgrepo.com/show/354259/react.svg",
+          name: "React Native",
+          color: "#61DAFB",
+          colorRGB: "97, 218, 251",
+        },
       ],
     },
     {
