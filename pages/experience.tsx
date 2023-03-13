@@ -113,9 +113,9 @@ export default function Experience() {
       image: "/projects/camer-portfolio.png",
     },
     {
-      name: "Find A Job",
-      url: "http://findajob.lndev.me/",
-      image: "/projects/find-a-job.png",
+      name: "Ulwo App",
+      url: "https://ulwo.lndev.me/",
+      image: "/projects/ulwo.png",
     },
     {
       name: "Web App Photography",
