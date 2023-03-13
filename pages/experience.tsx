@@ -104,7 +104,7 @@ export default function Experience() {
   const sideProjects: PersonalWork[] = [
     {
       name: "LNUI",
-      url: "https://lnui.vercel.app/",
+      url: "https://lnui.lndev.me/",
       image: "/projects/lnui.png",
     },
     {
