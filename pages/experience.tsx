@@ -46,6 +46,15 @@ export default function Experience() {
       stacks: ["ReactJS", "Framer Motion", "TypeScript", "JavaScript", "SASS"],
     },
     {
+      name: "Sharuco",
+      url: "https://sharuco.lndev.me/",
+      position: "FrontEnd Developer",
+      location: "Remote",
+      date: "March 2023 - Prsent",
+      description: "Creator and developer of this web application",
+      stacks: ["NextJS", "Shadcn/UI", "TypeScript", "Tailwind", "Firebase"],
+    },
+    {
       name: "Diadromoove",
       url: "https://diadromoove.leonelngoya.com/",
       position: "Web Integrator",
@@ -61,6 +70,7 @@ export default function Experience() {
       date: "From June 2021",
       description:
         " a freelancer I have worked for many independent clients and agencies around the world, especially in the position of front-end developer and also web integrator, my goal is to create robust web applications with a good UI/UX.",
+        stacks: ["React", "NextJS", "VueJS", "Svelte", "SCSS", "TypeScript"]
     },
     {
       name: "AfritechHub",
@@ -70,6 +80,7 @@ export default function Experience() {
       date: "April 2021",
       description:
         "For two weeks I trained students to become apprentices in web development including the basics of HTML5 - CSS3 - JavaScript.",
+        stacks: ["HTML", "CSS", "JS"]
     },
   ];
   const internships: Work[] = [
@@ -102,6 +113,11 @@ export default function Experience() {
     },
   ];
   const sideProjects: PersonalWork[] = [
+    {
+      name: "Sharuco",
+      url: "https://sharuco.lndev.me/",
+      image: "/projects/sharuco.png",
+    },
     {
       name: "LNUI",
       url: "https://lnui.lndev.me/",
@@ -254,6 +270,13 @@ export default function Experience() {
                 <div className="card-description">
                   <p>{work.description}</p>
                 </div>
+                {work.stacks && (
+                  <div className="card-stacks">
+                    {work.stacks.map((item) => {
+                      return <button>{item}</button>;
+                    })}
+                  </div>
+                )}
                 <div className="card-footer">
                   {work.url && (
                     <Link
