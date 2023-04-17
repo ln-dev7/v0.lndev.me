@@ -27,6 +27,16 @@ export default function Experience() {
 
   const works: Work[] = [
     {
+      name: "Learning Planet Institute",
+      url: "https://www.learningplanetinstitute.org/",
+      position: "FrontEnd Developer",
+      location: "Remote",
+      date: "April 2023 - Present",
+      description:
+        "",
+      stacks: ["Vue3", "StoryBook", "Nuxt", "SASS"],
+    },
+    {
       name: "Awwwards",
       url: "https://www.awwwards.com/jury-member/ln-dev",
       position: "Awwwards Young Jury",
@@ -40,7 +50,7 @@ export default function Experience() {
       url: "https://www.mboadigital.tech/",
       position: "Digital Consultant",
       location: "Yaoundé, Cameroon",
-      date: "August 2022 - Present",
+      date: "August 2022 - April 2023",
       description:
         "More than a front-end developer, I am here a Digital consultant. My goal is to design robust web applications with good UI/UX. While working as a team.",
       stacks: ["ReactJS", "Framer Motion", "TypeScript", "JavaScript", "SASS"],
@@ -50,18 +60,9 @@ export default function Experience() {
       url: "https://sharuco.lndev.me/",
       position: "FrontEnd Developer",
       location: "Remote",
-      date: "March 2023 - Prsent",
+      date: "March 2023 - Present",
       description: "Creator and developer of this web application",
       stacks: ["NextJS", "Shadcn/UI", "TypeScript", "Tailwind", "Firebase"],
-    },
-    {
-      name: "Diadromoove",
-      url: "https://diadromoove.leonelngoya.com/",
-      position: "Web Integrator",
-      location: "Remote",
-      date: "January 2023 - February 2023",
-      description: "Design of the user interfaces of the Diadromoove platform",
-      stacks: ["NextJS", "MUI", "TypeScript", "SASS"],
     },
     {
       name: "Freelance",
