@@ -81,7 +81,7 @@ export default function about() {
             className="about-left__text"
           >
             Hey, my name is Leonel NGOYA but I am much better known as LN. I am
-            a {age} year old Frontend Developer, Web Integrator and{" "}
+            a {age} year old FrontEnd Engineer, Web Integrator and{" "}
             <a
               href="https://www.awwwards.com/jury-member/ln-dev"
               onMouseEnter={() => cursorChangeHandler("hovered")}
@@ -137,7 +137,7 @@ export default function about() {
           <div className="about-left__links">
             <motion.a
               variants={item}
-              href="https://drive.google.com/file/d/1UW0UKUkghYXWWvLlO6QyDt6yD74Wna4p/view?usp=share_link"
+              href="https://drive.google.com/file/d/1kRsc9xYd6gsLQmdOXELFUn3v0kXPoaN9/view?usp=sharing"
               onMouseEnter={() => cursorChangeHandler("hovered")}
               onMouseLeave={() => cursorChangeHandler("")}
             >

@@ -63,13 +63,13 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <>
       <NextSeo
         title="Leonel NGOYA"
-        description="Hey, my name is Leonel NGOYA but I am much better known as LN. I am frontend developer and web integrator from Cameroon, I’m passionate about creating beautiful, intuitive and responsive websites."
+        description="Hey, my name is Leonel NGOYA but I am much better known as LN. I am FrontEnd Engineer and web integrator from Cameroon, I’m passionate about creating beautiful, intuitive and responsive websites."
         canonical="https://lndev.me/"
         openGraph={{
           url: "https://lndev.me/",
           title: "Leonel NGOYA",
           description:
-            "Hey, my name is Leonel NGOYA but I am much better known as LN. I am frontend developer and web integrator from Cameroon, I’m passionate about creating beautiful, intuitive and responsive websites.",
+            "Hey, my name is Leonel NGOYA but I am much better known as LN. I am FrontEnd Engineer and web integrator from Cameroon, I’m passionate about creating beautiful, intuitive and responsive websites.",
           images: [
             {
               url: "https://lndev.me/images/lndev.JPG",
@@ -78,7 +78,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
               secureUrl: "https://lndev.me/images/lndev.JPG",
             },
           ],
-          siteName: "Leonel NGOYA | Frontend Developer",
+          siteName: "Leonel NGOYA | FrontEnd Engineer",
         }}
         twitter={{
           handle: "@ln_dev7",
