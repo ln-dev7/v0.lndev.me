@@ -104,18 +104,18 @@ export default function Skills() {
         // },
       ],
     },
-    {
-      title: "Documentation",
-      skills: [
-        {
-          url: "https://nextra.site/_next/static/media/favicon.69cb336f.svg",
-          name: "Nextra",
-          color: "#000000",
-          colorRGB: "0, 0, 0",
-          isBgBlack: true,
-        },
-      ],
-    },
+    // {
+    //   title: "Documentation",
+    //   skills: [
+    //     {
+    //       url: "https://nextra.site/_next/static/media/favicon.69cb336f.svg",
+    //       name: "Nextra",
+    //       color: "#000000",
+    //       colorRGB: "0, 0, 0",
+    //       isBgBlack: true,
+    //     },
+    //   ],
+    // },
     // {
     //   title: "Mobile",
     //   skills: [
