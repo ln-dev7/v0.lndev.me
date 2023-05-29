@@ -29,18 +29,18 @@ export default function Skills() {
     {
       title: "Web",
       skills: [
-        {
-          url: "https://www.svgrepo.com/show/452228/html-5.svg",
-          name: "HTML",
-          color: "#E34F26",
-          colorRGB: "227, 79, 38",
-        },
-        {
-          url: "https://www.svgrepo.com/show/452185/css-3.svg",
-          name: "CSS",
-          color: "#1572B6",
-          colorRGB: "21, 114, 182",
-        },
+        // {
+        //   url: "https://www.svgrepo.com/show/452228/html-5.svg",
+        //   name: "HTML",
+        //   color: "#E34F26",
+        //   colorRGB: "227, 79, 38",
+        // },
+        // {
+        //   url: "https://www.svgrepo.com/show/452185/css-3.svg",
+        //   name: "CSS",
+        //   color: "#1572B6",
+        //   colorRGB: "21, 114, 182",
+        // },
         {
           url: "https://www.svgrepo.com/show/354310/sass.svg",
           name: "SASS",
@@ -90,12 +90,12 @@ export default function Skills() {
           color: "#38B2AC",
           colorRGB: "56, 178, 172",
         },
-        {
-          url: "https://www.svgrepo.com/show/354048/material-ui.svg",
-          name: "MUI",
-          color: "#0081CB",
-          colorRGB: "0, 129, 203",
-        },
+        // {
+        //   url: "https://www.svgrepo.com/show/354048/material-ui.svg",
+        //   name: "MUI",
+        //   color: "#0081CB",
+        //   colorRGB: "0, 129, 203",
+        // },
         // {
         //   url: "/images/lnui.svg",
         //   name: "LNUI",
@@ -116,23 +116,23 @@ export default function Skills() {
         },
       ],
     },
-    {
-      title: "Mobile",
-      skills: [
-        {
-          url: "https://www.svgrepo.com/show/373604/flutter.svg",
-          name: "Flutter",
-          color: "#02569B",
-          colorRGB: "2, 86, 155",
-        },
-        {
-          url: "https://www.svgrepo.com/show/354259/react.svg",
-          name: "React Native",
-          color: "#61DAFB",
-          colorRGB: "97, 218, 251",
-        },
-      ],
-    },
+    // {
+    //   title: "Mobile",
+    //   skills: [
+    //     {
+    //       url: "https://www.svgrepo.com/show/373604/flutter.svg",
+    //       name: "Flutter",
+    //       color: "#02569B",
+    //       colorRGB: "2, 86, 155",
+    //     },
+    //     {
+    //       url: "https://www.svgrepo.com/show/354259/react.svg",
+    //       name: "React Native",
+    //       color: "#61DAFB",
+    //       colorRGB: "97, 218, 251",
+    //     },
+    //   ],
+    // },
     {
       title: "Deployment",
       skills: [
@@ -166,12 +166,12 @@ export default function Skills() {
           color: "#FFCA28",
           colorRGB: "255, 202, 40",
         },
-        {
-          url: "https://www.svgrepo.com/show/374171/vscode.svg",
-          name: "VSCode",
-          color: "#007ACC",
-          colorRGB: "0, 122, 204",
-        },
+        // {
+        //   url: "https://www.svgrepo.com/show/374171/vscode.svg",
+        //   name: "VSCode",
+        //   color: "#007ACC",
+        //   colorRGB: "0, 122, 204",
+        // },
       ],
     },
   ];
