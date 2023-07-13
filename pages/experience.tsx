@@ -29,11 +29,20 @@ export default function Experience() {
     {
       name: "Learning Planet Institute",
       url: "https://www.learningplanetinstitute.org/",
-      position: "FrontEnd Developer",
+      position: "Freelance FrontEnd Developer",
       location: "Remote",
       date: "April 2023 - Present",
       description: "",
       stacks: ["Vue3", "StoryBook", "Nuxt", "SASS"],
+    },
+    {
+      name: "Diadromoove",
+      position: "Freelance FrontEnd Developer",
+      location: "Remote",
+      date: "January 2023 - July 2023",
+      description:
+        "Development of the front-end of the Diadromoove web application",
+      stacks: ["NextJS", "SASS"],
     },
     {
       name: "Mboa Digital",
@@ -134,6 +143,11 @@ export default function Experience() {
       image: "/projects/camer-portfolio.png",
     },
     {
+      name: "Sitrabcam",
+      url: "https://sitrabcam-web.leonelngoya.com/",
+      image: "/projects/sitrabcam.png",
+    },
+    {
       name: "Ulwo App",
       url: "https://ulwo.lndev.me/",
       image: "/projects/ulwo.png",
@@ -142,11 +156,6 @@ export default function Experience() {
       name: "Web App Photography",
       url: "https://webappphotography.leonelngoya.com/",
       image: "/projects/1.png",
-    },
-    {
-      name: "Pro Chakra UI",
-      url: "https://pro-chakra-ui-web.vercel.app/",
-      image: "/projects/pro-chakra-ui.png",
     },
     {
       name: "Canon Yaounde",
@@ -159,16 +168,6 @@ export default function Experience() {
       image: "/projects/4.png",
     },
     {
-      name: "Peef Dev",
-      url: "https://peef.leonelngoya.com/",
-      image: "/projects/5.png",
-    },
-    {
-      name: "CamerDjoss",
-      url: "https://camer-djoss.leonelngoya.com/",
-      image: "/projects/6.png",
-    },
-    {
       name: "ESF Website",
       url: "https://esf-website.leonelngoya.com/",
       image: "/projects/7.png",
@@ -179,19 +178,39 @@ export default function Experience() {
       image: "/projects/8.png",
     },
     {
+      name: "Peef Dev",
+      url: "https://peef.leonelngoya.com/",
+      image: "/projects/5.png",
+    },
+    {
+      name: "CamerDjoss",
+      url: "https://camer-djoss.leonelngoya.com/",
+      image: "/projects/6.png",
+    },
+    {
       name: "Queen Elizabeth II",
       url: "https://queenelizabeth2.leonelngoya.com/",
       image: "/projects/2.png",
     },
     {
-      name: "App Formation",
-      url: "https://app-formation.leonelngoya.com/",
-      image: "/projects/9.png",
+      name: "Pro Chakra UI",
+      url: "https://pro-chakra-ui-web.vercel.app/",
+      image: "/projects/pro-chakra-ui.png",
+    },
+    {
+      name: "App Expenses",
+      url: "https://app-expenses.vercel.app/",
+      image: "/projects/15.png",
     },
     {
       name: "Monarc",
       url: "https://monarc.leonelngoya.com/",
       image: "/projects/10.png",
+    },
+    {
+      name: "App Formation",
+      url: "https://app-formation.leonelngoya.com/",
+      image: "/projects/9.png",
     },
     {
       name: "GitHub User",
