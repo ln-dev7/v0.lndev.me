@@ -218,6 +218,11 @@ export default function Experience() {
       image: "/projects/14.png",
     },
     {
+      name: "Grid Animation",
+      url: "https://lndev-grid-animation-1.vercel.app/",
+      image: "/projects/16.png",
+    },
+    {
       name: "Cameroon Logos",
       url: "https://cameroon-logos.vercel.app/",
       image: "/projects/11.png",
