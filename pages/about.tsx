@@ -81,7 +81,7 @@ export default function about() {
             className="about-left__text"
           >
             Hey, my name is Leonel NGOYA but I am much better known as LN. I am
-            a {age} year old FrontEnd Engineer, Web Integrator and{" "}
+            a FrontEnd Engineer, Web Integrator and{" "}
             <a
               href="https://www.awwwards.com/jury-member/ln-dev"
               onMouseEnter={() => cursorChangeHandler("hovered")}
@@ -182,7 +182,7 @@ export default function about() {
         <div className="about-right">
           <div className="about-right__image">
             <Image
-              src="/images/ln-pic-2.jpg"
+              src="/images/ln-dev.jpg"
               alt="leonel ngoya"
               width={3024}
               height={4032}
