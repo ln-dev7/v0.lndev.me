@@ -179,7 +179,12 @@ export default function about() {
             </motion.a>
           </div>
         </motion.div>
-        <div className="about-right">
+        <motion.div
+          className="about-right"
+          animate={{ x: 0, opacity: 1 }}
+          initial={{ x: "25%", opacity: 0 }}
+          transition={{ duration: 0.75 }}
+        >
           <div className="about-right__image">
             <Image
               src="/images/ln-dev.jpg"
@@ -188,7 +193,7 @@ export default function about() {
               height={4032}
             />
           </div>
-        </div>
+        </motion.div>
       </main>
     </>
   );
