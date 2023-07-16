@@ -138,9 +138,9 @@ export default function Experience() {
       image: "/projects/lnui.png",
     },
     {
-      name: "Cameroon Portfolios",
-      url: "https://cameroon-portfolios.vercel.app/",
-      image: "/projects/camer-portfolio.png",
+      name: "World Portfolios",
+      url: "https://world-portfolios.vercel.app/",
+      image: "/projects/world-portfolio.png",
     },
     {
       name: "Sitrabcam",
