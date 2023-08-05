@@ -41,7 +41,7 @@ export default function Experience() {
       location: "Remote",
       date: "January 2023 - July 2023",
       description:
-        "Development of the front-end of the Diadromoove web application",
+        "Development of the front-end of the Gloovee web application",
       stacks: ["NextJS", "SASS"],
     },
     {
