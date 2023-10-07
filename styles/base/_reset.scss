@@ -160,3 +160,39 @@ body.dark {
     display: none;
   }
 }
+
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $primary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  z-index: 7;
+  p {
+    width: 100%;
+    text-align: center;
+    color: $light;
+    a {
+      text-decoration: underline;
+      font-weight: 500;
+      color: $light;
+    }
+  }
+  button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      width: 20px;
+    }
+  }
+}

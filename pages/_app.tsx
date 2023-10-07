@@ -59,6 +59,8 @@ export default function App({ Component, pageProps, router }: AppProps) {
     setTheme(theme === "light" ? "dark" : "light");
   }
 
+  const [alert, setAlert] = useState(true);
+
   return (
     <>
       <NextSeo
@@ -87,9 +89,42 @@ export default function App({ Component, pageProps, router }: AppProps) {
         }}
       />
       <GoogleAnalytics measurementId="G-E7N5LJTEWP" />
-      <AnimatePresence mode="wait" initial={true}  onExitComplete={() => window.scrollTo(0, 0)}>
+      <AnimatePresence
+        mode="wait"
+        initial={true}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
         <MouseContextProvider>
           <Cursor />
+          {alert && (
+            <div className="alert">
+              <p>
+                <a href="https://leonelngoya.com">
+                  A new version of my site is available here.
+                </a>
+              </p>
+              <button
+                onClick={() => {
+                  setAlert(false);
+                }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
           <header className="header">
             <Link href="/" className="header-logo">
               <svg
