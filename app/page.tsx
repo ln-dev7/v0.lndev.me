@@ -4,7 +4,9 @@ import { awards } from "@/constants/awards";
 
 export default function Home() {
   return (
-    <div className="bg-zinc-950 text-slate-50 px-4 py-12 flex flex-col items-center gap-6 w-full min-h-screen">
+    <div className="bg-zinc-950 relative overflow-hidden text-slate-50 px-4 py-12 flex flex-col items-center gap-6 w-full min-h-screen">
+      <img src="/circles.png" alt="circles" className="opacity-10 absolute -left-[20%] -top-[20%] -rotate-45" />
+      <img src="/circles.png" alt="circles" className="hidden 2xl:block opacity-10 absolute -bottom-1/4 -right-1/4 rotate-90" />
       <header className="mx-auto w-full max-w-[640px] flex gap-4 justify-between">
         <a className="flex items-center space-x-2 cursor-pointer" href="/">
           <div className="flex flex-col space-y-1 text-sm leading-none">
