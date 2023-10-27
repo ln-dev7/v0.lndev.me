@@ -57,7 +57,7 @@ export default function Home() {
       </div>
       <main className="mx-auto w-full max-w-[640px] flex flex-col items-start space-y-8">
         <div className="w-full flex flex-col items-start space-y-5">
-          <h2 className="text-xl">{">> "}Projects</h2>
+          <h2 className="text-xl font-bold">{">> "}Projects</h2>
           <ul className="w-full flex flex-col items-start space-y-4">
             {projects.map((project, index) => (
               <li key={index} className="w-full">
@@ -67,7 +67,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="p-1 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
                 >
-                  <span className="underline underline-offset-4">
+                  <span className="underline underline-offset-4 font-bold">
                     {project.name}
                   </span>
                   <span className="lowercase text-md">
@@ -79,7 +79,7 @@ export default function Home() {
           </ul>
         </div>
         <div className="w-full flex flex-col items-start space-y-5">
-          <h2 className="text-xl">{">> "}Awards</h2>
+          <h2 className="text-xl font-bold">{">> "}Awards</h2>
           <ul className="flex w-full flex-col items-start space-y-4">
             {awards.map((award, index) => (
               <li key={index} className="w-full">
@@ -89,7 +89,7 @@ export default function Home() {
                   rel="noreferrer"
                   className="p-1 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
                 >
-                  <span className="underline underline-offset-4">
+                  <span className="underline underline-offset-4 font-bold">
                     {award.name}
                   </span>
                   <span className="lowercase text-md">{award.description}</span>
