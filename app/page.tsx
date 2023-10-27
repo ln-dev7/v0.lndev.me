@@ -5,8 +5,16 @@ import { awards } from "@/constants/awards";
 export default function Home() {
   return (
     <div className="bg-zinc-950 relative overflow-hidden text-slate-50 px-4 py-12 flex flex-col items-center gap-6 w-full min-h-screen">
-      <img src="/circles.png" alt="circles" className="opacity-10 absolute -left-[20%] -top-[20%] -rotate-45" />
-      <img src="/circles.png" alt="circles" className="hidden 2xl:block opacity-10 absolute -bottom-1/4 -right-1/4 rotate-90" />
+      <img
+        src="/circles.png"
+        alt="circles"
+        className="opacity-10 absolute -left-[20%] -top-[20%] -rotate-45"
+      />
+      <img
+        src="/circles.png"
+        alt="circles"
+        className="hidden 2xl:block opacity-10 absolute -bottom-1/4 -right-1/4 rotate-90"
+      />
       <header className="mx-auto w-full max-w-[640px] flex gap-4 justify-between">
         <a className="flex items-center space-x-2 cursor-pointer" href="/">
           <div className="flex flex-col space-y-1 text-sm leading-none">
@@ -62,7 +70,9 @@ export default function Home() {
                   <span className="underline underline-offset-4">
                     {project.name}
                   </span>
-                  <span className="lowercase text-md">{project.description}</span>
+                  <span className="lowercase text-md">
+                    {project.description}
+                  </span>
                 </a>
               </li>
             ))}
@@ -88,19 +98,31 @@ export default function Home() {
             ))}
           </ul>
         </div>
+        <div className="w-full flex flex-col items-start space-y-5">
+          <a
+            href="https://shop.lndev.me/tshirt"
+            target="_blank"
+            rel="noreferrer"
+            className="opacity-30 w-full h-full text-lg duration-300 hover:opacity-100"
+          >
+            {"=> "} LN Shop
+          </a>
+        </div>
       </main>
       <div className="mx-auto w-full max-w-[640px] flex items-center justify-start border-t border-zinc-900 border-dashed pt-6">
         <a
           href="https://leonelngoya.com"
           target="_blank"
           rel="noreferrer"
-          className="opacity-30 w-full h-full text-xs underline underline-offset-2"
+          className="opacity-30 w-full h-full text-xs underline underline-offset-2 duration-300 hover:opacity-100"
         >
           {"-> "}Coded by Leonel Ngoya
         </a>
       </div>
       <div className="mx-auto w-full max-w-[640px] flex items-center justify-start border-t border-zinc-900 border-dashed py-6">
-      <a href="https://www.buymeacoffee.com/lndev"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a croissant&emoji=🥐&slug=lndev&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+        <a href="https://www.buymeacoffee.com/lndev">
+          <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a croissant&emoji=🥐&slug=lndev&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
+        </a>
       </div>
     </div>
   );
