@@ -17,14 +17,20 @@ export const projects: Project[] = [
     description: "Open source collection of World Portfolios.",
   },
   {
-    name: "Leonel Ngoya Portfolio",
-    url: "https://leonelngoya.com/",
-    description: "Cameroonian freelance front-end developer.",
+    name: "Ulwo",
+    url: "https://ulwo.lndev.me/",
+    description:
+      "Create and apply for jobs.",
   },
   {
     name: "LNUI",
     url: "https://lnui.lndev.me/",
     description:
       "With LNUI you will have components of all types that will allow you to build your website from scratch.",
+  },
+  {
+    name: "Leonel Ngoya Portfolio",
+    url: "https://leonelngoya.com/",
+    description: "Cameroonian freelance front-end developer.",
   },
 ];
