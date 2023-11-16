@@ -46,6 +46,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-2222017759396595" />
+      </head>
       <body className={`${jetbrains_mono.className} antialiased`}>{children}</body>
     </html>
   )
