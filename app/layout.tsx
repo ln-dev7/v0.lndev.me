@@ -48,6 +48,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-2222017759396595" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2222017759396595"
+     crossOrigin="anonymous"></script>
       </head>
       <body className={`${jetbrains_mono.className} antialiased`}>{children}</body>
     </html>
