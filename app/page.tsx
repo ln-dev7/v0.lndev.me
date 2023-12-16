@@ -65,7 +65,7 @@ export default function Home() {
                   href={project.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-1 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
+                  className="p-4 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
                 >
                   <span className="underline underline-offset-4 font-bold">
                     {project.name}
@@ -87,7 +87,7 @@ export default function Home() {
                   href={award.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-1 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
+                  className="p-4 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
                 >
                   <span className="underline underline-offset-4 font-bold">
                     {award.name}
@@ -97,30 +97,6 @@ export default function Home() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="w-full flex flex-col items-start space-y-5">
-          <a
-            href="https://shop.lndev.me/tshirt"
-            target="_blank"
-            rel="noreferrer"
-            className="opacity-30 flex items-center gap-1 w-full h-full text-md duration-300 hover:opacity-100"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-              />
-            </svg>
-            <span className="mt-1">LN Shop</span>
-          </a>
         </div>
       </main>
       <div className="mx-auto w-full max-w-[640px] flex items-center justify-start border-t border-zinc-900 border-dashed pt-6">
