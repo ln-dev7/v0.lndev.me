@@ -1,6 +1,7 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
 import { projects } from "@/constants/projects";
 import { awards } from "@/constants/awards";
+import { works } from "@/constants/works";
 
 export default function Home() {
   return (
@@ -56,6 +57,29 @@ export default function Home() {
         <span className="opacity-30 text-xs">{">> "}Leonel Ngoya aka LN</span>
       </div>
       <main className="mx-auto w-full max-w-[640px] flex flex-col items-start space-y-8">
+        <div className="w-full flex flex-col items-start space-y-5">
+          <h2 className="text-xl font-bold">{">> "}Works</h2>
+          <ul className="w-full flex flex-col items-start space-y-4">
+            {works.map((work, index) => (
+              <li key={index} className="w-full">
+                <a
+                  href={work.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-4 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
+                >
+                  <span className="underline underline-offset-4 font-bold">
+                    {work.name}
+                  </span>
+                  <span className="lowercase text-md">
+                    - {work.poste}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
         <div className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">{">> "}Projects</h2>
           <ul className="w-full flex flex-col items-start space-y-4">
