@@ -66,7 +66,7 @@ export default function Home() {
                   href={work.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-4 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900"
+                  className="p-4 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900 border border-zinc-900"
                 >
                   <span className="underline underline-offset-4 font-bold">
                     {work.name}
@@ -74,6 +74,7 @@ export default function Home() {
                   <span className="lowercase text-md">
                     - {work.poste}
                   </span>
+                  <span className="opacity-30 text-xs block self-end">{work.duration}</span>
                 </a>
               </li>
             ))}
