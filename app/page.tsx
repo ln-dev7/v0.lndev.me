@@ -17,7 +17,7 @@ export default function Home() {
         className="hidden 2xl:block opacity-10 absolute -bottom-1/4 -right-1/4 rotate-90"
       />
       <header className="mx-auto w-full max-w-[640px] flex gap-4 justify-between">
-        <a className="flex items-center space-x-2 cursor-pointer" href="/">
+        <a className="flex items-center space-x-2 cursor-pointer" href="https://leonelngoya.com" target="_blank">
           <div className="flex flex-col space-y-1 text-sm leading-none">
             <span className="text-lg font-bold">lndev</span>
             <span>/ FrontEnd Developer</span>

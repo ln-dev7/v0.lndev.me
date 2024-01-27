@@ -8,7 +8,7 @@ interface Work {
 export const works: Work[] = [
   {
     name: "Survaii",
-    duration: "15 / 2024 - Present",
+    duration: "01 / 2024 - Present",
     url: "https://survaii.io",
     poste: "FrontEnd Developer / NextJS",
   },
