@@ -135,7 +135,7 @@ export default function Home() {
                   </span>
 
                   <img
-                    className="w-10"
+                    className="w-10 self-end"
                     src={`https://api.dicebear.com/7.x/adventurer/svg?seed=${fun.name}`}
                     alt="avatar"
                   />
