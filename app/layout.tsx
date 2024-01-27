@@ -7,7 +7,7 @@ const jetbrains_mono = JetBrains_Mono({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "lndev",
   description:
-    "Leonel Ngoya aka LN - Freelance Frontend Developer - Build Sharuco x World Portfolios x LNUI",
+    "Leonel Ngoya aka LN - Frontend Developer - Build Sharuco x World Portfolios x LNUI",
   openGraph: {
     type: "website",
     locale: "en_US",
