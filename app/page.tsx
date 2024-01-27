@@ -100,12 +100,20 @@ export default function Home() {
                   <span className="underline underline-offset-4 font-bold">
                     {project.name}
                   </span>
-                  <span className="lowercase text-md">
+                  <span className="lowercase text-md opacity-60">
                     {project.description}
                   </span>
                 </a>
               </li>
             ))}
+            <a
+              href="https://github.com/ln-dev7"
+              target="_blank"
+              rel="noreferrer"
+              className="p-4 flex flex-col sm:flex-row gap-1 items-start sm:items-center justify-between space-y-1 w-full duration-300 hover:bg-zinc-900 underline underline-offset-4 hover:pl-10"
+            >
+              See more on my github
+            </a>
           </ul>
         </div>
 
@@ -134,6 +142,14 @@ export default function Home() {
                 </a>
               </li>
             ))}
+            <a
+              href="https://github.com/ln-dev7?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+              className="p-4 flex flex-col sm:flex-row gap-1 items-start sm:items-center justify-between space-y-1 w-full duration-300 border border-zinc-700 border-dotted hover:bg-zinc-900 hover:pl-10"
+            >
+              See more on my github
+            </a>
           </ul>
         </div>
 
