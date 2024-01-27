@@ -2,6 +2,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 import { projects } from "@/constants/projects";
 import { awards } from "@/constants/awards";
 import { works } from "@/constants/works";
+import { funs } from "@/constants/funs";
 
 export default function Home() {
   return (
@@ -17,7 +18,11 @@ export default function Home() {
         className="hidden 2xl:block opacity-10 absolute -bottom-1/4 -right-1/4 rotate-90"
       />
       <header className="mx-auto w-full max-w-[640px] flex gap-4 justify-between">
-        <a className="flex items-center space-x-2 cursor-pointer" href="https://leonelngoya.com" target="_blank">
+        <a
+          className="flex items-center space-x-2 cursor-pointer"
+          href="https://leonelngoya.com"
+          target="_blank"
+        >
           <div className="flex flex-col space-y-1 text-sm leading-none">
             <span className="text-lg font-bold">lndev</span>
             <span>/ FrontEnd Developer</span>
@@ -71,16 +76,16 @@ export default function Home() {
                   <span className="underline underline-offset-4 font-bold">
                     {work.name}
                   </span>
-                  <span className="lowercase text-md">
-                    - {work.poste}
+                  <span className="lowercase text-md">- {work.poste}</span>
+                  <span className="opacity-30 text-xs block self-end">
+                    {work.duration}
                   </span>
-                  <span className="opacity-30 text-xs block self-end">{work.duration}</span>
                 </a>
               </li>
             ))}
           </ul>
         </div>
-        
+
         <div className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">{">> "}Projects</h2>
           <ul className="w-full flex flex-col items-start space-y-4">
@@ -103,6 +108,35 @@ export default function Home() {
             ))}
           </ul>
         </div>
+
+        <div className="w-full flex flex-col items-start space-y-5">
+          <h2 className="text-xl font-bold">
+            {">> "}For fun {":)"}{" "}
+          </h2>
+          <ul className="w-full flex flex-col items-start space-y-4">
+            {funs.map((fun, index) => (
+              <li key={index} className="w-full">
+                <a
+                  href={fun.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-4 flex flex-col sm:flex-row gap-1 items-start sm:items-center justify-between space-y-1 w-full duration-300 border border-zinc-700 border-dotted hover:bg-zinc-900"
+                >
+                  <span className="underline underline-offset-4 font-bold">
+                    {fun.name}
+                  </span>
+
+                  <img
+                    className="w-10"
+                    src={`https://api.dicebear.com/7.x/adventurer/svg?seed=${fun.name}`}
+                    alt="avatar"
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">{">> "}Awards</h2>
           <ul className="flex w-full flex-col items-start space-y-4">
