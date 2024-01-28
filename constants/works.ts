@@ -3,6 +3,7 @@ interface Work {
   url: string;
   poste: string;
   duration: string;
+  stacks: string[];
 }
 
 export const works: Work[] = [
@@ -10,24 +11,28 @@ export const works: Work[] = [
     name: "Survaii",
     duration: "01 / 2024 - Present",
     url: "https://survaii.io",
-    poste: "FrontEnd Developer / NextJS",
+    poste: "FrontEnd Developer",
+    stacks: ["NextJS", "Apollo", "GraphQL", "TypeScript", "TailwindCSS"],
   },
   {
     name: "Gloovee",
     duration: "01 / 2023 - Present",
     url: "https://gloovee.com/",
-    poste: "FrontEnd Developer / NextJS - React Native",
+    poste: "FrontEnd Developer",
+    stacks: ["NextJS", "TypeScript", "React Native"],
   },
   {
     name: "LPI",
     duration: "04 / 2023 - 09 / 2023",
     url: "https://www.learningplanetinstitute.org/en/",
-    poste: "FrontEnd Developer / VueJS",
+    poste: "FrontEnd Developer",
+    stacks: ["VueJS", "StoryBook"],
   },
   {
     name: "Mboa Digital",
     duration: "06 / 2022 - 04 / 2023",
     url: "https://mboadigital.tech/",
-    poste: "FrontEnd Developer / React",
+    poste: "Consultant Digital",
+    stacks: ["ReactJS", "TypeScript", "StoryBook"],
   },
 ];

@@ -71,12 +71,22 @@ export default function Home() {
                   href={work.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="p-4 flex flex-col items-start space-y-1 w-full duration-300 hover:bg-zinc-900 border border-zinc-900"
+                  className="p-4 flex flex-col items-start gap-1 w-full duration-300 hover:bg-zinc-900 border border-zinc-900"
                 >
                   <span className="underline underline-offset-4 font-bold">
                     {work.name}
                   </span>
-                  <span className="lowercase text-md">- {work.poste}</span>
+                  <span className="lowercase text-md"> - {work.poste}</span>
+                  <div className="flex items-center gap-1 flex-wrap my-1">
+                    {work.stacks.map((stack, index) => (
+                      <span
+                        key={index}
+                        className="text-xs bg-white/10 py-1 px-2 opacity-30 rounded-full"
+                      >
+                        {stack}
+                      </span>
+                    ))}
+                  </div>
                   <span className="opacity-30 text-xs block self-end">
                     {work.duration}
                   </span>

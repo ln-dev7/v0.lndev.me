@@ -45,8 +45,8 @@ export const funs: Funs[] = [
     url: "https://nike-animation-1.vercel.app/",
   },
   {
-    name: "https://dual-button-proto.vercel.app/",
-    url: "Dual Button Animation",
+    name: "Dual Button Animation",
+    url: "https://dual-button-proto.vercel.app/",
   },
   {
     name: "Tinder Splashscreen",
