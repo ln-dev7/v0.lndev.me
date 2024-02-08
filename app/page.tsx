@@ -58,8 +58,19 @@ export default function Home() {
           </a>
         </div>
       </header>
-      <div className="mx-auto w-full max-w-[640px] flex items-center justify-start">
-        <span className="opacity-30 text-xs">{">> "}Leonel Ngoya aka LN</span>
+      <div className="mx-auto w-full max-w-[640px] flex items-center justify-between flex-wrap gap-2">
+        <a
+          href="https://leonelngoya.com"
+          className="opacity-30 text-[13px] hover:underline hover:underline-offset-2"
+        >
+          {">> "}Leonel Ngoya aka LN
+        </a>
+        <a
+          className="hover:bg-zinc-900 duration-300 border border-zinc-700 rounded-full py-2 px-5 text-xs uppercase"
+          href="mailto:leonelngoya@gmail.com"
+        >
+          Contact me
+        </a>
       </div>
       <main className="mx-auto w-full max-w-[640px] flex flex-col items-start space-y-8">
         <div className="w-full flex flex-col items-start space-y-5">
