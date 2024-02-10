@@ -16,7 +16,7 @@ export const works: Work[] = [
   },
   {
     name: "Gloovee",
-    duration: "01 / 2023 - Present",
+    duration: "01 / 2023 - 01 / 2024",
     url: "https://gloovee.com/",
     poste: "FrontEnd Developer",
     stacks: ["NextJS", "TypeScript", "React Native"],
@@ -40,6 +40,6 @@ export const works: Work[] = [
     duration: "06 / 2021 - Present",
     url: "https://leonelngoya.com/work",
     poste: "FrontEnd Developer",
-    stacks: ["ReactJS", "NextJS", "TailwindCSS"],
+    stacks: ["ReactJS", "NextJS"],
   },
 ];
