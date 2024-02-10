@@ -35,4 +35,11 @@ export const works: Work[] = [
     poste: "Consultant Digital",
     stacks: ["ReactJS", "TypeScript", "StoryBook"],
   },
+  {
+    name: "Indepedent Freelancer",
+    duration: "06 / 2021 - Present",
+    url: "https://leonelngoya.com/work",
+    poste: "FrontEnd Developer",
+    stacks: ["ReactJS", "NextJS", "TailwindCSS"],
+  },
 ];
