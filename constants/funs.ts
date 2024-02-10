@@ -5,6 +5,10 @@ interface Funs {
 
 export const funs: Funs[] = [
   {
+    name: "Would you be my Valentine?",
+    url: "https://will-you-be-my-valentine-henna.vercel.app/",
+  },
+  {
     name: "Burger King Animation",
     url: "https://burger-king-proto.vercel.app/",
   },
@@ -37,19 +41,11 @@ export const funs: Funs[] = [
     url: "https://manette-ps5-stone-design.vercel.app/",
   },
   {
-    name: "Facebook for Vision",
-    url: "https://facebook-for-vision-pro.vercel.app/",
-  },
-  {
     name: "Nike Animation",
     url: "https://nike-animation-1.vercel.app/",
   },
   {
     name: "Dual Button Animation",
     url: "https://dual-button-proto.vercel.app/",
-  },
-  {
-    name: "Tinder Splashscreen",
-    url: "https://tinder-splashscreen.vercel.app/",
   },
 ];

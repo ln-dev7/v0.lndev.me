@@ -28,9 +28,4 @@ export const projects: Project[] = [
     description:
       "With LNUI you will have components of all types that will allow you to build your website from scratch.",
   },
-  {
-    name: "Leonel Ngoya Portfolio",
-    url: "https://leonelngoya.com/",
-    description: "Cameroonian freelance front-end developer.",
-  },
 ];
