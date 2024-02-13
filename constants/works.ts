@@ -15,6 +15,13 @@ export const works: Work[] = [
     stacks: ["NextJS", "Apollo", "GraphQL", "TypeScript", "TailwindCSS"],
   },
   {
+    name: "Dark Code",
+    duration: "05 / 2023 - Present",
+    url: "https://www.dark-code.cm/",
+    poste: "Collaborator",
+    stacks: ["ReactJS", "NextJS",],
+  },
+  {
     name: "Gloovee",
     duration: "01 / 2023 - 01 / 2024",
     url: "https://gloovee.com/",
