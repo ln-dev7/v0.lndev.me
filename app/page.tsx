@@ -155,11 +155,11 @@ export default function Home() {
                     {fun.name}
                   </span>
 
-                  <img
+                  {/* <img
                     className="w-10 self-end"
                     src={`https://api.dicebear.com/7.x/adventurer/svg?seed=${fun.name}`}
                     alt="avatar"
-                  />
+                  /> */}
                 </a>
               </li>
             ))}

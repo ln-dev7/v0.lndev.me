@@ -13,6 +13,10 @@ export const funs: Funs[] = [
     url: "https://burger-king-proto.vercel.app/",
   },
   {
+    name: "Spinning Animation Card",
+    url: "https://spinning-animation-card.vercel.app/",
+  },
+  {
     name: "Airpods Max Animation",
     url: "https://airpods-max-slide-animation.vercel.app/",
   },
