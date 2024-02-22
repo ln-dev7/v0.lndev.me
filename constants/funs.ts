@@ -25,6 +25,10 @@ export const funs: Funs[] = [
     url: "https://anim-revolut-hero.vercel.app/",
   },
   {
+    name: "Perfume Parallax Animation",
+    url: "https://perfume-parallax-animation.vercel.app/",
+  },
+  {
     name: "Lays Animation",
     url: "https://lays-proto.vercel.app/",
   },
