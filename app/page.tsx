@@ -207,7 +207,7 @@ export default function Home() {
       </div>
       <div className="mx-auto w-full max-w-[640px] flex items-center justify-start border-t border-zinc-900 border-dashed py-6">
         <a href="https://www.buymeacoffee.com/lndev">
-          <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a croissant&emoji=🥐&slug=lndev&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
+          <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=lndev&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" />
         </a>
       </div>
     </div>
