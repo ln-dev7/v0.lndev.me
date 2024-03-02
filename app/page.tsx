@@ -10,12 +10,7 @@ export default function Home() {
       <img
         src="/circles.png"
         alt="circles"
-        className="opacity-10 absolute -left-[20%] -top-[20%] -rotate-45"
-      />
-      <img
-        src="/circles.png"
-        alt="circles"
-        className="hidden 2xl:block opacity-10 absolute -bottom-1/4 -right-1/4 rotate-90"
+        className="opacity-10 absolute -left-[25%] -top-[7%] -rotate-45"
       />
       <header className="mx-auto w-full max-w-[640px] flex gap-4 justify-between">
         <a
