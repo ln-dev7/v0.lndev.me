@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
 import { projects } from "@/constants/projects";
 import { awards } from "@/constants/awards";
 import { works } from "@/constants/works";
@@ -50,6 +50,15 @@ export default function Home() {
           >
             <Github className="w-4 h-4 fill-current" />
             <span className="sr-only">@ln-dev7</span>
+          </a>
+          <a
+            href="https://youtube.com/c/lndev"
+            target="_blank"
+            rel="noreferrer"
+            className="w-8 h-8 flex items-center justify-center text-sm font-medium duration-300 hover:bg-zinc-900 rounded-md cursor-pointer"
+          >
+            <Youtube />
+            <span className="sr-only">/c/lndev</span>
           </a>
         </div>
       </header>
