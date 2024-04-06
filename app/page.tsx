@@ -168,12 +168,12 @@ export default function Home() {
               </li>
             ))}
             <a
-              href="https://github.com/ln-dev7?tab=repositories"
+              href="https://github.com/topics/ln-fun-animation"
               target="_blank"
               rel="noreferrer"
               className="p-4 flex flex-col sm:flex-row gap-1 items-start sm:items-center justify-between space-y-1 w-full duration-300 border border-zinc-700 border-dotted hover:bg-zinc-900 hover:pl-10"
             >
-              See more on my github
+              See more on GitHub
             </a>
           </ul>
         </div>
