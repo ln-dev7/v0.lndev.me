@@ -8,8 +8,15 @@ interface Work {
 
 export const works: Work[] = [
   {
+    name: "Dotworld",
+    duration: "04 / 2024 - Present",
+    url: "https://dotworld.ch",
+    poste: "Software Developer",
+    stacks: [],
+  },
+  {
     name: "Survaii",
-    duration: "01 / 2024 - Present",
+    duration: "01 / 2024 - 04 / 2024",
     url: "https://survaii.io",
     poste: "FrontEnd Developer",
     stacks: ["NextJS", "Apollo", "GraphQL", "TypeScript", "TailwindCSS"],
@@ -19,7 +26,7 @@ export const works: Work[] = [
     duration: "05 / 2023 - Present",
     url: "https://www.dark-code.cm/",
     poste: "Collaborator",
-    stacks: ["ReactJS", "NextJS",],
+    stacks: ["ReactJS", "NextJS"],
   },
   {
     name: "Gloovee",
