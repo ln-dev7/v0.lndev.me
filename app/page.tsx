@@ -77,7 +77,7 @@ export default function Home() {
         </a>
       </div>
       <main className="mx-auto w-full max-w-[640px] flex flex-col items-start space-y-8">
-        <div className="w-full flex flex-col items-start space-y-5">
+        <div id="works" className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">{">> "}Works</h2>
           <ul className="w-full flex flex-col items-start space-y-4">
             {works.map((work, index) => (
@@ -111,7 +111,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="w-full flex flex-col items-start space-y-5">
+        <div id="projects" className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">{">> "}Projects</h2>
           <ul className="w-full flex flex-col items-start space-y-4">
             {projects.map((project, index) => (
@@ -142,7 +142,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="w-full flex flex-col items-start space-y-5">
+        <div id="fun-animation" className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">
             {">> "}For fun {":)"}{" "}
           </h2>
@@ -178,7 +178,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="w-full flex flex-col items-start space-y-5">
+        <div id="awards" className="w-full flex flex-col items-start space-y-5">
           <h2 className="text-xl font-bold">{">> "}Awards</h2>
           <ul className="flex w-full flex-col items-start space-y-4">
             {awards.map((award, index) => (
