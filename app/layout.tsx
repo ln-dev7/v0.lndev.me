@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://lndev.me/",
+    url: "https://v0.lndev.me/",
     siteName: "lndev",
     images: [
       {
-        url: "https://lndev.me/lndev.png",
+        url: "https://v0.lndev.me/lndev.png",
         width: 500,
         height: 500,
         alt: "lndev",
@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     creator: "@ln_dev7",
     images: [
       {
-        url: "https://lndev.me/lndev.png",
+        url: "https://v0.lndev.me/lndev.png",
         width: 500,
         height: 500,
         alt: "lndev",
       },
     ],
   },
-  authors: [{ name: "Leonel NGOYA", url: "https://lndev.me/" }],
+  authors: [{ name: "Leonel NGOYA", url: "https://v0.lndev.me/" }],
   keywords: "portfolio, cameroon, frontend, freelance",
 };
 
